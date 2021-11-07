@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{pdfpages}
 \usepackage[sfdefault]{GoSans}
@@ -11,7 +11,7 @@
 
 
 \begin{document}
-\includepdf[]{DeckblattPflichtenheft.pdf}
+\includepdf{PflichtenheftDeckblatt_final.pdf}
 \title{Pflichtenheft}
 
 \author{Die kranken Schwestern}
@@ -32,9 +32,9 @@ Hierzu sind unbedingt die folgenden Features erforderlich:
 \hline
 M0001     & UI & Das Programm muss eine graphische Oberfläche haben.  \\
 \hline
-M0002 & Scope & •   Es soll ein zellulärer Automat mit möglichst großer Freiheit definiert und simuliert werden können.  \\
+M0002 & Scope & •	Es soll ein zellulärer Automat mit möglichst großer Freiheit definiert und simuliert werden können.  \\
 \hline
-M0003 & Darstellung Spielfeld & •   Die Darstellung des Zellulären Automaten erfolgt über eine 2 Dimensionale Matrix aus Quadraten deren Farbe und Helligkeit den Zustand eines Feldes wiedergeben. \\
+M0003 & Darstellung Spielfeld & •	Die Darstellung des Zellulären Automaten erfolgt über eine 2 Dimensionale Matrix aus Quadraten deren Farbe und Helligkeit den Zustand eines Feldes wiedergeben. \\
 \hline
 M0004 & Transitionsregeleditor & Die Transitionsregeln sollen über eine definierte und im Handbuch dokumentierte Syntax (invers Polnische Notation, ggf. auch mathematische Schreibweise) formuliert werden können. Der neue Zustand einer Zelle darf dabei von der Zelle selbst, sowie von den umliegenden acht benachbarten Zellen abhängen. Ihr Status wird in Variablen bereitgestellt.\\
 \hline
@@ -374,117 +374,193 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
 \par
 
 \pagebreak
-    %Bild und Beschreibung der Funktionen auf dem Bild
+	%Bild und Beschreibung der Funktionen auf dem Bild
 
     Regeleditor %Ersetzen durch den Namen des Fensters
 
 \par
-\includegraphics[width=15cm]{regeleditor_dropdown_edit} %   width = 5 für kleine Fenster, name == Name des Bildes ohne Dateiendung  
+\includegraphics[width=15cm]{regeleditor_dropdown_edit} %	width = 5 für kleine Fenster, name == Name des Bildes ohne Dateiendung  
 
 \begin{longtable}[m]{|m{2cm}|m{4cm}|m{9cm}|} % Die Tabelle für grobe Auflistung, mit dem Format
-        \hline
-        RF-01 & Laden & Ruft den Filechooser zum Laden eines anderen Regelausdrucks auf \\
-        \hline
-        RF-02 & Speichern & Ruft den Java-Swing-Filechooser zum Speichern des aktuellen Regelausdrucks auf. \\
-        \hline
-        RF-03 & Topologiewechsler & Auswahlschalter für das Spielfeldrandverhalten. \\
-        \hline
-        RF-04 & Regel Bearbeiten & Ruft das Popup-Fenster zum Regelausdruck bearbeiten auf. \\
-        \hline
+		\hline
+		RF-01 & Laden & Ruft den Filechooser zum Laden eines anderen Regelausdrucks auf \\
+		\hline
+		RF-02 & Speichern & Ruft den Java-Swing-Filechooser zum Speichern des aktuellen Regelausdrucks auf. \\
+		\hline
+		RF-03 & Topologiewechsler & Auswahlschalter für das Spielfeldrandverhalten. \\
+		\hline
+		RF-04 & Regel Bearbeiten & Ruft das Popup-Fenster zum Regelausdruck bearbeiten auf. \\
+		\hline
 \end{longtable}
 \pagebreak
 
-    %Auflistung der einzelnen Funktionen: für jede davon eine Tabelle nach diesem Muster (Copy/paste sind am Start)
+	%Auflistung der einzelnen Funktionen: für jede davon eine Tabelle nach diesem Muster (Copy/paste sind am Start)
 
+	\begin{tabular}[m]{|m{7cm}|m{9cm}|}
+		\hline
+		Anwendungsfall ID     & RF-01 \\ %Hier immer den rechten Tabelleneintrag ergänzen.
+		\hline
+		AF Name     &  Laden \\
+		\hline
+		Akteur&Benutzer des Programms \\
+		\hline
+		Vorbedingung&Programm gestartet, Benutzer lebendig, Regeleditor Dropdownmenü ausgewählt\\
+		\hline
+		Auslösendes Ereignis&Mausklick auf den Laden-Button\\
+		\hline
+		Nachbedingung Erfolg&Öffnen des Java-Swing-Fensters mit FileChooser zum öffnen einer Regeldatei\\
+		\hline
+		Nachbedingung Fehlschlag&Fehlermeldung und Rückkehr zur Haupt-Oberfläche.\\
+		\hline
+		Ablauf&Nutzer klickt auf Button und öffnet das Fenster zum laden einer Regeldatei. Durch auswählen und Bestätigen durch klick auf "Öffnen". wird die aktuell aktive Regel durch die geladene ersetzt.\\
+		\hline
+	\end{tabular}
+	\par
+	
+	\begin{tabular}[m]{|m{7cm}|m{9cm}|}
+		\hline
+		Anwendungsfall ID     & RF-02 \\ %Hier immer den rechten Tabelleneintrag ergänzen.
+		\hline
+		AF Name     &  Speichern \\
+		\hline
+		Akteur&Benutzer des Programms \\
+		\hline
+		Vorbedingung&Programm gestartet, Benutzer lebendig, Regeleditor Dropdownmenü ausgewählt\\
+		\hline
+		Auslösendes Ereignis&Mausklick auf den Speichern-Button\\
+		\hline
+		Nachbedingung Erfolg&Öffnen des Java-Swing-Fensters mit FileChooser zum speichern einer Regeldatei\\
+		\hline
+		Nachbedingung Fehlschlag&Fehlermeldung und Rückkehr zur Haupt-Oberfläche.\\
+		\hline
+		Ablauf&Nutzer klickt auf Button und öffnet das Fenster zum Speichern einer Regeldatei. Durch auswählen und Bestätigen durch klick auf "Öffnen". wird die aktuell aktive Regel an besagter Stelle gespeichert.\\
+		\hline
+	\end{tabular}
+	\par
+
+	\begin{tabular}[m]{|m{7cm}|m{9cm}|}
+		\hline
+		Anwendungsfall ID     & RF-03 \\ %Hier immer den rechten Tabelleneintrag ergänzen.
+		\hline
+		AF Name     &  Topologie \\
+		\hline
+		Akteur&Benutzer des Programms \\
+		\hline
+		Vorbedingung&Programm gestartet, Benutzer lebendig, Regeleditor Dropdownmenü ausgewählt\\
+		\hline
+		Auslösendes Ereignis&Mausklick auf den Topologie-RadioButton\\
+		\hline
+		Nachbedingung Erfolg&Setzen der Spielfeldkantenbehandlung auf Torus oder Beschränkt, je nach Wunsch.\\
+		\hline
+		Nachbedingung Fehlschlag&Fehlermeldung und Rückkehr zur Haupt-Oberfläche.\\
+		\hline
+		Ablauf&Durch Klick auf "Standard" wird das Spielfeld als endliches Spielfeld behandelt, an den Kanten werden alle nachbarzellen als 0 angenommen.
+		Durch klick auf "Torus" werden die Zellen an den Kanten die Zellen an gegenüberliegenden Kanten als Nachbarn behandeln.\\
+		\hline
+	\end{tabular}
+	
+	\pagebreak
+	\par
+	Regeleditor Popup-Fenster mit Texteingabe:
+	\par
+	\includegraphics[width=15cm]{regedit}
+	\par
+	\begin{tabular}[m]{|m{5cm}|m{11cm}|}
+		\hline
+		Anwendungsfall ID     & RF-04 \\ %Hier immer den rechten Tabelleneintrag ergänzen.
+		\hline
+		AF Name     &  Regel Bearbeiten \\
+		\hline
+		Akteur&Benutzer des Programms \\
+		\hline
+		Vorbedingung&Programm gestartet, Benutzer lebendig, Dropdownmenü "Regeleditor" ausgewählt.\\
+		\hline
+		Auslösendes Ereignis&Mausklick auf den "Regel Bearbeiten"-Button im Regeleditor-Dropdownmenü\\
+		\hline
+		Nachbedingung Erfolg&Öffnen des Popupfensters "Regeleditor" (siehe oben).\\
+		\hline
+		Nachbedingung Fehlschlag&Fehlermeldung und Rückkehr zur Haupt-Oberfläche.\\
+		\hline
+		Ablauf&Öffnen des Übergangsregel-Editors. Bei Öffnen steht im Textfeld die zurzeit verwendete Transitionsregel. Durch Tastatureingabe kann der String im Textfeld verändert werden, womit die Transitionsregel angepasst wird. Ferner gibt es ein Bild links, welches als Hilfestellung die Variablen angibt, welche die Zellzustände von Nachbarzellen angeben. Auf die Weise kann der Zustand der akuell betrachteten Zelle für die nächste Iteration auf Basis ihrer Nachbarn berechnet werden\\
+		\hline
+	\end{tabular}
+	\par
+	
+	
+	    %Bild und Beschreibung der Funktionen auf dem Bild
+\pagebreak
+\par
+    Regeleditor %Ersetzen durch den Namen des Fensters
+    \par
+    \includegraphics[width=15cm]{spielfeldeditor_dropdown_edit.jpeg} %    width = 5 für kleine Fenster, name == Name des Bildes ohne Dateiendung  
+
+    \begin{longtable}[m]{|m{2cm}|m{4cm}|m{9cm}|} % Die Tabelle für grobe Auflistung, mit dem Format
+        \hline
+        SE-01 & Laden & Wiederherstellen eines Gespeicherten Spielfeldes durch Auswahl der Datei. \\
+        \hline
+        SE-02 & Einfügen & Einen kleineren Spielfeldzustand in das Aktuelle wird an einer beliebigen Stelle eingefügt. \\
+        \hline
+        SE-03 & Speichern & Aktueller Zustand des Spielfeldes wird in einer Datei gesichert. \\
+        \hline
+        SE-04 & Größe & Dimensionen: Das erste Eintragskästchen gibt die Breite an, das Zweite die Höhe des gewünschten Spielfeldes.\\
+        \hline
+        SE-05 & Anwenden & Das aktuelle Spielfeld wird auf die gewünschten Dimensionen gebracht. \\
+        \hline
+        SE-06 & Zufallsgenerator & Werkzeug um das Spielfeld mit Zufälligen werten zu füllen.\\
+        \hline
+        SE-07 & Clear & Generiert ein leeres Spielfeld.\\
+        \hline
+    \end{longtable}
+    
+    %Auflistung der einzelnen Funktionen: für jede davon eine Tabelle nach diesem Muster (Copy/paste sind am Start)
+    
+    %SE-01 Laden
     \begin{tabular}[m]{|m{7cm}|m{9cm}|}
         \hline
-        Anwendungsfall ID     & RF-01 \\ %Hier immer den rechten Tabelleneintrag ergänzen.
+        Anwendungsfall ID     & SE-01 \\ %Hier immer den rechten Tabelleneintrag ergänzen.
         \hline
         AF Name     &  Laden \\
         \hline
-        Akteur&Benutzer des Programms \\
+        Akteur &  Benutzer des Programms \\
         \hline
-        Vorbedingung&Programm gestartet, Benutzer lebendig, Regeleditor Dropdownmenü ausgewählt\\
+        Vorbedingung & Spielzustand pausiert\\
         \hline
-        Auslösendes Ereignis&Mausklick auf den Laden-Button\\
+        Auslösendes Ereignis & Linksklick auf den Laden-Button\\
         \hline
-        Nachbedingung Erfolg&Öffnen des Java-Swing-Fensters mit FileChooser zum öffnen einer Regeldatei\\
+        Nachbedingung Erfolgt & Öffnen des Fensters "Laden"\\
         \hline
-        Nachbedingung Fehlschlag&Fehlermeldung und Rückkehr zur Haupt-Oberfläche.\\
+        Nachbedingung Fehlschlag & Programm stürzt ab\\
         \hline
-        Ablauf&Nutzer klickt auf Button und öffnet das Fenster zum laden einer Regeldatei. Durch auswählen und Bestätigen durch klick auf "Öffnen". wird die aktuell aktive Regel durch die geladene ersetzt.\\
+        Ablauf & Nutzer klickt auf den Laden-Button und wählt die jeweilige Datei aus, die in das Spiel eingebunden werden soll.\\
         \hline
     \end{tabular}
     \par
     
-    \begin{tabular}[m]{|m{7cm}|m{9cm}|}
+    %SE-02 Einfügen
+    
+        \begin{tabular}[m]{|m{7cm}|m{9cm}|}
         \hline
-        Anwendungsfall ID     & RF-02 \\ %Hier immer den rechten Tabelleneintrag ergänzen.
+        Anwendungsfall ID     & SE-02 \\ %Hier immer den rechten Tabelleneintrag ergänzen.
         \hline
-        AF Name     &  Speichern \\
+        AF Name     &  Einfügen \\
         \hline
         Akteur&Benutzer des Programms \\
         \hline
-        Vorbedingung&Programm gestartet, Benutzer lebendig, Regeleditor Dropdownmenü ausgewählt\\
+        Vorbedingung & Spielzustand pausiert\\
         \hline
-        Auslösendes Ereignis&Mausklick auf den Speichern-Button\\
+        Auslösendes Ereignis & Linksklick auf den Einfügen-Button\\
         \hline
-        Nachbedingung Erfolg&Öffnen des Java-Swing-Fensters mit FileChooser zum speichern einer Regeldatei\\
+        Nachbedingung Erfolgt&Öffnen des Fensters "Einfügen"\\
         \hline
-        Nachbedingung Fehlschlag&Fehlermeldung und Rückkehr zur Haupt-Oberfläche.\\
+        Nachbedingung Fehlschlag&Programm stürzt ab\\
         \hline
-        Ablauf&Nutzer klickt auf Button und öffnet das Fenster zum Speichern einer Regeldatei. Durch auswählen und Bestätigen durch klick auf "Öffnen". wird die aktuell aktive Regel an besagter Stelle gespeichert.\\
+        Ablauf&Nutzer klickt auf den Einfügen-Button und wählt aus dem Pop-Up-Fenster den jeweiligen Spielzustand aus, der in das Spielfeld eingebunden werden soll.\\
         \hline
     \end{tabular}
     \par
-
-    \begin{tabular}[m]{|m{7cm}|m{9cm}|}
-        \hline
-        Anwendungsfall ID     & RF-03 \\ %Hier immer den rechten Tabelleneintrag ergänzen.
-        \hline
-        AF Name     &  Topologie \\
-        \hline
-        Akteur&Benutzer des Programms \\
-        \hline
-        Vorbedingung&Programm gestartet, Benutzer lebendig, Regeleditor Dropdownmenü ausgewählt\\
-        \hline
-        Auslösendes Ereignis&Mausklick auf den Topologie-RadioButton\\
-        \hline
-        Nachbedingung Erfolg&Setzen der Spielfeldkantenbehandlung auf Torus oder Beschränkt, je nach Wunsch.\\
-        \hline
-        Nachbedingung Fehlschlag&Fehlermeldung und Rückkehr zur Haupt-Oberfläche.\\
-        \hline
-        Ablauf&Durch Klick auf "Standard" wird das Spielfeld als endliches Spielfeld behandelt, an den Kanten werden alle nachbarzellen als 0 angenommen.
-        Durch klick auf "Torus" werden die Zellen an den Kanten die Zellen an gegenüberliegenden Kanten als Nachbarn behandeln.\\
-        \hline
-    \end{tabular}
     
     \pagebreak
-    \par
-    Regeleditor Popup-Fenster mit Texteingabe:
-    \par
-    \includegraphics[width=15cm]{regedit}
-    \par
-    \begin{tabular}[m]{|m{5cm}|m{11cm}|}
-        \hline
-        Anwendungsfall ID     & RF-04 \\ %Hier immer den rechten Tabelleneintrag ergänzen.
-        \hline
-        AF Name     &  Regel Bearbeiten \\
-        \hline
-        Akteur&Benutzer des Programms \\
-        \hline
-        Vorbedingung&Programm gestartet, Benutzer lebendig, Dropdownmenü "Regeleditor" ausgewählt.\\
-        \hline
-        Auslösendes Ereignis&Mausklick auf den "Regel Bearbeiten"-Button im Regeleditor-Dropdownmenü\\
-        \hline
-        Nachbedingung Erfolg&Öffnen des Popupfensters "Regeleditor" (siehe oben).\\
-        \hline
-        Nachbedingung Fehlschlag&Fehlermeldung und Rückkehr zur Haupt-Oberfläche.\\
-        \hline
-        Ablauf&Öffnen des Übergangsregel-Editors. Bei Öffnen steht im Textfeld die zurzeit verwendete Transitionsregel. Durch Tastatureingabe kann der String im Textfeld verändert werden, womit die Transitionsregel angepasst wird. Ferner gibt es ein Bild links, welches als Hilfestellung die Variablen angibt, welche die Zellzustände von Nachbarzellen angeben. Auf die Weise kann der Zustand der akuell betrachteten Zelle für die nächste Iteration auf Basis ihrer Nachbarn berechnet werden\\
-        \hline
-    \end{tabular}
-    \par
+    
 \subsubsection{}
 
 
@@ -553,7 +629,7 @@ Wenn jemand Photoshop macht, dann Diaa.
 \par
 Glossar
 \par
-\begin{tabular}{|c|c|}
+\begin{longtable}[m]{|m{8cm}|m{8cm}|}
 \hline
 Begriff & Erklärung \\
     \hline
@@ -561,16 +637,31 @@ Begriff & Erklärung \\
   \hline
 JRE  & Java Runtime Environment. Ein Stück frei erhältliche Software, die es Ermöglicht Java Programme auszuführen. \\
     \hline
-  & \\
+.csv  & "Comma separated values“ simples Tabellen-Dateiformat. Trennung von Spalten durch Kommata und Zeilen durch Umbrüche. \\
     \hline
-  & \\
+.txt  & Dateiendung für Textdateien.\\
     \hline
-  & \\
+ Zellulärer Automat & Ein Konzept zur Modellierung dynamischer Systeme.
+Zellen die eine bestimmte Menge von zuständen einnehmen können befinden sich in einem Raum. Die Räumlich nächsten Zellen bilden die Nachbarschaft. Aus dem eigenen Zustand und dem der Nachbarn ergibt sich über eine Transitionsregel der Folgezustand.
+\\
     \hline
-  & \\  
+ Transisitonsregel & Vorschrift die unter Verwendung vorhandener Daten den Zustand einer Zelle in den Nächsten überfuhrt.\\  
   \hline
-  & \\
-\end{tabular}
+ Simulation & Dynamische Abbildung, meist realer Sachverhalte, anhand eines Modells, durch Anwendung des Modells über Zeit.\\
+  \hline
+  Spielfeld & Zweidimensionales Feld aus Zellen\\
+  \hline
+  Zelle & Ein einzelnes Feld was einen Status haben kann.\\
+  \hline
+  Invers Polnische Notation & Beste Erfindung der Welt. Klammerfreie Notation von Algorithmen, die auf einem Stack ausgeführt werden können.\\
+  \hline
+  Syntax & Regeln zur Anordnung und Reihenfolge von Zeichensystemen\\
+  \hline
+  Multithreading & gleichzeitige Nutzung mehrerer Rechenkerne für erhöhten Stromverbrauch, verringerte Laufzeit und ultimativ viel bessere Laune.\\
+ \hline
+ Gesichter & Seiten eines Würfels. Möglichkeiten, auf die der Zufallsgenerator fallen kann.\\
+ \hline
+\end{longtable}
 
 
 \end{document}
