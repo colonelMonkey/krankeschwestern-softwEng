@@ -5,6 +5,8 @@
 \usepackage{longtable}
 \usepackage{array}
 \usepackage{verbatim}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 \linespread{1,5}
 
 
@@ -30,9 +32,9 @@ Hierzu sind unbedingt die folgenden Features erforderlich:
 \hline
 M0001     & UI & Das Programm muss eine graphische Oberfläche haben.  \\
 \hline
-M0002 & Scope & •	Es soll ein zellulärer Automat mit möglichst großer Freiheit definiert und simuliert werden können.  \\
+M0002 & Scope & •   Es soll ein zellulärer Automat mit möglichst großer Freiheit definiert und simuliert werden können.  \\
 \hline
-M0003 & Darstellung Spielfeld & •	Die Darstellung des Zellulären Automaten erfolgt über eine 2 Dimensionale Matrix aus Quadraten deren Farbe und Helligkeit den Zustand eines Feldes wiedergeben. \\
+M0003 & Darstellung Spielfeld & •   Die Darstellung des Zellulären Automaten erfolgt über eine 2 Dimensionale Matrix aus Quadraten deren Farbe und Helligkeit den Zustand eines Feldes wiedergeben. \\
 \hline
 M0004 & Transitionsregeleditor & Die Transitionsregeln sollen über eine definierte und im Handbuch dokumentierte Syntax (invers Polnische Notation, ggf. auch mathematische Schreibweise) formuliert werden können. Der neue Zustand einer Zelle darf dabei von der Zelle selbst, sowie von den umliegenden acht benachbarten Zellen abhängen. Ihr Status wird in Variablen bereitgestellt.\\
 \hline
@@ -117,10 +119,16 @@ Leider ist es nicht möglich, den Regeleditor intuitiv bedienbar zu gestalten, d
 \end{itemize}
 
 \subsubsection{Hardwareanforderungen}
+
+
 \begin{itemize}
     \item Ein Computer aus diesem Jahrtausend mit einer Prozessorarchitektur für die eine JRE verfügbar ist. Dual-Core oder besser empfohlen, Dienstalter nicht über 1,6 Dekaden.
 \end{itemize}
+
+
 \subsection{Betriebsbedingungen}
+
+
 \begin{itemize}
     \item Schreib- und Leserechte für die Speicherstände.
     \item verfügbarer Speicherplatz. (500 MB Festplattenspeicher großzügigerweise empfohlen)
@@ -128,10 +136,359 @@ Leider ist es nicht möglich, den Regeleditor intuitiv bedienbar zu gestalten, d
 \end{itemize}
 
 \pagebreak
+
+
+
 \section{Produktfunktionen}
 \subsection{Funktionale Anforderungen}
 \subsubsection{Benutzeroberfläche}
 Nach dem Start soll folgende Oberfläche als Standard auftauchen. Im folgenden werden die (numerierten) UI-Elemente erläutert.
+\par
+Hauptbenutzerfläche
+\par
+\includegraphics[width =15cm]{images/oberfläche.jpeg}
+
+\begin{longtable}[m]{|m{2cm}|m{4cm}|m{9cm}|}
+\hline
+ AF-01 & Spielfeldeditor & Klick auf den Button Spielfeldeditor öffnet das Dropdownmenü "Spielfeldeditor".   \\
+ \hline
+AF-02 & Regeleditor & Klick auf den Button "Regeleditor" öffnet das Dropdown-Menü "Regeleditor" \\
+ \hline
+AF-03& Undo/Redo& Klick auf "undo" macht die letzte Eingabe des Spielers rückgängig. "Redo" stellt sie wieder her. Hochoptional. \\
+ \hline
+ AF-04 & Simulation starten / unterbrechen & Klick auf den Button schaltet die automatische Simulation an oder aus. \\
+ \hline
+ AF-05& Stepover & Klick auf den Button "STEP" führt genau einen Simulationsschritt aus.  \\
+
+\hline
+ AF-06 & Delay-Slider & Mit diesem Slider kann die Verzögerung zwischen zwei Generationen zwischen 1 und 0 sekunden stufenlos ausgewählt werden. \\
+ \hline
+ AF-07 & Zellmodifikation & In diesem Textfeld kann (nur int) der Wert festgelegt werden, auf den eine Zelle gesetzt werden soll, falls man mit der Maus darauf klickt.  \\
+\hline
+\end{longtable}
+
+\pagebreak
+\begin{comment}
+Spielfeldeditor
+\par
+\includegraphics[]{}
+\begin{longtable}[m]{|m{2cm}|m{4cm}|m{9cm}|}
+\end{longtable}
+\pagebreak
+Regeleditor
+\includegraphics[]{}
+\begin{longtable}[m]{|m{2cm}|m{4cm}|m{9cm}|}
+\end{longtable}
+\pagebreak
+
+\includegraphics[]{}
+\begin{longtable}[m]{|m{2cm}|m{4cm}|m{9cm}|}
+\end{longtable}
+\pagebreak
+
+\includegraphics[]{}
+\begin{longtable}[m]{|m{2cm}|m{4cm}|m{9cm}|}
+\end{longtable}
+\pagebreak
+
+
+\end{comment}
+
+\par
+\begin{comment}
+\begin{tabular}[m]{|m{7cm}|m{9cm}|}
+\hline
+Anwendungsfall ID     & AF-01 \\
+     \hline
+AF Name     &  Spielfeldeditor \\
+     \hline
+Akteur&Benutzer des Programms \\
+\hline
+Vorbedingung&Programm gestartet, Benutzer lebendig\\
+\hline
+Auslösendes Ereignis&Mausklick auf den <Name>-Button\\
+\hline
+Nachbedingung Erfolg&Öffnen des Fensters "Spielfeldeditor\\
+\hline
+Nachbedingung Fehlschlag&Programm stürzt ab\\
+\hline
+Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
+\hline
+\end{tabular}
+\par
+\end{comment}
+
+
+\begin{tabular}[m]{|m{7cm}|m{9cm}|}
+    \hline
+    Anwendungsfall ID     & AF-01 \\
+         \hline
+    AF Name     &  Spielfeldeditor \\
+         \hline
+    Akteur&Benutzer des Programms \\
+    \hline
+    Vorbedingung&Programm gestartet, Benutzer lebendig\\
+    \hline
+    Auslösendes Ereignis&Mausklick auf den <Name>-Button\\
+    \hline
+    Nachbedingung Erfolg&Öffnen des Fensters "Spielfeldeditor\\
+    \hline
+    Nachbedingung Fehlschlag&Programm stürzt ab\\
+    \hline
+    Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
+    \hline
+\end{tabular}
+\par
+
+
+\begin{tabular}[m]{|m{7cm}|m{9cm}|}
+    \hline
+    Anwendungsfall ID     & AF-02 \\
+         \hline
+    AF Name     &  Regeleditor \\
+         \hline
+    Akteur&Benutzer des Programms \\
+    \hline
+    Vorbedingung&Programm gestartet, Benutzer lebendig\\
+    \hline
+    Auslösendes Ereignis&Mausklick auf den Regeleditor-Button\\
+    \hline
+    Nachbedingung Erfolg&Öffnen des Fensters "Regeleditor\\
+    \hline
+    Nachbedingung Fehlschlag&Programm stürzt ab\\
+    \hline
+    Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
+    \hline
+\end{tabular}
+\par
+
+
+\begin{tabular}[m]{|m{7cm}|m{9cm}|}
+    \hline
+    Anwendungsfall ID     & AF-03  \\
+         \hline
+    AF Name     &  Undo/Redo \\
+         \hline
+    Akteur&Benutzer des Programms \\
+    \hline
+    Vorbedingung&Irgendeine Aktion im Programm wurde bereits durchgeführt.\\
+    \hline
+    Auslösendes Ereignis&Mausklick auf den Undo- bzw. Redo-Button\\
+    \hline
+    Nachbedingung Erfolg&Undo: Rückgängig machen der zuletzt ausgeführten Aktion. Redo: Wiederherstellen. Hochoptional.\\
+    \hline
+    Nachbedingung Fehlschlag&Undo: Fehlermeldung : "Nichts zurückzusetzen", Redo: Fehlermeldung: "nichts wiederherzustellen".\\
+    \hline
+    Ablauf&Nutzer klickt auf Undo, die zuletzt ausgeführte Aktion wird zurückgesetzt. REDO: die zuletzt ausgeführte Aktion wird wiederhergestellt.\\
+    \hline
+\end{tabular}
+\par
+
+
+\begin{tabular}[m]{|m{7cm}|m{9cm}|}
+    \hline
+    Anwendungsfall ID     & AF-04 \\
+         \hline
+    AF Name     &  Play/Pause \\
+         \hline
+    Akteur&Benutzer des Programms \\
+    \hline
+    Vorbedingung&Programm gestartet, Benutzer lebendig\\
+    \hline
+    Auslösendes Ereignis&Mausklick auf den Play/Pause-Button\\
+    \hline
+    Nachbedingung Erfolg&Umschalten der Simulation zwischen "Simulation läuft" und "Pausiert"\\
+    \hline
+    Nachbedingung Fehlschlag&Programm stürzt ab\\
+    \hline
+    Ablauf&Simulation gestoppt: User klickt auf Button, Simulation startet. Simulation läuft: User klickt auf Button, Simulation stoppt.\\
+    \hline
+\end{tabular}
+\par
+
+
+\begin{tabular}[m]{|m{7cm}|m{9cm}|}
+    \hline
+    Anwendungsfall ID     & AF-05 \\
+         \hline
+    AF Name     &  STEPOVER \\
+         \hline
+    Akteur&Benutzer des Programms \\
+    \hline
+    Vorbedingung&Programm gestartet, Benutzer lebendig und im Vollbesitz seiner Maus\\
+    \hline
+    Auslösendes Ereignis&Mausklick auf den STEPOVER-Button\\
+    \hline
+    Nachbedingung Erfolg& Simulieren und anzeigen der nachfolgenden Spielfeldgeneration\\
+    \hline
+    Nachbedingung Fehlschlag&Programm stürzt ab\\
+    \hline
+    Ablauf&Nutzer klickt auf Button und der Zelluläre Automat bewegt sich genau einen Simulationsschritt weiter.\\
+    \hline
+\end{tabular}
+\par
+
+
+\begin{tabular}[m]{|m{7cm}|m{9cm}|}
+    \hline
+    Anwendungsfall ID     & AF-06 \\
+         \hline
+    AF Name     &  Delay-Slider\\
+         \hline
+    Akteur&Benutzer des Programms \\
+    \hline
+    Vorbedingung&Programm gestartet, Benutzer lebendig\\
+    \hline
+    Auslösendes Ereignis&Klicken und Ziehen auf dem Delayslider\\
+    \hline
+    Nachbedingung Erfolg&Anpassung des Simulationsschritt-Delays\\
+    \hline
+    Nachbedingung Fehlschlag&Programm stürzt ab\\
+    \hline
+    Ablauf&... Nicht im Ernst...\\
+    \hline
+\end{tabular}
+\par
+
+
+\begin{tabular}[m]{|m{7cm}|m{9cm}|}
+    \hline
+    Anwendungsfall ID     & AF-07 \\
+         \hline
+    AF Name     & Zellmodifikation \\
+         \hline
+    Akteur&Benutzer des Programms \\
+    \hline
+    Vorbedingung&Programm gestartet, Benutzer lebendig und mit einem Alkoholpegel < 5 \% \\
+    \hline
+    Auslösendes Ereignis&Mausklick auf das Zustandstextfeld, oder auf das Spielfeld\\
+    \hline
+    Nachbedingung Erfolg& Textfeld: User kann neuen Edit-Zielzustand angeben und mit Enter bestätigen. Spielfeld: Zustand der angeklickten Zelle wird auf den Zustand im Textfeld gesetzt. \\
+    \hline
+    Nachbedingung Fehlschlag&Textfeld: Bei eingabe eines Nicht-Integers Fehlermeldung und setzen auf 0 (zur Sicherheit)\\
+    \hline
+    Ablauf&Textfeld: Nutzer klickt auf Textfeld. Nutzer gibt ein, welcher Zielzustand gewünscht ist. Nutzer bestätigt mit Enter. 
+    Spielfeld: Nutzer klickt beliebige Zelle an. Zustand der Zelle wird überschrieben durch Zustand im Textfeld\\
+    \hline
+\end{tabular}
+\par
+
+\pagebreak
+    %Bild und Beschreibung der Funktionen auf dem Bild
+
+    Regeleditor %Ersetzen durch den Namen des Fensters
+
+\par
+\includegraphics[width=15cm]{regeleditor_dropdown_edit} %   width = 5 für kleine Fenster, name == Name des Bildes ohne Dateiendung  
+
+\begin{longtable}[m]{|m{2cm}|m{4cm}|m{9cm}|} % Die Tabelle für grobe Auflistung, mit dem Format
+        \hline
+        RF-01 & Laden & Ruft den Filechooser zum Laden eines anderen Regelausdrucks auf \\
+        \hline
+        RF-02 & Speichern & Ruft den Java-Swing-Filechooser zum Speichern des aktuellen Regelausdrucks auf. \\
+        \hline
+        RF-03 & Topologiewechsler & Auswahlschalter für das Spielfeldrandverhalten. \\
+        \hline
+        RF-04 & Regel Bearbeiten & Ruft das Popup-Fenster zum Regelausdruck bearbeiten auf. \\
+        \hline
+\end{longtable}
+\pagebreak
+
+    %Auflistung der einzelnen Funktionen: für jede davon eine Tabelle nach diesem Muster (Copy/paste sind am Start)
+
+    \begin{tabular}[m]{|m{7cm}|m{9cm}|}
+        \hline
+        Anwendungsfall ID     & RF-01 \\ %Hier immer den rechten Tabelleneintrag ergänzen.
+        \hline
+        AF Name     &  Laden \\
+        \hline
+        Akteur&Benutzer des Programms \\
+        \hline
+        Vorbedingung&Programm gestartet, Benutzer lebendig, Regeleditor Dropdownmenü ausgewählt\\
+        \hline
+        Auslösendes Ereignis&Mausklick auf den Laden-Button\\
+        \hline
+        Nachbedingung Erfolg&Öffnen des Java-Swing-Fensters mit FileChooser zum öffnen einer Regeldatei\\
+        \hline
+        Nachbedingung Fehlschlag&Fehlermeldung und Rückkehr zur Haupt-Oberfläche.\\
+        \hline
+        Ablauf&Nutzer klickt auf Button und öffnet das Fenster zum laden einer Regeldatei. Durch auswählen und Bestätigen durch klick auf "Öffnen". wird die aktuell aktive Regel durch die geladene ersetzt.\\
+        \hline
+    \end{tabular}
+    \par
+    
+    \begin{tabular}[m]{|m{7cm}|m{9cm}|}
+        \hline
+        Anwendungsfall ID     & RF-02 \\ %Hier immer den rechten Tabelleneintrag ergänzen.
+        \hline
+        AF Name     &  Speichern \\
+        \hline
+        Akteur&Benutzer des Programms \\
+        \hline
+        Vorbedingung&Programm gestartet, Benutzer lebendig, Regeleditor Dropdownmenü ausgewählt\\
+        \hline
+        Auslösendes Ereignis&Mausklick auf den Speichern-Button\\
+        \hline
+        Nachbedingung Erfolg&Öffnen des Java-Swing-Fensters mit FileChooser zum speichern einer Regeldatei\\
+        \hline
+        Nachbedingung Fehlschlag&Fehlermeldung und Rückkehr zur Haupt-Oberfläche.\\
+        \hline
+        Ablauf&Nutzer klickt auf Button und öffnet das Fenster zum Speichern einer Regeldatei. Durch auswählen und Bestätigen durch klick auf "Öffnen". wird die aktuell aktive Regel an besagter Stelle gespeichert.\\
+        \hline
+    \end{tabular}
+    \par
+
+    \begin{tabular}[m]{|m{7cm}|m{9cm}|}
+        \hline
+        Anwendungsfall ID     & RF-03 \\ %Hier immer den rechten Tabelleneintrag ergänzen.
+        \hline
+        AF Name     &  Topologie \\
+        \hline
+        Akteur&Benutzer des Programms \\
+        \hline
+        Vorbedingung&Programm gestartet, Benutzer lebendig, Regeleditor Dropdownmenü ausgewählt\\
+        \hline
+        Auslösendes Ereignis&Mausklick auf den Topologie-RadioButton\\
+        \hline
+        Nachbedingung Erfolg&Setzen der Spielfeldkantenbehandlung auf Torus oder Beschränkt, je nach Wunsch.\\
+        \hline
+        Nachbedingung Fehlschlag&Fehlermeldung und Rückkehr zur Haupt-Oberfläche.\\
+        \hline
+        Ablauf&Durch Klick auf "Standard" wird das Spielfeld als endliches Spielfeld behandelt, an den Kanten werden alle nachbarzellen als 0 angenommen.
+        Durch klick auf "Torus" werden die Zellen an den Kanten die Zellen an gegenüberliegenden Kanten als Nachbarn behandeln.\\
+        \hline
+    \end{tabular}
+    
+    \pagebreak
+    \par
+    Regeleditor Popup-Fenster mit Texteingabe:
+    \par
+    \includegraphics[width=15cm]{regedit}
+    \par
+    \begin{tabular}[m]{|m{5cm}|m{11cm}|}
+        \hline
+        Anwendungsfall ID     & RF-04 \\ %Hier immer den rechten Tabelleneintrag ergänzen.
+        \hline
+        AF Name     &  Regel Bearbeiten \\
+        \hline
+        Akteur&Benutzer des Programms \\
+        \hline
+        Vorbedingung&Programm gestartet, Benutzer lebendig, Dropdownmenü "Regeleditor" ausgewählt.\\
+        \hline
+        Auslösendes Ereignis&Mausklick auf den "Regel Bearbeiten"-Button im Regeleditor-Dropdownmenü\\
+        \hline
+        Nachbedingung Erfolg&Öffnen des Popupfensters "Regeleditor" (siehe oben).\\
+        \hline
+        Nachbedingung Fehlschlag&Fehlermeldung und Rückkehr zur Haupt-Oberfläche.\\
+        \hline
+        Ablauf&Öffnen des Übergangsregel-Editors. Bei Öffnen steht im Textfeld die zurzeit verwendete Transitionsregel. Durch Tastatureingabe kann der String im Textfeld verändert werden, womit die Transitionsregel angepasst wird. Ferner gibt es ein Bild links, welches als Hilfestellung die Variablen angibt, welche die Zellzustände von Nachbarzellen angeben. Auf die Weise kann der Zustand der akuell betrachteten Zelle für die nächste Iteration auf Basis ihrer Nachbarn berechnet werden\\
+        \hline
+    \end{tabular}
+    \par
+\subsubsection{}
+
+
+
 \subsubsection{Datenverarbeitung}
 \subsubsection{Datenspeicherung}
 \subsection{Nichtfunktionale Anforderungen}
@@ -147,12 +504,20 @@ Nach dem Start soll folgende Oberfläche als Standard auftauchen. Im folgenden w
 Hinweis: Für die Sicherheit des Nutzers wird nicht garantiert.
 \pagebreak
 \section{Testszenarien}
-Alle Testszenarien werden auf die Spezifikationsphase verschoben.
 \subsection{UI}
+Das UserInterface bietete einige Möglichkeiten für Probleme. Für alle Texteingabefelder muss zur Laufzeit geprüft werden, ob der User-Input in Ordnung ist und bei Bedarf Fehlermeldungen ausspucken. Beispiel: Die Spielfeldgröße muss unbedingt vom Typ int sein. "abeuiae" ist keine valide Spielfeldgröße.
+Ferner muss geprüft werden, ob alle Knöpfe ausschließlich das tun, was sie sollen und nicht spaßige Nebeneffekte erzeugen.
 \subsection{Verarbeitung}
+Es muss geprüft werden, ob der Regelinterpreter vernünftig funktioniert. Es muss geprüft werden ob die Spielfeldvariation vernünftig funktioniert. Es muss geprüft werden ob die Arrayverarbeitung für den Spielstand venünftig funktioniert. 
+
 \subsection{Speichern}
+Der Java Filechooser wird wohl funktionieren, nicht wahr?
+
+ggf. kann man einen Speicherzustand laden und unter anderem Namen speichern und dann den Inhalt vergleichen....
 \subsection{Performance}
+Awatt, Performance wird auf modernen Systemen in ausreichender Menge vorhanden sein. Bitte keine Speicherlecks bauen...
 \subsection {Benutzbarkeit (Schimpanse benötigt)}
+Bin kein Schimpanse, es 
 \pagebreak
 \section{Entwicklungsumgebung}
 \subsection{Verwendete Software}
@@ -185,6 +550,27 @@ Wenn jemand Photoshop macht, dann Diaa.
 \pagebreak
 
 
+\par
+Glossar
+\par
+\begin{tabular}{|c|c|}
+\hline
+Begriff & Erklärung \\
+    \hline
+  Performance   & Geschwindigkeit der Software. \\
+  \hline
+JRE  & Java Runtime Environment. Ein Stück frei erhältliche Software, die es Ermöglicht Java Programme auszuführen. \\
+    \hline
+  & \\
+    \hline
+  & \\
+    \hline
+  & \\
+    \hline
+  & \\  
+  \hline
+  & \\
+\end{tabular}
 
 
 \end{document}
