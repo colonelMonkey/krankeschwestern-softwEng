@@ -579,22 +579,29 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
 
 Hinweis: Für die Sicherheit des Nutzers wird nicht garantiert.
 \pagebreak
+
 \section{Testszenarien}
 \subsection{UI}
-Das UserInterface bietete einige Möglichkeiten für Probleme. Für alle Texteingabefelder muss zur Laufzeit geprüft werden, ob der User-Input in Ordnung ist und bei Bedarf Fehlermeldungen ausspucken. Beispiel: Die Spielfeldgröße muss unbedingt vom Typ int sein. "abeuiae" ist keine valide Spielfeldgröße.
+Das UserInterface bietet einige Möglichkeiten für Probleme. Für alle Texteingabefelder muss zur Laufzeit geprüft werden, ob der User-Input in Ordnung ist und bei Bedarf Fehlermeldungen ausspucken. Beispiel: Die Spielfeldgröße muss unbedingt vom Typ int sein. "abeuiae" ist keine valide Spielfeldgröße.
 Ferner muss geprüft werden, ob alle Knöpfe ausschließlich das tun, was sie sollen und nicht spaßige Nebeneffekte erzeugen.
+Knöpfe, die was am Spielfeld ändern, dürfen während der Simulation nicht betätigbar sein. Man muss fähig sein Zustände wieder zu verlassen, ohne das Programm zu beenden. Überschreiten des Wertebereiches von int darf nicht zum Absturz oder unvorhersehbarem Verhalten führen. 
 \subsection{Verarbeitung}
-Es muss geprüft werden, ob der Regelinterpreter vernünftig funktioniert. Es muss geprüft werden ob die Spielfeldvariation vernünftig funktioniert. Es muss geprüft werden ob die Arrayverarbeitung für den Spielstand venünftig funktioniert. 
+Der Regelinterpreter bekommt den Regelsatz für Game of Life und es werden bekannte Formationen eigegeben und geschaut ob die sich auf Langzeit ordentlich verhalten. 
+Es wird eine Regelsatz entworfen, welcher zu Überschreitung des Zahlenbereichs int führt. Das Programm muss weiter Funkitionieren.
+Es wird empirisch getestet ob bei dem Zufallsgenerator ausschließlich erwünschte Zustände mit jeweiligen Verteilungen generiert werden.
+Die Funktion der Topologien wird überprüft.
 
 \subsection{Speichern}
 Der Java Filechooser wird wohl funktionieren, nicht wahr?
+Zugriffsfehler(Rechte oder Speicherplatz bedingt) müssen abgefangen werden.
 
 ggf. kann man einen Speicherzustand laden und unter anderem Namen speichern und dann den Inhalt vergleichen....
 \subsection{Performance}
-Awatt, Performance wird auf modernen Systemen in ausreichender Menge vorhanden sein. Bitte keine Speicherlecks bauen...
+Flüssige Interaktion mit dem UI muss außerhalb der Simulation möglich sein, während der Simulation ohne Delay darf das ruhig laggen, es tut ja was.
 \subsection {Benutzbarkeit (Schimpanse benötigt)}
-Bin kein Schimpanse, es 
-\pagebreak
+Ausflug in den Zoo. Laptop in den Käfig.
+\subsection {Stabilität}
+Langzeittest mit Testperson.
 \section{Entwicklungsumgebung}
 \subsection{Verwendete Software}
 \begin{tabular}{|c|c|}
