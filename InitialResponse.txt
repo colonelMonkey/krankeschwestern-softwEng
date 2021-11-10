@@ -1,0 +1,155 @@
+Hallo Schwesternschaft, hallo Herr Uwimana,
+
+vielen Dank für ihre Abgabe. Ich hatte einige Freude daran!
+
+Meine Anmerkungen:
+
+Pflichtenheft
+=============
+ - Im Inhaltsverzeichnis gibt es "Softwareanforderungen" gleich doppelt: 2.3.1 und 2.3.2			bleh
+
+Musskiterien:
+ - M0014 und M0003 besser zusammenfassen									bleh
+ - Es fehlt die Wählbarkeit der Nachbarschaftsform (Moore-Nachbarschaft, Von-Neumann-Nachbarschaft)		1 Absatz Text im Handbuch wird das fixen. 1 Absatz Pflichtenheft auch.
+ - Behandlung von Randzellen bei endlicher Fläche?								Alle umliegenden Zellen werden als Zustand 0 behandelt.
+ - Der Zustand einer Zelle muss genau beobachtet werden können, z.B. durch Anzeige des Zustands der		Mal nochmal nachdenken.
+   Zelle (integer) unter dem Mauszeiger Zellzustands als kleines Overlay oder in einem Textfeld bei
+   den Kontrollelementen (Nutzung von GUI-Element 7?).
+
+ + Der Leitfaden zur Definition der Transitionsregeln ist eine sehr gute Idee!
+ + Sie haben das Verhältnis der beiden Aufgaben zueinander durchschaut!
+ 
+Hardwareanforderungen:
+ - Man benötigt zwingend eine "ausreichend" großen Bildschirm (ggf. sogar in bunt;)				Fixed... 
+ 
+Produktfunktionen:
+    AF-01    (1) Das Programm sollte niemals geplant abstürzen!							Ja is ja ok
+        (2) "Entsprechendes Fenster" bitte benennen (mit "Bestellnummer", s.u.).				Hab ich gemacht
+        (3) Was ist der "¡Name¿-Button"?									Ein Placeholder. Fixed.
+    
+    AF-02    (1) Das Programm sollte niemals geplant abstürzen!
+        (2) "Entsprechendes Fenster" bitte benennen (mit "Bestellnummer", s.u.).
+       
+    AF-04    (1) Raten Sie mal...
+        (2) Eventuelle sollten Sie die Farbe/Beschriftung des Buttons ändern, so dass der
+            aktuelle Zustand des Programms unmittelbar ersichtlich ist.						taken care of.
+
+    AF-05    (1) ...												...
+               
+    AF-06    (1) ...												...
+        (2) Hier fehlt eine Angabe zum Wertebereich								jetzt nicht mehr.
+        (3) Das an anderer Stelle ausgewiesene Werteintervall scheint mir zu klein zu sein			mal sehen.
+                - etwa bei einem großen Spielfeld, das mittels Panning betrachtet wird, sind
+                sicherlich mehrere Sekunden Verzögerung notwendig.
+    
+    AF-07    (1) Negative Integer im zulässigen Wertebereich?							fair, fixed. IDK
+        (2) Was geschieht, wenn der Benutzer einen Wert eingibt, nicht mit Enter bestätigt und			Rückkehr auf Hauptoberfläche, alten Wert beibehalten.
+            das Textfeld den Fokus verliert (der Benutzer eine andere Bedienhandlung vornimmt)?
+        (3) Warum ist ein Alkoholpegel ¡ 5 % beim Benutzer erforderlich? Inwiefern handelt es			weniger technisch als juristisch. Die 5%-Hürde sollte nicht überschritten werden.
+            sich um eine technische Notwendigkeit? Wie wird die Vorbedingung überprüft?   
+    
+    RF-01    (1) (Wie) Wird der Inhalt der Regeldatei überprüft? Dateiformat?
+        (2) Was beinhaltet die Fehlermeldung?
+       
+    RF-02    (1) Was beinhaltet die Fehlermeldung?								jaja
+        (2) Dateiformat?
+       
+    SE-01    (1) ...
+        (2) Was bedeutet "Spielzustand pausiert"?
+        (3) Nachbedingung Erfolg ist falsch! "Laden" war dann doch gerade!
+       
+    SE-02    (1) ...
+        (2) Was bedeutet "Spielzustand pausiert"?
+
+           
+     Folgende Funktionen vermisse ich:
+     - Anwendung der Transitionsregeln
+     - zeitdiskrete, synchrone Aktualisierung aller Zellzustände
+     - Datenformate Regeldatei, Spielfeld
+     - Auswahl, Laden, Positionieren und Einfügen eines Musters
+
+3.1.2 - 3.1.4 sind leer?
+
+3.2.2 (1) Es ist nicht gut, sich über Glaubensgemeinschaften lustig zu machen. Jehovas Zeugen
+    gehörten übrigens zu den wenigen Glaubensgemeinschaften, die auch unter dem NS-Regime
+    standhaft bei ihren Werten geblieben sind und nicht geschlossen mit den Nazis kooperiert haben!
+    
+4 Testszenarien
+
+    Unter Testszenarien verstehen wir hier typische Anwendungsfälle. Also etwa:
+     - Programm starten, Standardkonfiguration wählen, Simulation starten, Simulation und Programm beenden.
+     - Programm starten und alternative Regeln und eigenes Spielfeld erstellen, beides Speichern, Simulation starten
+     - laufende Simulation unterbrechen und Spielfeld editieren. Danach Simulation fortsetzen.
+    Dabei sollten die Abläufe konkret so konkret wie möglich benannt werden, insbesondere alle Bedienhandlungen
+    und die Reaktionen des Programms dargestellt werden. Sinnvollerweise integriert man dabei auch Fehlbedienungen
+    mit entsprechenden Fehlermeldungen.
+    Diese Szenarien können dann im Benutzerleitfaden und in der Testspezifikationsphase wiederverwendet werden.
+
+    Die von ihnen beschriebenen Szenarien sind nicht konkret genug. Um diese nutzen zu können, muss genau
+    beschrieben werden, was man erwartet. Es hilft auch, alle von einem Test überdeckten Funktionen/Anforderungen
+    klar zu benennen, etwa um die Vollständigkeit des Tests zu dokumentieren.
+
+4.4    Man schreibt nicht salopp, dass das Programm "laggt". Das ist bei dem von ihnen geforderten >2 Core-Prozessor
+    durch Multithreading in der Regel auch vermeidbar.
+    
+4.5    Cool. Das sehe ich mir dann gerne mit an. Wo ist der nächste Zoo mit Schimpasenhaltung - Duisburg? Krefeld?
+    Leider beschäftigt sich meine Hausbiologin nicht mit Ethologie - aber vielleicht kennen Sie jemanden?
+
+Glossar
+    Multithreading:    Besser nochmal anschauen. Wenn Sie bei Lehrbuch zu Betriebssystemen haben, notfalls auch bei
+            Wikipedia.
+    Gesichter:    Dieser Begriff wird im Pflichtenheft nicht verwendet.
+    
+    Es fehlen Begriffe wie "Zelle", "Spielfeld", "Zustand", "Nachbar", "Nachbarschaft", "Hauptbenutzerfläche",
+    "Spielfeldeditor", "Regeleditor", ...
+    
+    Bitte alle Begriffe definieren, die nicht allgemein bekannt sind oder im Kontext der Anwendung eine
+    spezifische Bedeutung haben!
+    
+Generell: Sie haben die Einzelfunktionen und Anforderungen vorbildlich nach einem Schema nummeriert.
+      Sie sollten diese dann aber auch als Verweise verwenden, etwa um aufzuweisen, welche Kriterien
+      durch welche Produktfunktionen realisiert werden, was/welche Funktionen Voraussetzungen und
+      Nachbedingungen von anderen Funktionen sind, wie Funktionen an GUI-Elemente gebunden werden etc.
+      Das erleichert (bzw. vermeidet) die Interpretation ihrer Angaben.
+    
+ 
+Benutzerleitfaden
+=================
+
+Besser, Sie entscheiden sich klar für die deutsche oder die englische Sprache in Benutzerleitfaden und GUI.
+Denglish ist nie eine gute Wahl! Im Pflichtenheft mag dies noch gehen, denn der Nutzerkreis ist stark eingeschränkt
+(und besteht in diesem Falle aus mehr oder weniger nerdigen Individuen). Beim Benutzerhandbuch und der GUI sieht das ganz anders aus.
+
+
+2. Installation
+    - Wozu benötigt man 1 GB freien Festspeicher? Bitte realistische Angaben machen!
+    - Wie führt man das Programm aus?
+
+3.1 Bildschirmaufbau: 3. Zufallsgenerator
+    - Die Funktionsweise des Dialogfensters ist für mich nur schwer nachvollziehbar.
+        - Wozu Spalten markieren? Sie meinen Zeilen?
+        - Das Bild ist irreführend: Die totale Wahrscheinlichkeit (Summe der W'keiten aller
+          unabhängigen Ereignisse) im Beispiel liegt bei 60%, sollte aber bei 100% liegen.
+          Darüber hinaus passen die "Anzahlen" nicht zu den "Abs. W'keiten". Bei 0-0 müsste
+          sie 10/12 (nicht 50%), bei 1-5 und 6-10 1/12 (nicht 5%).
+
+3.2 Die Funktionen wurden im Pflichtenheft nicht genannt. Bitte nachtragen (Bedienkonzept).
+
+3.3 Die Syntax der Transitionsregeln muss ebenfalls ins Pflichtenheft!
+    - können Sie mit den so erstellbaren Regeln Conway's Game of Life darstellen? Zur Übung und als Beispiel
+      angeben. Wenn's nicht geht: Operatorsatz anpassen.
+
+Glossar: Siehe oben. An beiden Stellen dasselbe Glossar verwenden.
+
+Es fehlen die Anwendungsfälle (heißen im Pflichtenheft "Testszenarien"). Hier bitte recyclen!
+
+
+
+Gesamtwertung: 2/5
+
+Bitte verbessern Sie ihre Abgabe unter Berücksichtigung meiner Anmerkungen und reichen Sie es schnellstmöglich erneut über die Abgabe-Funktion auf Moodle ein.
+(Es gibt auch noch zahlreiche Gelegenheiten, Rechtschreibung und Grammatik zu vervollkommnen.)
+
+Beste Grüße
+
+Christian Düntgen
