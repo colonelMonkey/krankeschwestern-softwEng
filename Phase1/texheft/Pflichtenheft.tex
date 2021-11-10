@@ -98,6 +98,8 @@ W0003 & Performance & Multithreading parallelisierbarer Prozesse\\
 \hline
 W0003 &Farbanpassung & Wenn möglich soll die Farbe eines Zustands durch den Benutzer einstellbar sein.\\
 \hline
+W0004 & Wahl der Nachbarschaft & Es wurde gewünscht, zwischen der Von-Neumann-Nachbarschaft und Moore-Nachbarschaft wählen zu können. Hierzu sei angemerkt dass dies nichts anderes erfordert, als zwei verschiedene Transitionsregeln mitzuliefern, welche entsprechend benannt sind und dann geladen werden können. Es kann genauso ein Ausdruck für Von-Neumann Nachbarschaft wie für Moore-Nachbarschaft gebaut werden, indem die entsprechenden diagonalliegenden Zellen berücksichtigt werden oder eben nicht. Daher ist für dieses Feature keine Ergänzung in der Programmarchitektur erforderlich.\\
+\hline
 \end{longtable}
 
 
@@ -109,8 +111,10 @@ Das Programm soll dazu dienen, Zelluläre Automaten mit recht großer Freiheit b
 Die Verwendung dieses Programms für Conway's Game of life ist einfach, da die Spielregeln mitgeliefert werden. Dies kann von allen interessierten ausprobiert werden, da die Manipulation des Spielfelds zum ausprobieren einlädt.
 
 Leider ist es nicht möglich, den Regeleditor intuitiv bedienbar zu gestalten, da es für eine effiziente Verarbeitung notwendig ist, den Zustand einer Zelle in der nächsten Generation als Mathematische Funktion der Zustönde der Nachbarzellen darzustellen. Aus diesem Grund gibt es zwar einen Leitfaden, um Mathematische Funktionen mit den Umliegenden Zellen als Ausgangsdaten zu erstellen, es ist jedoch nicht einfach, dies zu tun. Deal with it.
+
+
 \subsection{Produktumgebung}
-\subsubsection{Softwareanforderungen}
+
 
 \subsubsection{Softwareanforderungen}
 \begin{itemize}
@@ -123,6 +127,7 @@ Leider ist es nicht möglich, den Regeleditor intuitiv bedienbar zu gestalten, d
 
 \begin{itemize}
     \item Ein Computer aus diesem Jahrtausend mit einer Prozessorarchitektur für die eine JRE verfügbar ist. Dual-Core oder besser empfohlen, Dienstalter nicht über 1,6 Dekaden.
+	\item Dieses Programm erfordert eine Bildausgabe über einen geeigneten Grafikadapter. Für ein optimales Nutzungserlebnis wird ein Farbbildschirm dringend empfohlen.
 \end{itemize}
 
 
@@ -229,13 +234,13 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
     \hline
     Vorbedingung&Programm gestartet, Benutzer lebendig\\
     \hline
-    Auslösendes Ereignis&Mausklick auf den <Name>-Button\\
+    Auslösendes Ereignis&Mausklick auf den Spielfeldeditor-Button\\
     \hline
-    Nachbedingung Erfolg&Öffnen des Fensters "Spielfeldeditor\\
+    Nachbedingung Erfolg&Öffnen des Dropdown-Menüs "Spielfeldeditor" (SE-0X)\\
     \hline
-    Nachbedingung Fehlschlag&Programm stürzt ab\\
+    Nachbedingung Fehlschlag&Programm kehrt mit Fehlermeldung auf das Hauptfenster zurück.\\
     \hline
-    Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
+    Ablauf&Nutzer klickt auf Button und das Dropdown-Menü "Spielfeldeditor" (SE-0X) öffnet sich.\\
     \hline
 \end{tabular}
 \par
@@ -253,11 +258,11 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
     \hline
     Auslösendes Ereignis&Mausklick auf den Regeleditor-Button\\
     \hline
-    Nachbedingung Erfolg&Öffnen des Fensters "Regeleditor\\
+    Nachbedingung Erfolg&Öffnen des Fensters "Regeleditor"\\
     \hline
-    Nachbedingung Fehlschlag&Programm stürzt ab\\
+    Nachbedingung Fehlschlag&Programm kehrt nach Fehlermeldung auf das Hauptfenster zurück.\\
     \hline
-    Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
+    Ablauf&Nutzer klickt auf Button und das Regeleditor-Dropdownmenü öffnet sich.\\
     \hline
 \end{tabular}
 \par
@@ -297,11 +302,11 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
     \hline
     Auslösendes Ereignis&Mausklick auf den Play/Pause-Button\\
     \hline
-    Nachbedingung Erfolg&Umschalten der Simulation zwischen "Simulation läuft" und "Pausiert"\\
+    Nachbedingung Erfolg&Umschalten der Simulation zwischen "Simulation läuft" und "Pausiert" Anzeige des aktuellen Spielzustands durch Icon oder Farbe.\\
     \hline
-    Nachbedingung Fehlschlag&Programm stürzt ab\\
+    Nachbedingung Fehlschlag&Programm kehrt nach Fehlermeldung auf das Hauptfenster zurück.\\
     \hline
-    Ablauf&Simulation gestoppt: User klickt auf Button, Simulation startet. Simulation läuft: User klickt auf Button, Simulation stoppt.\\
+    Ablauf&Simulation gestoppt: User klickt auf Button, Simulation startet, Button zeigt nun ein rotes Quadrat an. Simulation läuft: User klickt auf Button, Simulation stoppt. Button zeigt nun ein rechtsweisendes grünes Dreieck an.\\
     \hline
 \end{tabular}
 \par
@@ -321,7 +326,7 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
     \hline
     Nachbedingung Erfolg& Simulieren und anzeigen der nachfolgenden Spielfeldgeneration\\
     \hline
-    Nachbedingung Fehlschlag&Programm stürzt ab\\
+    Nachbedingung Fehlschlag&Fehlermeldung, Simulation anhalten und auf Hauptfenster zurückkehren.\\
     \hline
     Ablauf&Nutzer klickt auf Button und der Zelluläre Automat bewegt sich genau einen Simulationsschritt weiter.\\
     \hline
@@ -341,11 +346,12 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
     \hline
     Auslösendes Ereignis&Klicken und Ziehen auf dem Delayslider\\
     \hline
-    Nachbedingung Erfolg&Anpassung des Simulationsschritt-Delays\\
+    Nachbedingung Erfolg&Anpassung des Simulationsschritt-Delays zwischen 0 und 5 Sekunden\\
     \hline
-    Nachbedingung Fehlschlag&Programm stürzt ab\\
+    Nachbedingung Fehlschlag&Programm mit Fehlermeldung beenden.\\
     \hline
-    Ablauf&... Nicht im Ernst...\\
+    Ablauf&... Nicht im Ernst... Sliderbedienungsfähigkeit wird vorausgesetzt. \newline Die Verzögerung ist genau als solche zu verstehen: Sie definiert die Zeit, die das Programm zwischen zwei Spielfeldzustandsiterationen verstreichen lässt. Über den Wertebereich kann bei Bedarf verhandelt werden.
+    \\
     \hline
 \end{tabular}
 \par
@@ -365,10 +371,12 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
     \hline
     Nachbedingung Erfolg& Textfeld: User kann neuen Edit-Zielzustand angeben und mit Enter bestätigen. Spielfeld: Zustand der angeklickten Zelle wird auf den Zustand im Textfeld gesetzt. \\
     \hline
-    Nachbedingung Fehlschlag&Textfeld: Bei eingabe eines Nicht-Integers Fehlermeldung und setzen auf 0 (zur Sicherheit)\\
+    Nachbedingung Fehlschlag&Textfeld: Bei eingabe einer Zeichenfolge welche keinen nichtnegativen Integer repräsentiert: Fehlermeldung und bisherigen Zustand beibehalten.\\
     \hline
     Ablauf&Textfeld: Nutzer klickt auf Textfeld. Nutzer gibt ein, welcher Zielzustand gewünscht ist. Nutzer bestätigt mit Enter. 
-    Spielfeld: Nutzer klickt beliebige Zelle an. Zustand der Zelle wird überschrieben durch Zustand im Textfeld\\
+    Spielfeld: Nutzer klickt beliebige Zelle an. Zustand der Zelle wird überschrieben durch Zustand im Textfeld
+    Bei Abbruch wird der vorherige Wert weiterverwendet.
+    \newline Hinweis: Die Alkoholprüfung wird beim Programmstart durch bestätigung eines Pop-Ups durchgeführt "Dieses Programm darf nur von Personen mit einem Alkoholpegel \< 5\% verwendet werden. Durch klick auf OK bestätigen Sie, dass sie diese Bedingung erfüllen"\\
     \hline
 \end{tabular}
 \par
@@ -410,9 +418,10 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
 		\hline
 		Nachbedingung Erfolg&Öffnen des Java-Swing-Fensters mit FileChooser zum öffnen einer Regeldatei\\
 		\hline
-		Nachbedingung Fehlschlag&Fehlermeldung und Rückkehr zur Haupt-Oberfläche.\\
+		Nachbedingung Fehlschlag&Fehlermeldung "Laden Fehlgeschlagen", ggf. mit Ursache "fehlerhafter Ausdruck" und Rückkehr zur Haupt-Oberfläche. Beibehalten der bisherigen Regeln.\\
 		\hline
-		Ablauf&Nutzer klickt auf Button und öffnet das Fenster zum laden einer Regeldatei. Durch auswählen und Bestätigen durch klick auf "Öffnen". wird die aktuell aktive Regel durch die geladene ersetzt.\\
+		Ablauf&Nutzer klickt auf Button und öffnet das Fenster zum laden einer Regeldatei. Durch auswählen und Bestätigen durch klick auf "Öffnen". wird die aktuell aktive Regel durch die geladene ersetzt.
+          Prüfung mittels Algorithmus, ob das Ergebnis vom Typ Integer ist. Dateiformat .txt\\
 		\hline
 	\end{tabular}
 	\par
@@ -429,9 +438,9 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
 		\hline
 		Auslösendes Ereignis&Mausklick auf den Speichern-Button\\
 		\hline
-		Nachbedingung Erfolg&Öffnen des Java-Swing-Fensters mit FileChooser zum speichern einer Regeldatei\\
+		Nachbedingung Erfolg&Öffnen des Java-Swing-Fensters mit FileChooser zum speichern einer Regeldatei als plain text string.\\
 		\hline
-		Nachbedingung Fehlschlag&Fehlermeldung und Rückkehr zur Haupt-Oberfläche.\\
+		Nachbedingung Fehlschlag&Fehlermeldung "Fehler beim Speichern" und Rückkehr zur Haupt-Oberfläche.\\
 		\hline
 		Ablauf&Nutzer klickt auf Button und öffnet das Fenster zum Speichern einer Regeldatei. Durch auswählen und Bestätigen durch klick auf "Öffnen". wird die aktuell aktive Regel an besagter Stelle gespeichert.\\
 		\hline
@@ -454,7 +463,7 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
 		\hline
 		Nachbedingung Fehlschlag&Fehlermeldung und Rückkehr zur Haupt-Oberfläche.\\
 		\hline
-		Ablauf&Durch Klick auf "Standard" wird das Spielfeld als endliches Spielfeld behandelt, an den Kanten werden alle nachbarzellen als 0 angenommen.
+		Ablauf&Durch Klick auf "Standard" wird das Spielfeld als endliches Spielfeld behandelt, an den Kanten werden alle nichtexistenten Nachbarzellen als "Zustand 0"  angenommen.
 		Durch klick auf "Torus" werden die Zellen an den Kanten die Zellen an gegenüberliegenden Kanten als Nachbarn behandeln.\\
 		\hline
 	\end{tabular}
@@ -490,7 +499,7 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
 	    %Bild und Beschreibung der Funktionen auf dem Bild
 \pagebreak
 \par
-    Regeleditor %Ersetzen durch den Namen des Fensters
+    Spielfeldeditor-Dropdown %Ersetzen durch den Namen des Fensters
     \par
     \includegraphics[width=15cm]{spielfeldeditor_dropdown_edit.jpeg} %    width = 5 für kleine Fenster, name == Name des Bildes ohne Dateiendung  
 
