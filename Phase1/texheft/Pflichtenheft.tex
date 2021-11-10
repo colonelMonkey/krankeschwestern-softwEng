@@ -56,13 +56,16 @@ M0012 & Automatische Simulation & Die Simulationsgeschwindigkeit soll über eine
 \hline
 M0013 & Manuelle Simulation & Über einen Button soll die nächste Generation berechnet und angezeigt werden können. \\
 \hline
-M0013 & Zufälliger Anfangszustand & Der Spielfeldzustand soll zufällig generierbar sein. Dazu soll einem Zellzustand eine Wahrscheinlichkeit zugewiesen werden können, mit dem Default-Zustand 0, sodass jede Zelle genau einen Zustand erhält.\\
+M0014 & Zufälliger Anfangszustand & Der Spielfeldzustand soll zufällig generierbar sein. Dazu soll einem Zellzustand eine Wahrscheinlichkeit zugewiesen werden können, mit dem Default-Zustand 0, sodass jede Zelle genau einen Zustand erhält.\\
 
-\hline
-M0014 & Anzeige & Die Anzeige des Spielfeldzustands soll durch Farben erfolgen, wobe einem Zustand eine Farbe zugeordnet wird.\\
 \hline
 M0015 & Startbedingungen & Beim Programmstart soll ein 80x80 Zellen großes Spielfeld präsentiert werden, auf welches die Spielregeln für Conway's Game of Life verwendet werden. \\
 
+\hline
+M0016 & Nachbarschaftswahl & Die Verwendung von sowohl Moore als auch Neumann Nachbarschaft muss ermöglicht werden. Am Rand einer endlichen Fläche können nicht alle Nachbarn existieren und werden auch nicht gezählt. \\
+
+\hline
+M0017 & Numerische Anzeige des Zellzustandes & Der genaue Wert einer Zelle muss irgendwie anzeigbar sein. \\
 \hline
 \end{longtable}    
 \newpage
@@ -123,6 +126,9 @@ Leider ist es nicht möglich, den Regeleditor intuitiv bedienbar zu gestalten, d
 
 \begin{itemize}
     \item Ein Computer aus diesem Jahrtausend mit einer Prozessorarchitektur für die eine JRE verfügbar ist. Dual-Core oder besser empfohlen, Dienstalter nicht über 1,6 Dekaden.
+    \item Farbmonitor mit ausreichend Nutzfläche. Minimal 80 *80 + Platz für die Menus also so 120*120 aber empfohlen ist ein HD Ready Display mit 720*1280 Pixeln.
+    \item Maus mit 3 Tasten und Mausrad.
+    \item Tastatur
 \end{itemize}
 
 
@@ -229,11 +235,11 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
     \hline
     Vorbedingung&Programm gestartet, Benutzer lebendig\\
     \hline
-    Auslösendes Ereignis&Mausklick auf den <Name>-Button\\
+    Auslösendes Ereignis&Mausklick auf den Spielfeldeditor-Button\\
     \hline
     Nachbedingung Erfolg&Öffnen des Fensters "Spielfeldeditor\\
     \hline
-    Nachbedingung Fehlschlag&Programm stürzt ab\\
+    Nachbedingung Fehlschlag&Ausgeben der programminternen Fehlermeldung in Dialogfenster.\\
     \hline
     Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
     \hline
@@ -255,7 +261,7 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
     \hline
     Nachbedingung Erfolg&Öffnen des Fensters "Regeleditor\\
     \hline
-    Nachbedingung Fehlschlag&Programm stürzt ab\\
+    Nachbedingung Fehlschlag&Ausgeben der programminternen Fehlermeldung in Dialogfenster.\\
     \hline
     Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
     \hline
@@ -299,9 +305,9 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
     \hline
     Nachbedingung Erfolg&Umschalten der Simulation zwischen "Simulation läuft" und "Pausiert"\\
     \hline
-    Nachbedingung Fehlschlag&Programm stürzt ab\\
+    Nachbedingung Fehlschlag&Ausgeben der programminternen Fehlermeldung in Dialogfenster.\\
     \hline
-    Ablauf&Simulation gestoppt: User klickt auf Button, Simulation startet. Simulation läuft: User klickt auf Button, Simulation stoppt.\\
+    Ablauf&Simulation gestoppt: User klickt auf Button, Simulation startet. Knopf Hintergund des Knopfes wird Grün. Simulation läuft: User klickt auf Button, Simulation stoppt. Hintergrund Knopfes wird Grau.\\
     \hline
 \end{tabular}
 \par
@@ -321,7 +327,7 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
     \hline
     Nachbedingung Erfolg& Simulieren und anzeigen der nachfolgenden Spielfeldgeneration\\
     \hline
-    Nachbedingung Fehlschlag&Programm stürzt ab\\
+    Nachbedingung Fehlschlag&Ausgeben der programminternen Fehlermeldung in Dialogfenster.\\
     \hline
     Ablauf&Nutzer klickt auf Button und der Zelluläre Automat bewegt sich genau einen Simulationsschritt weiter.\\
     \hline
@@ -343,9 +349,9 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
     \hline
     Nachbedingung Erfolg&Anpassung des Simulationsschritt-Delays\\
     \hline
-    Nachbedingung Fehlschlag&Programm stürzt ab\\
+    Nachbedingung Fehlschlag&Ausgeben der programminternen Fehlermeldung in Dialogfenster.\\
     \hline
-    Ablauf&... Nicht im Ernst...\\
+    Ablauf&Nutzer zieht den Slider auf eine Stelle im Intervall 0-5 Sekunden\\
     \hline
 \end{tabular}
 \par
@@ -359,7 +365,7 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
          \hline
     Akteur&Benutzer des Programms \\
     \hline
-    Vorbedingung&Programm gestartet, Benutzer lebendig und mit einem Alkoholpegel < 5 \% \\
+    Vorbedingung&Programm gestartet, zu editierende Zelle mit Linksklick ausgewählt, Benutzer lebendig und mindestens leicht angetrunken. Pegel wird durch KI analyse der Mausbewegungen ermittelt. \\
     \hline
     Auslösendes Ereignis&Mausklick auf das Zustandstextfeld, oder auf das Spielfeld\\
     \hline
@@ -367,7 +373,7 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
     \hline
     Nachbedingung Fehlschlag&Textfeld: Bei eingabe eines Nicht-Integers Fehlermeldung und setzen auf 0 (zur Sicherheit)\\
     \hline
-    Ablauf&Textfeld: Nutzer klickt auf Textfeld. Nutzer gibt ein, welcher Zielzustand gewünscht ist. Nutzer bestätigt mit Enter. 
+    Ablauf&Textfeld: Nutzer klickt auf Textfeld. Nutzer gibt ein, welcher Zielzustand(32 bit signed Integer) gewünscht ist. Nutzer bestätigt mit Enter. 
     Spielfeld: Nutzer klickt beliebige Zelle an. Zustand der Zelle wird überschrieben durch Zustand im Textfeld\\
     \hline
 \end{tabular}
@@ -529,7 +535,7 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
         \hline
         Nachbedingung Erfolgt & Öffnen des Fensters "Laden"\\
         \hline
-        Nachbedingung Fehlschlag & Programm stürzt ab\\
+        Nachbedingung Fehlschlag & Ausgeben der programminternen Fehlermeldung in Dialogfenster.\\
         \hline
         Ablauf & Nutzer klickt auf den Laden-Button und wählt die jeweilige Datei aus, die in das Spiel eingebunden werden soll.\\
         \hline
@@ -552,7 +558,7 @@ Ablauf&Nutzer klickt auf Button und das entsprechende Fenster öffnet sich.\\
         \hline
         Nachbedingung Erfolgt&Öffnen des Fensters "Einfügen"\\
         \hline
-        Nachbedingung Fehlschlag&Programm stürzt ab\\
+        Nachbedingung Fehlschlag&Ausgeben der programminternen Fehlermeldung in Dialogfenster.\\
         \hline
         Ablauf&Nutzer klickt auf den Einfügen-Button und wählt aus dem Pop-Up-Fenster den jeweiligen Spielzustand aus, der in das Spielfeld eingebunden werden soll.\\
         \hline
