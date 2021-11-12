@@ -48,8 +48,8 @@ Produktfunktionen:
         (3) Warum ist ein Alkoholpegel ¡ 5 % beim Benutzer erforderlich? Inwiefern handelt es			weniger technisch als juristisch. Die 5%-Hürde sollte nicht überschritten werden.
             sich um eine technische Notwendigkeit? Wie wird die Vorbedingung überprüft?   
     
-    RF-01    (1) (Wie) Wird der Inhalt der Regeldatei überprüft? Dateiformat?
-        (2) Was beinhaltet die Fehlermeldung?
+    RF-01    (1) (Wie) Wird der Inhalt der Regeldatei überprüft? Dateiformat?					TODO:Idealerweise werden die regeln geprüft wenn sie kompiliert werden und das passiert am besten beim starten der simulation wenn die regeln sich seit dem letzten mal geändert haben.
+        (2) Was beinhaltet die Fehlermeldung?									Das einzige was schieftgehen kann ist keine lese rechte zu haben. Das Dateiformat wird vom Filechooser vorgegeben. 
        
     RF-02    (1) Was beinhaltet die Fehlermeldung?								jaja
         (2) Dateiformat?
@@ -122,30 +122,30 @@ Denglish ist nie eine gute Wahl! Im Pflichtenheft mag dies noch gehen, denn der 
 
 
 2. Installation
-    - Wozu benötigt man 1 GB freien Festspeicher? Bitte realistische Angaben machen!
-    - Wie führt man das Programm aus?
+    - Wozu benötigt man 1 GB freien Festspeicher? Bitte realistische Angaben machen!				done
+    - Wie führt man das Programm aus?										done
 
 3.1 Bildschirmaufbau: 3. Zufallsgenerator
-    - Die Funktionsweise des Dialogfensters ist für mich nur schwer nachvollziehbar.
-        - Wozu Spalten markieren? Sie meinen Zeilen?
-        - Das Bild ist irreführend: Die totale Wahrscheinlichkeit (Summe der W'keiten aller
+    - Die Funktionsweise des Dialogfensters ist für mich nur schwer nachvollziehbar.				traurig
+        - Wozu Spalten markieren? Sie meinen Zeilen?								done
+        - Das Bild ist irreführend: Die totale Wahrscheinlichkeit (Summe der W'keiten aller			ist es nicht wenn man richtig liest, done
           unabhängigen Ereignisse) im Beispiel liegt bei 60%, sollte aber bei 100% liegen.
           Darüber hinaus passen die "Anzahlen" nicht zu den "Abs. W'keiten". Bei 0-0 müsste
-          sie 10/12 (nicht 50%), bei 1-5 und 6-10 1/12 (nicht 5%).
+          sie 10/12 (nicht 50%), bei 1-5 und 6-10 1/12 (nicht 5%).						von 1-10 sind nicht 12 zahlen düntgen von 0 bis 10 auch nicht.
 
-3.2 Die Funktionen wurden im Pflichtenheft nicht genannt. Bitte nachtragen (Bedienkonzept).
+3.2 Die Funktionen wurden im Pflichtenheft nicht genannt. Bitte nachtragen (Bedienkonzept).			wtf. to do
 
-3.3 Die Syntax der Transitionsregeln muss ebenfalls ins Pflichtenheft!
-    - können Sie mit den so erstellbaren Regeln Conway's Game of Life darstellen? Zur Übung und als Beispiel
+3.3 Die Syntax der Transitionsregeln muss ebenfalls ins Pflichtenheft!						ist sie schon grob aber okay, to do
+    - können Sie mit den so erstellbaren Regeln Conway's Game of Life darstellen? Zur Übung und als Beispiel	ist möglich, wird gemacht, to do
       angeben. Wenn's nicht geht: Operatorsatz anpassen.
 
-Glossar: Siehe oben. An beiden Stellen dasselbe Glossar verwenden.
+Glossar: Siehe oben. An beiden Stellen dasselbe Glossar verwenden.						glossar anpassen, auch felix, to do
 
-Es fehlen die Anwendungsfälle (heißen im Pflichtenheft "Testszenarien"). Hier bitte recyclen!
+Es fehlen die Anwendungsfälle (heißen im Pflichtenheft "Testszenarien"). Hier bitte recyclen!			felix wenn du weißt was er meint sags mir bitte. ich hab nichts derartiges gefunden. ~Nico
 
 
 
-Gesamtwertung: 2/5
+Gesamtwertung: 2/5												frechheit
 
 Bitte verbessern Sie ihre Abgabe unter Berücksichtigung meiner Anmerkungen und reichen Sie es schnellstmöglich erneut über die Abgabe-Funktion auf Moodle ein.
 (Es gibt auch noch zahlreiche Gelegenheiten, Rechtschreibung und Grammatik zu vervollkommnen.)
