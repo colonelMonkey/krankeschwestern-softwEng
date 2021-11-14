@@ -21,7 +21,7 @@
 
 \section{Zielbestimmung}
 \subsection{Musskriterien}
-Das Programm soll dazu dienen, Zelluläre Automaten auf einem 2-D orthogonalen Spielfeld darstellen zu können. Dazu werden als Beispiel die Regeln für Conway`s Game of Life verwendet.
+Das Programm soll dazu dienen, Zelluläre Automaten auf einem 2D orthogonalen Spielfeld darstellen zu können. Dazu werden als Beispiel die Regeln für Conway`s Game of Life verwendet.
 Hierzu sind unbedingt die folgenden Features erforderlich:
 
 \par
@@ -32,13 +32,13 @@ Hierzu sind unbedingt die folgenden Features erforderlich:
 \hline
 M0001     & UI & Das Programm muss eine graphische Oberfläche haben.  \\
 \hline
-M0002 & Scope & •	Es soll ein zellulärer Automat mit möglichst großer Freiheit definiert und simuliert werden können.  \\
+M0002 & Scope & Es soll ein zellulärer Automat mit möglichst großer Freiheit definiert und simuliert werden können.  \\
 \hline
-M0003 & Darstellung Spielfeld & •	Die Darstellung des Zellulären Automaten erfolgt über eine 2 Dimensionale Matrix aus Quadraten deren Farbe und Helligkeit den Zustand eines Feldes wiedergeben. \\
+M0003 & Darstellung Spielfeld & Die Darstellung des Zellulären Automaten Erfolgt über eine 2D Matrix aus Quadraten deren Farbe und Helligkeit den Zustand eines Feldes wiedergeben. \\
 \hline
 M0004 & Transitionsregeleditor & Die Transitionsregeln sollen über eine definierte und im Handbuch dokumentierte Syntax (invers Polnische Notation, ggf. auch mathematische Schreibweise) formuliert werden können. Der neue Zustand einer Zelle darf dabei von der Zelle selbst, sowie von den umliegenden acht benachbarten Zellen abhängen. Ihr Status wird in Variablen bereitgestellt.\\
 \hline
-M0005 & Spielfeldaufbau & Das Spielfeld soll als 2-D Array von Integerwerten ausgeführt sein, welche den Zellzustand repräsentieren.\\
+M0005 & Spielfeldaufbau & Das Spielfeld soll als 2D Array von Integerwerten ausgeführt sein, welche den Zellzustand repräsentieren.\\
 \hline
 0006 & Spielfeldgröße & Die Spielfeldgröße soll vor Simulationsstart vom Benutzer über (Text-)Eingabefelder festgelegt werden können.\\
 \hline
@@ -48,7 +48,7 @@ M0008 & Einfügen & Es sollen Figuren in das Spielfeld eingefügt werden können
 \hline
 M0009 & Navigation & es soll möglich sein, das Spielfeld mit Zoom und Pan verschieden zu betrachten. \\
 \hline
-M0010 & Spielfeldmanipulation & Der Zustand einer Zelle soll durch Mausklick darauf auf einen wählbaren Wert einstellbar sein. Das Wählen des Werts soll durch ein Texteingabefeld auf der Benutzeroberfläche erfolgen. Details in der Beschreibung der Benutzeroberfläche.\\
+M0010 & Spielfeldmanipulation & Der Zustand einer Zelle soll durch Mausklick darauf auf einen wählbaren Wert einstellbar sein. Das Wählen des Werts soll durch ein Texteingabefeld auf der Benutzeroberfläche Erfolgten. Details in der Beschreibung der Benutzeroberfläche.\\
 \hline
 M0011 & Topologie & Das Randverhalten des Spielfelds soll zwischen begrenztem Rechteck und Torus (Zellen an den Kanten sind mit den ihnen gegenüberliegen zellen benachbart) wählbar sein.\\
 \hline
@@ -107,8 +107,8 @@ Leider ist es nicht möglich, den Regeleditor intuitiv bedienbar zu gestalten, d
 
 \begin{itemize}
     \item Ein Computer aus diesem Jahrtausend mit einer Prozessorarchitektur für die eine JRE verfügbar ist. Dual-Core oder besser empfohlen, Dienstalter nicht über 1,6 Dekaden.
-    \item Farbmonitor mit ausreichend Nutzfläche. Minimal 80 *80 + Platz für die Menus also so 120*120 aber empfohlen ist ein HD Ready Display mit 720*1280 Pixeln.
-    \item Maus mit 3 Tasten und Mausrad. 
+    \item Farbmonitor mit ausreichend Nutzfläche mindestens 80 *80 Pixel. Empfohlen wird ein HD Ready Display mit 720*1280 Pixeln.
+    \item Maus die mit Links.-/ Rechtsklicktasten und einem Mausrad bestückt ist. 
     \item Tastatur
 \end{itemize}
 
@@ -118,8 +118,8 @@ Leider ist es nicht möglich, den Regeleditor intuitiv bedienbar zu gestalten, d
 
 \begin{itemize}
     \item Schreib- und Leserechte für die Speicherstände.
-    \item verfügbarer Speicherplatz. (500 MB Festplattenspeicher großzügigerweise empfohlen)
-    \item Arbeitsspeicher angepasst an die Feldgröße (128 MB sollten für die Standardkonfiguration ausreichen)
+    \item Verfügbarer Speicherplatz (großzügigerweise werden 500 MB Festplattenspeicher empfohlen).
+    \item Arbeitsspeicher angepasst an die Feldgröße (Standardtkonfiguration benötigt 128 MB).
 \end{itemize}
 
 \pagebreak
@@ -129,7 +129,7 @@ Leider ist es nicht möglich, den Regeleditor intuitiv bedienbar zu gestalten, d
 \section{Produktfunktionen}
 \subsection{Funktionale Anforderungen}
 \subsubsection{Benutzeroberfläche}
-Nach dem Start soll folgende Oberfläche als Standard auftauchen. Im folgenden werden die (numerierten) UI-Elemente erläutert.
+Nach dem Start wird folgende Oberfläche als Standard erscheinen. Im folgenden werden die (numerierten) UI-Elemente erläutert.
 \par
 Hauptbenutzerfläche
 \par
@@ -137,15 +137,15 @@ Hauptbenutzerfläche
 
 \begin{longtable}[m]{|m{2cm}|m{4cm}|m{9cm}|}
 \hline
- AF-01 & Spielfeldeditor & Klick auf den Button Spielfeldeditor öffnet das Dropdownmenü "Spielfeldeditor".   \\
+ AF-01 & Spielfeldeditor & Mausklick auf den Button Spielfeldeditor öffnet das Dropdownmenü "Spielfeldeditor".   \\
  \hline
-AF-02 & Regeleditor & Klick auf den Button "Regeleditor" öffnet das Dropdown-Menü "Regeleditor" \\
+AF-02 & Regeleditor & Mausklick auf den "Regeleditor- Button " öffnet das Dropdownmenü "Regeleditor" \\
  \hline
-AF-03& Undo/Redo& Klick auf "undo" macht die letzte Eingabe des Spielers rückgängig. "Redo" stellt sie wieder her. Hochoptional. \\
+AF-03& Undo/Redo& Mausklick auf "undo" macht die letzte Eingabe des Spielers rückgängig. "Redo" stellt sie wieder her (Hochoptional) \\
  \hline
- AF-04 & Simulation starten / unterbrechen & Klick auf den Button schaltet die automatische Simulation an oder aus. \\
+ AF-04 & Simulation starten / unterbrechen & Mausklick auf den Button schaltet die automatische Simulation an oder aus. \\
  \hline
- AF-05& Stepover & Klick auf den Button "STEP" führt genau einen Simulationsschritt aus.  \\
+ AF-05& Stepover & Mauklick auf den "STEP- Button " führt genau einen Simulationsschritt aus.  \\
 
 \hline
  AF-06 & Delay-Slider & Mit diesem Slider kann die Verzögerung zwischen zwei Generationen zwischen 1 und 0 sekunden stufenlos ausgewählt werden. \\
@@ -166,11 +166,11 @@ AF-03& Undo/Redo& Klick auf "undo" macht die letzte Eingabe des Spielers rückg�
     \hline
     Vorbedingung&Programm gestartet, Benutzer lebendig\\
     \hline
-    Auslösendes Ereignis&Mausklick auf den Spielfeldeditor-Button\\
+    Auslösendes Ereignis&Mausklick auf den "Spielfeldeditor-Button"\\
     \hline
-    Nachbedingung Erfolg&Öffnen des Dropdown-Menüs "Spielfeldeditor" (SE-0X)\\
+    Nachbedingung Erfolgt&Öffnen des Dropdownmenü "Spielfeldeditor"\\
     \hline
-    Nachbedingung Fehlschlag&Programm kehrt mit Fehlermeldung auf das Hauptfenster zurück.\\
+    Nachbedingung Fehlschlag&Ausgeben der programminternen Fehlermeldung im Dialogfenster.\\
     \hline
     Ablauf&Nutzer klickt auf Button und das Dropdown-Menü "Spielfeldeditor" (SE-0X) öffnet sich.\\
     \hline
@@ -188,11 +188,11 @@ AF-03& Undo/Redo& Klick auf "undo" macht die letzte Eingabe des Spielers rückg�
     \hline
     Vorbedingung&Programm gestartet, Benutzer lebendig\\
     \hline
-    Auslösendes Ereignis&Mausklick auf den Regeleditor-Button\\
+    Auslösendes Ereignis&Mausklick auf den "Regeleditor-Button"\\
     \hline
-    Nachbedingung Erfolg&Öffnen des Fensters "Regeleditor"\\
+    Nachbedingung Erfolgt&Öffnen des Fensters "Regeleditor"\\
     \hline
-    Nachbedingung Fehlschlag&Programm kehrt nach Fehlermeldung auf das Hauptfenster zurück.\\
+    Nachbedingung Fehlschlag&Ausgeben der programminternen Fehlermelung im Dialogfenster.\\
     \hline
     Ablauf&Nutzer klickt auf Button und das Regeleditor-Dropdownmenü öffnet sich.\\
     \hline
@@ -212,7 +212,7 @@ AF-03& Undo/Redo& Klick auf "undo" macht die letzte Eingabe des Spielers rückg�
     \hline
     Auslösendes Ereignis&Mausklick auf den Undo- bzw. Redo-Button\\
     \hline
-    Nachbedingung Erfolg&Undo: Rückgängig machen der zuletzt ausgeführten Aktion. Redo: Wiederherstellen. Hochoptional.\\
+    Nachbedingung Erfolgt&Undo: Rückgängig machen der zuletzt ausgeführten Aktion. Redo: Wiederherstellen. Hochoptional.\\
     \hline
     Nachbedingung Fehlschlag&Undo: Fehlermeldung : "Nichts zurückzusetzen", Redo: Fehlermeldung: "nichts wiederherzustellen".\\
     \hline
@@ -232,11 +232,11 @@ AF-03& Undo/Redo& Klick auf "undo" macht die letzte Eingabe des Spielers rückg�
     \hline
     Vorbedingung&Programm gestartet, Benutzer lebendig\\
     \hline
-    Auslösendes Ereignis&Mausklick auf den Play/Pause-Button\\
+    Auslösendes Ereignis&Mausklick auf den "Play/Pause-Button"\\
     \hline
-    Nachbedingung Erfolg&Umschalten der Simulation zwischen "Simulation läuft" und "Pausiert" Anzeige des aktuellen Spielzustands durch Icon oder Farbe.\\
+    Nachbedingung Erfolgt&Umschalten der Simulation zwischen "Simulation läuft" und "Pausiert" Anzeige des aktuellen Spielzustands durch Icon oder Farbe.\\
     \hline
-    Nachbedingung Fehlschlag&Programm kehrt nach Fehlermeldung auf das Hauptfenster zurück.\\
+    Nachbedingung Fehlschlag&Ausgeben der programminternen Fehlermelung im Dialogfenster.\\
     \hline
     Ablauf&Simulation gestoppt: User klickt auf Button, Simulation startet, Button zeigt nun ein rotes Quadrat an. Simulation läuft: User klickt auf Button, Simulation stoppt. Button zeigt nun ein rechtsweisendes grünes Dreieck an.\\
     \hline
@@ -254,11 +254,11 @@ AF-03& Undo/Redo& Klick auf "undo" macht die letzte Eingabe des Spielers rückg�
     \hline
     Vorbedingung&Programm gestartet, Benutzer lebendig und im Vollbesitz seiner Maus\\
     \hline
-    Auslösendes Ereignis&Mausklick auf den STEPOVER-Button\\
+    Auslösendes Ereignis&Mausklick auf den "STEPOVER-Button"\\
     \hline
-    Nachbedingung Erfolg& Simulieren und anzeigen der nachfolgenden Spielfeldgeneration\\
+    Nachbedingung Erfolgt& Simulieren und anzeigen der nachfolgenden Spielfeldgeneration\\
     \hline
-    Nachbedingung Fehlschlag&Fehlermeldung, Simulation anhalten und auf Hauptfenster zurückkehren.\\
+    Nachbedingung Fehlschlag&Ausgeben der programminternen Fehlermelung im Dialogfenster.\\
     \hline
     Ablauf&Nutzer klickt auf Button und der Zelluläre Automat bewegt sich genau einen Simulationsschritt weiter.\\
     \hline
@@ -276,11 +276,11 @@ AF-03& Undo/Redo& Klick auf "undo" macht die letzte Eingabe des Spielers rückg�
     \hline
     Vorbedingung&Programm gestartet, Benutzer lebendig\\
     \hline
-    Auslösendes Ereignis&Klicken und Ziehen auf dem Delayslider\\
+    Auslösendes Ereignis& Mausklick und Ziehen auf dem "Delayslider"\\
     \hline
-    Nachbedingung Erfolg&Anpassung des Simulationsschritt-Delays zwischen 0 und 5 Sekunden\\
+    Nachbedingung Erfolgt&Anpassung des Simulationsschritt-Delays zwischen 0 und 5 Sekunden\\
     \hline
-    Nachbedingung Fehlschlag&Programm mit Fehlermeldung beenden.\\
+    Nachbedingung Fehlschlag& Ausgeben der programminternen Fehlermelung im Dialogfenster.\\
     \hline
     Ablauf&... Nicht im Ernst... Sliderbedienungsfähigkeit wird vorausgesetzt. \newline Die Verzögerung ist genau als solche zu verstehen: Sie definiert die Zeit, die das Programm zwischen zwei Spielfeldzustandsiterationen verstreichen lässt. Über den Wertebereich kann bei Bedarf verhandelt werden.
     \\
@@ -299,11 +299,11 @@ AF-03& Undo/Redo& Klick auf "undo" macht die letzte Eingabe des Spielers rückg�
     \hline
     Vorbedingung&Programm gestartet, Benutzer lebendig und mit einem Alkoholpegel < 5 \% \\
     \hline
-    Auslösendes Ereignis&Mausklick auf das Zustandstextfeld, oder auf das Spielfeld\\
+    Auslösendes Ereignis&Mausklick auf das "Zustandstextfeld" oder auf das "Spielfeld"\\
     \hline
-    Nachbedingung Erfolg& Textfeld: User kann neuen Edit-Zielzustand angeben und mit Enter bestätigen. Spielfeld: Zustand der angeklickten Zelle wird auf den Zustand im Textfeld gesetzt. \\
+    Nachbedingung Erfolgt& Textfeld: User kann neuen Edit-Zielzustand angeben und mit Enter bestätigen. Spielfeld: Zustand der angeklickten Zelle wird auf den Zustand im Textfeld gesetzt. \\
     \hline
-    Nachbedingung Fehlschlag&Textfeld: Bei eingabe einer Zeichenfolge welche keinen nichtnegativen Integer repräsentiert: Fehlermeldung und bisherigen Zustand beibehalten.\\
+    Nachbedingung Fehlschlag&Textfeld: Bei Eingabe einer Zeichenfolge welche keinen nichtnegativen Integer repräsentiert: Fehlermeldung und bisherigen Zustand beibehalten.\\
     \hline
     Ablauf&Textfeld: Nutzer klickt auf Textfeld. Nutzer gibt ein, welcher Zielzustand gewünscht ist. Nutzer bestätigt mit Enter. 
     \linebreak
@@ -347,15 +347,15 @@ AF-03& Undo/Redo& Klick auf "undo" macht die letzte Eingabe des Spielers rückg�
           \hline
           Akteur&Benutzer des Programms \\
           \hline
-          Vorbedingung&Programm gestartet, Benutzer lebendig, Regeleditor Dropdownmenü ausgewählt\\
+          Vorbedingung&Programm gestartet, Benutzer lebendig, Dropdownmenü "Regeleditor" auswählen\\
           \hline
-          Auslösendes Ereignis&Mausklick auf den Laden-Button\\
+          Auslösendes Ereignis&Mausklick auf den "Laden- Button"\\
           \hline
-          Nachbedingung Erfolg&Öffnen des Java-Swing-Fensters mit FileChooser zum öffnen einer Regeldatei\\
+          Nachbedingung Erfolgt&Öffnen des Java-Swing-Fensters mit FileChooser zum öffnen einer Regeldatei\\
           \hline
           Nachbedingung Fehlschlag&Fehlermeldung "Laden Fehlgeschlagen", ggf. mit Ursache "fehlerhafter Ausdruck" und Rückkehr zur Haupt-Oberfläche. Beibehalten der bisherigen Regeln.\\
           \hline
-          Ablauf&Nutzer klickt auf Button und öffnet das Fenster zum laden einer Regeldatei. Durch auswählen und Bestätigen durch klick auf "Öffnen". wird die aktuell aktive Regel durch die geladene ersetzt.
+          Ablauf&Nutzer klickt auf Button und öffnet das Fenster zum laden einer Regeldatei. Durch auswählen und Bestätigen durch klick auf "Öffnen" wird die aktuell aktive Regel durch die geladene ersetzt.
           Prüfung mittels Algorithmus, ob das Ergebnis vom Typ Integer ist. Dateiformat .txt\\
           \hline
      \end{tabular}
@@ -369,15 +369,15 @@ AF-03& Undo/Redo& Klick auf "undo" macht die letzte Eingabe des Spielers rückg�
           \hline
           Akteur&Benutzer des Programms \\
           \hline
-          Vorbedingung&Programm gestartet, Benutzer lebendig, Regeleditor Dropdownmenü ausgewählt\\
+          Vorbedingung&Programm gestartet, Benutzer lebendig, Dropdownmenü "Regeleditor" auswählen\\
           \hline
-          Auslösendes Ereignis&Mausklick auf den Speichern-Button\\
+          Auslösendes Ereignis&Mausklick auf den "Speichern- Button"\\
           \hline
-          Nachbedingung Erfolg&Öffnen des Java-Swing-Fensters mit FileChooser zum speichern einer Regeldatei als plain text string.\\
+          Nachbedingung Erfolgt&Öffnen des Java-Swing-Fensters mit FileChooser zum speichern einer Regeldatei als plain text string.\\
           \hline
           Nachbedingung Fehlschlag&Fehlermeldung "Fehler beim Speichern" und Rückkehr zur Haupt-Oberfläche.\\
           \hline
-          Ablauf&Nutzer klickt auf Button und öffnet das Fenster zum Speichern einer Regeldatei. Durch auswählen und Bestätigen durch klick auf "Öffnen". wird die aktuell aktive Regel an besagter Stelle gespeichert.\\
+          Ablauf&Nutzer klickt auf Button und öffnet das Fenster zum Speichern einer Regeldatei. Durch auswählen und Bestätigen durch klick auf "Öffnen" wird die aktuell aktive Regel an besagter Stelle gespeichert.\\
           \hline
      \end{tabular}
      \par
@@ -390,13 +390,13 @@ AF-03& Undo/Redo& Klick auf "undo" macht die letzte Eingabe des Spielers rückg�
 		\hline
 		Akteur&Benutzer des Programms \\
 		\hline
-		Vorbedingung&Programm gestartet, Benutzer lebendig, Regeleditor Dropdownmenü ausgewählt\\
+		Vorbedingung&Programm gestartet, Benutzer lebendig, Dropdownmenü "Regeleditor" auswählen\\
 		\hline
-		Auslösendes Ereignis&Mausklick auf den Topologie-RadioButton\\
+		Auslösendes Ereignis&Mausklick auf den "Topologie- Radio- Button"\\
 		\hline
-		Nachbedingung Erfolg&Setzen der Spielfeldkantenbehandlung auf Torus oder Beschränkt, je nach Wunsch.\\
+		Nachbedingung Erfolgt&Setzen der Spielfeldkantenbehandlung auf Torus oder Beschränkt, je nach Wunsch.\\
 		\hline
-		Nachbedingung Fehlschlag&Fehlermeldung und Rückkehr zur Haupt-Oberfläche.\\
+		Nachbedingung Fehlschlag&Ausgeben der programminternen Fehlermeldung im Dialogfenster.\\
 		\hline
 		Ablauf&Durch Klick auf "Standard" wird das Spielfeld als endliches Spielfeld behandelt, an den Kanten werden alle nachbarzellen als "Zustand 0" angenommen.
 		Durch klick auf "Torus" werden die Zellen an den Kanten die Zellen an gegenüberliegenden Kanten als Nachbarn behandeln.\\
@@ -421,11 +421,11 @@ AF-03& Undo/Redo& Klick auf "undo" macht die letzte Eingabe des Spielers rückg�
 		\hline
 		Auslösendes Ereignis&Mausklick auf den "Regel Bearbeiten"-Button im Regeleditor-Dropdownmenü\\
 		\hline
-		Nachbedingung Erfolg&Öffnen des Popupfensters "Regeleditor" (siehe oben).\\
+		Nachbedingung Erfolgt&Öffnen des Popupfensters "Regeleditor" (siehe oben).\\
 		\hline
-		Nachbedingung Fehlschlag&Fehlermeldung und Rückkehr zur Haupt-Oberfläche.\\
+		Nachbedingung Fehlschlag&Ausgeben der programminternen Fehlermeldung im Dialogfenster.\\
 		\hline
-		Ablauf&Öffnen des Übergangsregel-Editors. Bei Öffnen steht im Textfeld die zurzeit verwendete Transitionsregel. Durch Tastatureingabe kann der String im Textfeld verändert werden, womit die Transitionsregel angepasst wird. Ferner gibt es ein Bild links, welches als Hilfestellung die Variablen angibt, welche die Zellzustände von Nachbarzellen angeben. Auf die Weise kann der Zustand der akuell betrachteten Zelle für die nächste Iteration auf Basis ihrer Nachbarn berechnet werden\\
+		Ablauf&Öffnen des Übergangsregel-Editors. Beim Öffnen steht im Textfeld die zurzeit verwendete Transitionsregel. Durch Tastatureingabe kann der String im Textfeld verändert werden, womit die Transitionsregel angepasst wird. Ferner gibt es ein Bild links, welches als Hilfestellung die Variablen angibt, welche die Zellzustände von Nachbarzellen angeben. Auf die Weise kann der Zustand der akuell betrachteten Zelle für die nächste Iteration auf Basis ihrer Nachbarn berechnet werden\\
 		\hline
 	\end{tabular}
 	\par
@@ -440,7 +440,7 @@ AF-03& Undo/Redo& Klick auf "undo" macht die letzte Eingabe des Spielers rückg�
 
     \begin{longtable}[m]{|m{2cm}|m{4cm}|m{9cm}|} % Die Tabelle für grobe Auflistung, mit dem Format
         \hline
-        SE-01 & Laden & Wiederherstellen eines Gespeicherten Spielfeldes durch Auswahl der Datei. \\
+        SE-01 & Laden & Ruft Filechooser auf, worüber ein bereits gespeichertes Spielfeld geladen wird. \\
         \hline
         SE-02 & Einfügen & Einen kleineren Spielfeldzustand in das Aktuelle wird an einer beliebigen Stelle eingefügt. \\
         \hline
@@ -467,13 +467,13 @@ AF-03& Undo/Redo& Klick auf "undo" macht die letzte Eingabe des Spielers rückg�
         \hline
         Akteur &  Benutzer des Programms \\
         \hline
-        Vorbedingung & Spielzustand pausiert\\
+        Vorbedingung & Spielzustand über den "Play/Pause- Button" pausieren. Hintergrundfarbe des Buttons färbt sich grau.\\
         \hline
-        Auslösendes Ereignis & Linksklick auf den Laden-Button\\
+        Auslösendes Ereignis & Mausklick auf den "Laden- Button"\\
         \hline
-        Nachbedingung Erfolgt & Öffnen des Fensters "Laden"\\
+        Nachbedingung Erfolgt & Öffnen des Java- Swing- Fensters mit Filechooser zum öffnen einer Datei um ein geispeichertes Spielfeld zu laden.\\
         \hline
-        Nachbedingung Fehlschlag & Ausgeben der programminternen Fehlermeldung in Dialogfenster.\\
+        Nachbedingung Fehlschlag & Ausgbe der programminternen Fehlermeldung im Dialogfenster.\\
         \hline
         Ablauf & Nutzer klickt auf den Laden-Button und wählt die jeweilige Datei aus, die in das Spiel eingebunden werden soll.\\
         \hline
@@ -490,15 +490,15 @@ AF-03& Undo/Redo& Klick auf "undo" macht die letzte Eingabe des Spielers rückg�
         \hline
         Akteur&Benutzer des Programms \\
         \hline
-        Vorbedingung & Spielzustand pausiert\\
+        Vorbedingung & Spielzustand über den "Play/Pause- Button" pausieren. Hintergrundfarbe des Buttons färbt sich grau.\\
         \hline
-        Auslösendes Ereignis & Linksklick auf den Einfügen-Button\\
+        Auslösendes Ereignis & Mausklick auf den "Einfügen- Button"\\
         \hline
-        Nachbedingung Erfolgt&Öffnen des Fensters "Einfügen"\\
+        Nachbedingung Erfolgt& Öffnen des Java- Swing- Fensters mit Filechooser zum öffnen einer Datei um ein kleineren Spielzustand in das aktuelle Spiel einzufügen.\\
         \hline
-        Nachbedingung Fehlschlag&Ausgeben der programminternen Fehlermeldung in Dialogfenster.\\
+        Nachbedingung Fehlschlag&Ausgbe der programminternen Fehlermeldung im Dialogfenster.\\
         \hline
-        Ablauf&Nutzer klickt auf den Einfügen-Button und wählt aus dem Pop-Up-Fenster den jeweiligen Spielzustand aus, der in das Spielfeld eingebunden werden soll.\\
+        Ablauf&Nutzer klickt auf den "Einfügen-Button" und wählt aus dem Pop-Up-Fenster den jeweiligen Spielzustand aus, der in das Spielfeld eingebunden werden soll.\\
         \hline
     \end{tabular}
     \par
@@ -526,23 +526,27 @@ Hinweis: Für die Sicherheit des Nutzers wird nicht garantiert.
 
 \section{Testszenarien}
 \subsection{UI}
+
+%Hier müssen noch Testszenarien aufgearbeitet werden nach Herr Düntgen.
 Das UserInterface bietet einige Möglichkeiten für Probleme. Für alle Texteingabefelder muss zur Laufzeit geprüft werden, ob der User-Input in Ordnung ist und bei Bedarf Fehlermeldungen ausspucken. Beispiel: Die Spielfeldgröße muss unbedingt vom Typ int sein. "abeuiae" ist keine valide Spielfeldgröße.
 Ferner muss geprüft werden, ob alle Knöpfe ausschließlich das tun, was sie sollen und nicht spaßige Nebeneffekte erzeugen.
 Knöpfe, die was am Spielfeld ändern, dürfen während der Simulation nicht betätigbar sein. Man muss fähig sein Zustände wieder zu verlassen, ohne das Programm zu beenden. Überschreiten des Wertebereiches von int darf nicht zum Absturz oder unvorhersehbarem Verhalten führen. 
 \subsection{Verarbeitung}
-Der Regelinterpreter bekommt den Regelsatz für Game of Life und es werden bekannte Formationen eigegeben und geschaut ob die sich auf Langzeit ordentlich verhalten. 
+Der Regelinterpreter bekommt den Regelsatz für Game of Life und es werden bekannte Formationen eigegeben und geschaut, ob diese sich auf Langzeit stabil verhalten. 
 Es wird eine Regelsatz entworfen, welcher zu Überschreitung des Zahlenbereichs int führt. Das Programm muss weiter Funkitionieren.
-Es wird empirisch getestet ob bei dem Zufallsgenerator ausschließlich erwünschte Zustände mit jeweiligen Verteilungen generiert werden.
+Es wird empirisch getestet, ob bei dem Zufallsgenerator ausschließlich erwünschte Zustände mit jeweiligen Verteilungen generiert werden.
 Die Funktion der Topologien wird überprüft.
 
 \subsection{Speichern}
 Der Java Filechooser wird wohl funktionieren, nicht wahr?
 Zugriffsfehler(Rechte oder Speicherplatz bedingt) müssen abgefangen werden.
 
+%Realisierbar? Falls nicht- rausnehmen.
 ggf. kann man einen Speicherzustand laden und unter anderem Namen speichern und dann den Inhalt vergleichen....
 \subsection{Performance}
-Flüssige Interaktion mit dem UI muss außerhalb der Simulation möglich sein, während der Simulation ohne Delay darf das ruhig laggen, es tut ja was.
+Eine flüssige Interaktion mit der UI ist gewährleistet, wenn die Hardwareanforderungen (s. 2.3.3) eigehalten werden.
 \subsection {Benutzbarkeit (Schimpanse benötigt)}
+%Rausnehmen oder entsprechend anpassen. Zweiters nach Herr Düntgens Kommentar.
 Ausflug in den Zoo. Laptop in den Käfig.
 \subsection {Stabilität}
 Langzeittest mit Testperson.
@@ -602,16 +606,35 @@ Zellen die eine bestimmte Menge von zuständen einnehmen können befinden sich i
   \hline
   Spielfeld & Zweidimensionales Feld aus Zellen\\
   \hline
-  Zelle & Ein einzelnes Feld was einen Status haben kann.\\
+  Zelle & Ein zellular Automat (Zelle), der einen Zustand (lebendig oder tot) annehmen kann.\\
   \hline
   Invers Polnische Notation & Beste Erfindung der Welt. Klammerfreie Notation von Algorithmen, die auf einem Stack ausgeführt werden können.\\
   \hline
   Syntax & Regeln zur Anordnung und Reihenfolge von Zeichensystemen\\
   \hline
-  Multithreading & gleichzeitige Nutzung mehrerer Rechenkerne für erhöhten Stromverbrauch, verringerte Laufzeit und ultimativ viel bessere Laune.\\
+  Multithreading & Muss neu definiert werden nach Herrn Düntgen.\\
  \hline
- Gesichter & Seiten eines Würfels. Möglichkeiten, auf die der Zufallsgenerator fallen kann.\\
+ Spielfeld & Ein abgegrenztes 2D Feld aus Zellen. 
  \hline
+ Zustand & Der Zustand einer Zelle (lebendig oder tot) in der Folgegeneration hängt nur vom aktuellen Zustand der Zelle selbst und den aktuellen Zuständen ihrer Nachbarzellen ab. 
+ \hline
+ Nachbarn & Zellen mit dem Zustand "lebendig", die über Kanten oder Ecken mit der aktuellen Zelle verbunden sind. 
+ \hline
+ Nachbarschaft &
+ \hline
+ Moor Nachbarschaft &
+ \hline
+ Neumann Nachbarschaft &
+ \hline
+ Hauptbenutzeroberfläche &
+ \hline
+ Spielfeldeditor & Hierüber wird das 2D Feld auf eine gewünschte Größe abgegrenzt.
+ \hline
+ Regeleditor &
+ \hline
+
+
+
 \end{longtable}
 
 
