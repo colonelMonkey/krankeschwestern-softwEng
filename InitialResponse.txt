@@ -48,8 +48,10 @@ Produktfunktionen:
         (3) Warum ist ein Alkoholpegel ¡ 5 % beim Benutzer erforderlich? Inwiefern handelt es			weniger technisch als juristisch. Die 5%-Hürde sollte nicht überschritten werden.
             sich um eine technische Notwendigkeit? Wie wird die Vorbedingung überprüft?   
     
-    RF-01    (1) (Wie) Wird der Inhalt der Regeldatei überprüft? Dateiformat?					TODO:Idealerweise werden die regeln geprüft wenn sie kompiliert werden und das passiert am besten beim starten der simulation wenn die regeln sich seit dem letzten mal geändert haben.
-        (2) Was beinhaltet die Fehlermeldung?									Das einzige was schieftgehen kann ist keine lese rechte zu haben. Das Dateiformat wird vom Filechooser vorgegeben. 
+    RF-01    (1) (Wie) Wird der Inhalt der Regeldatei überprüft? Dateiformat?					TODO:Idealerweise werden die regeln geprüft wenn sie kompiliert werden und das passiert 
+													am besten beim starten der simulation wenn die regeln sich seit dem letzten mal geändert haben.
+        (2) Was beinhaltet die Fehlermeldung?									Das einzige was schieftgehen kann ist keine lese rechte zu haben. Das Dateiformat wird
+														 vom Filechooser vorgegeben. 
        
     RF-02    (1) Was beinhaltet die Fehlermeldung?								jaja
         (2) Dateiformat?
@@ -100,7 +102,7 @@ Glossar
             Wikipedia.
     Gesichter:    Dieser Begriff wird im Pflichtenheft nicht verwendet.
     
-    Es fehlen Begriffe wie "Zelle", "Spielfeld", "Zustand", "Nachbar", "Nachbarschaft", "Hauptbenutzerfläche",
+    Es fehlen Begriffe wie "Zelle", "Spielfeld", "Zustand", "Nachbar", "Nachbarschaft", "Hauptbenutzerfläche",				done
     "Spielfeldeditor", "Regeleditor", ...
     
     Bitte alle Begriffe definieren, die nicht allgemein bekannt sind oder im Kontext der Anwendung eine
