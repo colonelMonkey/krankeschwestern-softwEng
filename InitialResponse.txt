@@ -66,19 +66,19 @@ Produktfunktionen:
            
      Folgende Funktionen vermisse ich:
      - Anwendung der Transitionsregeln
-     - zeitdiskrete, synchrone Aktualisierung aller Zellzustände
-     - Datenformate Regeldatei, Spielfeld
-     - Auswahl, Laden, Positionieren und Einfügen eines Musters
+     - zeitdiskrete, synchrone Aktualisierung aller Zellzustände							hat ja recht, aber Zeitfee sagt NJET
+     - Datenformate Regeldatei, Spielfeld									-meh
+     - Auswahl, Laden, Positionieren und Einfügen eines Musters							-meh
 
 3.1.2 - 3.1.4 sind leer?
 
-3.2.2 (1) Es ist nicht gut, sich über Glaubensgemeinschaften lustig zu machen. Jehovas Zeugen
+3.2.2 (1) Es ist nicht gut, sich über Glaubensgemeinschaften lustig zu machen. Jehovas Zeugen				Aus diplomatischen Gründen entfernt. Wenn auch widerwillig.
     gehörten übrigens zu den wenigen Glaubensgemeinschaften, die auch unter dem NS-Regime
-    standhaft bei ihren Werten geblieben sind und nicht geschlossen mit den Nazis kooperiert haben!
+    standhaft bei ihren Werten geblieben sind und nicht geschlossen mit den Nazis kooperiert haben!			Unpopular Opinion: Jede fundamentalistische Glaubensgemeinschaft hat es verdient, dass man Witze über sie macht. Diejenigen, welche versuchen es zu verbieten, erst recht.
     
 4 Testszenarien
 
-    Unter Testszenarien verstehen wir hier typische Anwendungsfälle. Also etwa:
+    Unter Testszenarien verstehen wir hier typische Anwendungsfälle. Also etwa:								aus Budgetgründen nicht mehr bearbeitet.
      - Programm starten, Standardkonfiguration wählen, Simulation starten, Simulation und Programm beenden.
      - Programm starten und alternative Regeln und eigenes Spielfeld erstellen, beides Speichern, Simulation starten
      - laufende Simulation unterbrechen und Spielfeld editieren. Danach Simulation fortsetzen.
@@ -88,13 +88,13 @@ Produktfunktionen:
     Diese Szenarien können dann im Benutzerleitfaden und in der Testspezifikationsphase wiederverwendet werden.
 
     Die von ihnen beschriebenen Szenarien sind nicht konkret genug. Um diese nutzen zu können, muss genau
-    beschrieben werden, was man erwartet. Es hilft auch, alle von einem Test überdeckten Funktionen/Anforderungen
+    beschrieben werden, was man erwartet. Es hilft auch, alle von einem Test überdeckten Funktionen/Anforderungen			meh
     klar zu benennen, etwa um die Vollständigkeit des Tests zu dokumentieren.
 
-4.4    Man schreibt nicht salopp, dass das Programm "laggt". Das ist bei dem von ihnen geforderten >2 Core-Prozessor
+4.4    Man schreibt nicht salopp, dass das Programm "laggt". Das ist bei dem von ihnen geforderten >2 Core-Prozessor			done
     durch Multithreading in der Regel auch vermeidbar.
     
-4.5    Cool. Das sehe ich mir dann gerne mit an. Wo ist der nächste Zoo mit Schimpasenhaltung - Duisburg? Krefeld?
+4.5    Cool. Das sehe ich mir dann gerne mit an. Wo ist der nächste Zoo mit Schimpasenhaltung - Duisburg? Krefeld?			done
     Leider beschäftigt sich meine Hausbiologin nicht mit Ethologie - aber vielleicht kennen Sie jemanden?
 
 Glossar

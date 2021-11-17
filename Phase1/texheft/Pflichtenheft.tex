@@ -467,11 +467,11 @@ AF-03& Undo/Redo& Mausklick auf "undo" macht die letzte Eingabe des Spielers rü
         \hline
         Akteur &  Benutzer des Programms \\
         \hline
-        Vorbedingung & Spielzustand über den "Play/Pause- Button" pausieren. Hintergrundfarbe des Buttons färbt sich grau.\\
+        Vorbedingung & Simulation über den "Play/Pause- Button" pausieren. Hintergrundfarbe des Buttons färbt sich grau.\\
         \hline
         Auslösendes Ereignis & Mausklick auf den "Laden- Button"\\
         \hline
-        Nachbedingung Erfolgt & Öffnen des Java- Swing- Fensters mit Filechooser zum öffnen einer Datei um ein geispeichertes Spielfeld zu laden.\\
+        Nachbedingung Erfolgt & Öffnen des Java- Swing- Fensters mit Filechooser zum öffnen des Filechoosers "laden". Nach beenden des Auswählens: Rückkehr auf die Hauptoberfläche.\\
         \hline
         Nachbedingung Fehlschlag & Ausgbe der programminternen Fehlermeldung im Dialogfenster.\\
         \hline
@@ -490,7 +490,7 @@ AF-03& Undo/Redo& Mausklick auf "undo" macht die letzte Eingabe des Spielers rü
         \hline
         Akteur&Benutzer des Programms \\
         \hline
-        Vorbedingung & Spielzustand über den "Play/Pause- Button" pausieren. Hintergrundfarbe des Buttons färbt sich grau.\\
+        Vorbedingung & Simulation über den "Play/Pause- Button" pausieren. Hintergrundfarbe des Buttons färbt sich grau.\\
         \hline
         Auslösendes Ereignis & Mausklick auf den "Einfügen- Button"\\
         \hline
@@ -498,7 +498,7 @@ AF-03& Undo/Redo& Mausklick auf "undo" macht die letzte Eingabe des Spielers rü
         \hline
         Nachbedingung Fehlschlag&Ausgbe der programminternen Fehlermeldung im Dialogfenster.\\
         \hline
-        Ablauf&Nutzer klickt auf den "Einfügen-Button" und wählt aus dem Pop-Up-Fenster den jeweiligen Spielzustand aus, der in das Spielfeld eingebunden werden soll.\\
+        Ablauf&Nutzer klickt auf den "Einfügen-Button" und wählt aus dem Pop-Up-Fenster den jeweiligen Spielzustand aus, der in das Spielfeld eingebunden werden soll. Anschließend Rückkehr zur Hauptoberfläche, auf welcher der Nutzer den einzufügenden Spielstand nun per linksklick einfügen kann.\\
         \hline
     \end{tabular}
     \par
@@ -508,20 +508,74 @@ AF-03& Undo/Redo& Mausklick auf "undo" macht die letzte Eingabe des Spielers rü
 \subsubsection{}
 
 
+\subsection{Transitionsregeleditor: Heimlicher Star der ganzen Show}
+Die Forderung, die Transitionsregeln des Spiels zur Laufzeit (nicht zur Simulationszeit) verändern zu können, benötigt einen Interpreter, weil Code nicht wirklich nachkompiliert werden kann.
+Da die Zellzustände als Integer-Variablen gespeichert sind, ist es leicht, Arithmetik mit ihnen zu betreiben. Vergleichsoperationen können dadurch eingesetzt werden, dass "wahr" wie "1" und "falsch" wie "0" behandelt wird. Ferner ist es zwingend notwendig, das Verwenden von Klammern zu erlauben. Es ist Nützlich, den Ausdruck in gewohnter Mathematischer Schreibweise angeben zu können, dies für jede Zelle auszuwerten ist jedoch ressourcenintensiv und daher ungeeignet. Denselben Ausdruck in invers polnischer Notation anzugeben verkürzt die Berechnungsdauer enorm, weil sie jetzt proportional zur Länge des invers polnisch aufgeschriebenen Ausdrucks ist, statt dass darüber hinaus jedes mal der Ausdruck rekursiv geparst werden muss.
+Ob es in der vorgegebenen Zeit gelingt, einen Übersetzer zu schreiben ist fraglich. Daher werden hier Beispiele für mathematische und Polnische Notation angegeben.
 
-\subsubsection{Datenverarbeitung}
-\subsubsection{Datenspeicherung}
+Erforderlich ist es dafür, die Zellzustände der Nachbarzellen in Variablen bereitzustellen, welche in der Syntax verwendet werden können, zur Vereinfachung wird für Moore-Nachbarschaft und Von-Neumann-Nachbarschaft zusätzlich die Summe der betreffenden Variablen geliefert, um Schreibaufwand zu sparen. Aus Zeit- und Lohngründen ist es nicht vorgesehen, die Verwendung von eigenen Variablen zu ermöglichen. 
+
+
+
+\par
+Die zur Verfügung stehenden Variablen und Operatoren:
+\par
+\begin{longtable}[m]{|m{2cm}|m{2.5cm}|m{6.5cm}|}
+\hline
+Symbol&Name&Beschreibung\\
+\hline
++ & Addition & Addiert die Zahlen links und rechts des Operators\\
+\hline
+- & Subtraktion & addiert den linken Wert mit dem negativen des rechten Wertes\\
+\hline
+* & multiplikation & multipliziert den linken Wert mit dem rechnten Wert\\
+\hline
+/ & division & dividiert den linken durch den rechten Wert. Achtung: Zellzustände sind integer, daher wird die Division wie Division von Integern in Java stets abgerundete Ergebnisse produzieren.\\
+\hline
+= & gleichheit & gibt 1 zurück, wenn die linke Seite gleich der rechten ist, andernfalls gibt es 0 zurück VORSICHT: Es ist kein Zuweisungsoperator\\ 
+\hline
+
+\&  & AND & gibt den Integer zurück, den die bitweise Und-Operation auf linker und rechter Seite produziert. Die Verantwortung, gültige Ausdrücke zu finden wird dem Benutzer auferlegt.\\
+\hline
+| & OR & gibt den Integer zurück, welchen die bitwesie Oder-Operation auf linker und rechter Seite produziert. Die Verantwortung, Regeln gültig aufzuschreiben wird dem Benutzer auferlegt.\\
+
+\hline
+\#&XOR&gibt den Integer zurück, welcher bei der bitweisen XOR-Verknüpfung zwiischen linker und rechter Seite entsteht. Benutzung auf eigene Gefahr.\\
+\hline
+! & not & gibt den nachfolgenden Wert XOR 1 zurück. Nur zu empfehlen für Werte, welche nur 1 oder 0 annehmen können. Benutzung auf eigene Gefahr.\\
+\hline
+< & kleiner & gibt 1 zurück, wenn der linke Wert strikt kleiner ist als der rechte, ansonsten 0\\
+\hline
+>&größer & gibt 1 zurück wenn der linke Wert strikt größer ist als der rechte, ansonsten 0\\
+\hline
+()&Klammern&Klammern legen wie üblich fest, welche Operationen vor anderen Operationen ausgeführt werden sollen. Sie entfallen in polnischer Schreibweise\\
+\hline
+a, b, c, d, e, f, g, h&Nachbarn&Variablen, welche die Werte der benachbarten Zellen enthalten. Die Anordnung entnehmen Sie bitte dem Bild "Regeleditor"\\
+\hline 
+z&Zellzustand& Variable, welche den Wert der betrachteten Zelle zurückgibt, sodass dieser in der Berechnung verwendet werden kann.\\
+\hline
+m&moore-Nachbar&Variable welche die Summe aller Nachbarzellen zurückgibt. Nützlich, um Schreibaufwand zu sparen, wenn die einzelnen Zellzustände nicht interessant sind.Äquivalent zu (a+b+c+d+e+f+g+h)\\
+\hline
+n&Neumann-Nachbar&Variable welche die Summe aller Neumann-Nachbarzellen zurückgibt, um Schreibaufwand zu sparen.  Äquivalent zu (b+d+f+h)\\
+\hline
+\end{longtable}
+\par
+In dieser Schrebweise sieht die Transitionsregel für Conways Game of Life wie folgt aus:
+\[Zn : ((m=2)\&(z=1))|(m=3) \]
+\par
+In umgekehrt polnischer Notation für den Rechner:
+\[|,=,m,3,\&,=,z,1,=,m,2\]
+\par
+Dabei stehen Zahlen bzw. Variablen für die Operation "lege auf den Stack", ein Operator nimmt die beiden vorhergehenden Werte von links nach rechts vom Stack und legt das Ergebnis zurück auf den Stack.
+Wird dieser Ausdruck von Rechts nach links durchlaufen, so ist die Berechnung dieselbe wie in geklammerter Schreibweise, weniger Übersichtlich für einen Menschen, aber für einen Computer mittels eines nachgebauten Stacks und switch-Case-Anweisungen schneller ausführbar als der geklammerte Ausdruck. Hoffentlich ist diese Methode effizient genug, um eine zügige Simulation zu ermöglichen. Natürlich würde es in Hardware direkt schneller gehen, aber wir habe
+
+ 
 \subsection{Nichtfunktionale Anforderungen}
 \subsubsection{Performance}
 \begin{itemize}
     \item Lineare Laufzeit der Generationsberechnung pro Spielfeldgröße
 \end{itemize}
-\subsubsection{Zuverlässigkeit}
-\begin{itemize}
-    \item This is bleeding edge technology. Report bugs to Jehova's Witnesses, Ortsgruppe Westfalen-Lippe.
-\end{itemize}
 
-Hinweis: Für die Sicherheit des Nutzers wird nicht garantiert.
 \pagebreak
 
 \section{Testszenarien}
@@ -537,19 +591,19 @@ Es wird eine Regelsatz entworfen, welcher zu Überschreitung des Zahlenbereichs 
 Es wird empirisch getestet, ob bei dem Zufallsgenerator ausschließlich erwünschte Zustände mit jeweiligen Verteilungen generiert werden.
 Die Funktion der Topologien wird überprüft.
 
+
+
 \subsection{Speichern}
 Der Java Filechooser wird wohl funktionieren, nicht wahr?
 Zugriffsfehler(Rechte oder Speicherplatz bedingt) müssen abgefangen werden.
 
-%Realisierbar? Falls nicht- rausnehmen.
-ggf. kann man einen Speicherzustand laden und unter anderem Namen speichern und dann den Inhalt vergleichen....
+
 \subsection{Performance}
 Eine flüssige Interaktion mit der UI ist gewährleistet, wenn die Hardwareanforderungen (s. 2.3.3) eigehalten werden.
-\subsection {Benutzbarkeit (Schimpanse benötigt)}
-%Rausnehmen oder entsprechend anpassen. Zweiters nach Herr Düntgens Kommentar.
-Ausflug in den Zoo. Laptop in den Käfig.
+
 \subsection {Stabilität}
 Langzeittest mit Testperson.
+Ist eher ein Test der Ausdauer von besagter Person.
 \section{Entwicklungsumgebung}
 \subsection{Verwendete Software}
 \begin{tabular}{|c|c|}
@@ -578,6 +632,9 @@ Wenn jemand Protokoll schreibt, dann Felix.
 Wenn jemand gute Laune hat, dann Jörg.
 Wenn jemand Photoshop macht, dann Diaa.
 
+
+
+
 \pagebreak
 
 
@@ -600,7 +657,7 @@ JRE  & Java Runtime Environment. Ein Stück frei erhältliche Software, die es E
 Zellen die eine bestimmte Menge von zuständen einnehmen können befinden sich in einem Raum. Die Räumlich nächsten Zellen bilden die Nachbarschaft. Aus dem eigenen Zustand und dem der Nachbarn ergibt sich über eine Transitionsregel der Folgezustand.
 \\
     \hline
- Transisitonsregel & Vorschrift die unter Verwendung vorhandener Daten den Zustand einer Zelle in den Nächsten überfuhrt.\\  
+ Transiitonsregel & Vorschrift die unter Verwendung vorhandener Daten den Zustand einer Zelle in den Nächsten überfuhrt.\\  
   \hline
  Simulation & Dynamische Abbildung, meist realer Sachverhalte, anhand eines Modells, durch Anwendung des Modells über Zeit.\\
   \hline
@@ -612,7 +669,7 @@ Zellen die eine bestimmte Menge von zuständen einnehmen können befinden sich i
   \hline
   Syntax & Regeln zur Anordnung und Reihenfolge von Zeichensystemen\\
   \hline
-  Multithreading & Simultante Berechnung von Threads eines Prorgrammes. Hier meist bei Parallelisierbaren Prozessen wie der Transition.\\
+
  \hline
  Spielfeld & Ein abgegrenztes 2D Feld aus Zellen. \\
  \hline
