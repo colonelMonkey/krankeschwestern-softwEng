@@ -234,7 +234,7 @@ AF-03& Undo/Redo& Mausklick auf "undo" macht die letzte Eingabe des Spielers rü
     \hline
     Auslösendes Ereignis&Mausklick auf den "Play/Pause-Button"\\
     \hline
-    Nachbedingung Erfolgt&Umschalten der Simulation zwischen "Simulation läuft" und "Pausiert" Anzeige des aktuellen Spielzustands durch Icon oder Farbe.\\
+    Nachbedingung Erfolgt&Umschalten der Simulation zwischen "Simulation läuft" und "Pausiert" Anzeige des aktuellen Spielzustands durch Icon oder Farbe. Automatischer fortlauf Zeitdiskreter Aktualisierung aller Zellzustände anhand der Transitionsregeln.\\
     \hline
     Nachbedingung Fehlschlag&Ausgeben der programminternen Fehlermelung im Dialogfenster.\\
     \hline
@@ -256,7 +256,7 @@ AF-03& Undo/Redo& Mausklick auf "undo" macht die letzte Eingabe des Spielers rü
     \hline
     Auslösendes Ereignis&Mausklick auf den "STEPOVER-Button"\\
     \hline
-    Nachbedingung Erfolgt& Simulieren und anzeigen der nachfolgenden Spielfeldgeneration\\
+    Nachbedingung Erfolgt& Einamlige Zeitdiskrete Aktualisierung aller Zellzustände anhand der Transitionsregeln.\\
     \hline
     Nachbedingung Fehlschlag&Ausgeben der programminternen Fehlermelung im Dialogfenster.\\
     \hline
@@ -297,25 +297,28 @@ AF-03& Undo/Redo& Mausklick auf "undo" macht die letzte Eingabe des Spielers rü
          \hline
     Akteur&Benutzer des Programms \\
     \hline
-    Vorbedingung&Programm gestartet, Benutzer lebendig und mit einem Alkoholpegel < 5 \% \\
+    Vorbedingung&Programm gestartet, Benutzer lebendig und mit einem Alkoholpegel $<$ 5 \% \\
     \hline
     Auslösendes Ereignis&Mausklick auf das "Zustandstextfeld" oder auf das "Spielfeld"\\
     \hline
     Nachbedingung Erfolgt& Textfeld: User kann neuen Edit-Zielzustand angeben und mit Enter bestätigen. Spielfeld: Zustand der angeklickten Zelle wird auf den Zustand im Textfeld gesetzt. \\
     \hline
-    Nachbedingung Fehlschlag&Textfeld: Bei Eingabe einer Zeichenfolge welche keinen nichtnegativen Integer repräsentiert: Fehlermeldung und bisherigen Zustand beibehalten.\\
+    Nachbedingung Fehlschlag&Textfeld: Bei Eingabe einer Zeichenfolge welche keinen signed Integer repräsentiert: Fehlermeldung und bisherigen Zustand beibehalten.\\
     \hline
     Ablauf&Textfeld: Nutzer klickt auf Textfeld. Nutzer gibt ein, welcher Zielzustand gewünscht ist. Nutzer bestätigt mit Enter. 
     \linebreak
     Spielfeld: Nutzer klickt beliebige Zelle an. Zustand der Zelle wird überschrieben durch Zustand im Textfeld
     Bei Abbruch wird der vorherige Wert weiterverwendet.
     \linebreak 
-    Hinweis: Die Alkoholprüfung wird beim Programmstart durch bestätigung eines Pop-Ups durchgeführt "Dieses Programm darf nur von Personen mit einem Alkoholpegel größer 0.5 Promille verwendet werden. Durch klick auf OK bestätigen Sie, dass sie diese Bedingung erfüllen"\\
+    Hinweis: Die Alkoholprüfung wird beim Programmstart durch bestätigung eines Pop-Ups durchgeführt "Dieses Programm darf nur von Personen mit einem Alkoholpegel $<$ 5\% verwendet werden. Durch klick auf OK bestätigen Sie, dass sie diese Bedingung erfüllen"\\
     \hline
     
 \end{tabular}
 \par
-
+\medskip 
+Nachtrag Dialogfenster: 
+\par
+Dialogfenster lassen sich innerhalb des Pragrammes nicht den Fokus entnehmen, \par bis die Interaktion abgeschlossen ist.
 \pagebreak
 	%Bild und Beschreibung der Funktionen auf dem Bild
 
@@ -353,10 +356,10 @@ AF-03& Undo/Redo& Mausklick auf "undo" macht die letzte Eingabe des Spielers rü
           \hline
           Nachbedingung Erfolgt&Öffnen des Java-Swing-Fensters mit FileChooser zum öffnen einer Regeldatei\\
           \hline
-          Nachbedingung Fehlschlag&Fehlermeldung "Laden Fehlgeschlagen", ggf. mit Ursache "fehlerhafter Ausdruck" und Rückkehr zur Haupt-Oberfläche. Beibehalten der bisherigen Regeln.\\
+          Nachbedingung Fehlschlag&Fehlermeldung "Laden Fehlgeschlagen", ggf. mit Ursache "fehlerhafter Ausdruck" oder "zugriffsfehler" und Rückkehr zur Haupt-Oberfläche. Beibehalten der bisherigen Regeln.\\
           \hline
           Ablauf&Nutzer klickt auf Button und öffnet das Fenster zum laden einer Regeldatei. Durch auswählen und Bestätigen durch klick auf "Öffnen" wird die aktuell aktive Regel durch die geladene ersetzt.
-          Prüfung mittels Algorithmus, ob das Ergebnis vom Typ Integer ist. Dateiformat .txt\\
+          Prüfung mittels Algorithmus, ob die Regel der Syntax entspricht. Filechooser gibt Dateiformat .txt vor.\\
           \hline
      \end{tabular}
      \par
@@ -377,7 +380,7 @@ AF-03& Undo/Redo& Mausklick auf "undo" macht die letzte Eingabe des Spielers rü
           \hline
           Nachbedingung Fehlschlag&Fehlermeldung "Fehler beim Speichern" und Rückkehr zur Haupt-Oberfläche.\\
           \hline
-          Ablauf&Nutzer klickt auf Button und öffnet das Fenster zum Speichern einer Regeldatei. Durch auswählen und Bestätigen durch klick auf "Öffnen" wird die aktuell aktive Regel an besagter Stelle gespeichert.\\
+          Ablauf&Nutzer klickt auf Button und öffnet das Fenster zum Speichern einer Regeldatei. Durch auswählen und Bestätigen durch klick auf "Öffnen" wird die aktuell aktive Regel an besagter Stelle im Dateiformat .txt gespeichert.\\
           \hline
      \end{tabular}
      \par
@@ -471,7 +474,7 @@ AF-03& Undo/Redo& Mausklick auf "undo" macht die letzte Eingabe des Spielers rü
         \hline
         Auslösendes Ereignis & Mausklick auf den "Laden- Button"\\
         \hline
-        Nachbedingung Erfolgt & Öffnen des Java- Swing- Fensters mit Filechooser zum öffnen des Filechoosers "laden". Nach beenden des Auswählens: Rückkehr auf die Hauptoberfläche.\\
+        Nachbedingung Erfolgt & Öffnen des Java- Swing- Filechoosers zum öffnen der Spielfeld .csv Datei. Nach beenden des Auswählens: Rückkehr auf die Hauptoberfläche.\\
         \hline
         Nachbedingung Fehlschlag & Ausgbe der programminternen Fehlermeldung im Dialogfenster.\\
         \hline
@@ -494,18 +497,17 @@ AF-03& Undo/Redo& Mausklick auf "undo" macht die letzte Eingabe des Spielers rü
         \hline
         Auslösendes Ereignis & Mausklick auf den "Einfügen- Button"\\
         \hline
-        Nachbedingung Erfolgt& Öffnen des Java- Swing- Fensters mit Filechooser zum öffnen einer Datei um ein kleineren Spielzustand in das aktuelle Spiel einzufügen.\\
+        Nachbedingung Erfolgt& Öffnen des Java- Swing- Fensters mit Filechooser zum öffnen einer Datei um ein kleineren Spielzustand per "Drag and Drop" in das aktuelle Spiel einzufügen.\\
         \hline
         Nachbedingung Fehlschlag&Ausgbe der programminternen Fehlermeldung im Dialogfenster.\\
         \hline
-        Ablauf&Nutzer klickt auf den "Einfügen-Button" und wählt aus dem Pop-Up-Fenster den jeweiligen Spielzustand aus, der in das Spielfeld eingebunden werden soll. Anschließend Rückkehr zur Hauptoberfläche, auf welcher der Nutzer den einzufügenden Spielstand nun per linksklick einfügen kann.\\
+        Ablauf&Nutzer klickt auf den "Einfügen-Button" und wählt aus dem Pop-Up-Fenster den jeweiligen Spielzustand aus, der in das Spielfeld eingebunden werden soll. Anschließend Rückkehr zur Hauptoberfläche, auf welcher der Nutzer den einzufügenden Spielstand nun per linksklick an gewünschter Stelle einfügen kann.\\
         \hline
     \end{tabular}
     \par
     
     \pagebreak
     
-\subsubsection{}
 
 
 \subsection{Transitionsregeleditor: Heimlicher Star der ganzen Show}
@@ -542,11 +544,9 @@ Symbol&Name&Beschreibung\\
 \hline
 \#&XOR&gibt den Integer zurück, welcher bei der bitweisen XOR-Verknüpfung zwiischen linker und rechter Seite entsteht. Benutzung auf eigene Gefahr.\\
 \hline
-! & not & gibt den nachfolgenden Wert XOR 1 zurück. Nur zu empfehlen für Werte, welche nur 1 oder 0 annehmen können. Benutzung auf eigene Gefahr.\\
+$<$ & kleiner & gibt 1 zurück, wenn der linke Wert strikt kleiner ist als der rechte, ansonsten 0\\
 \hline
-< & kleiner & gibt 1 zurück, wenn der linke Wert strikt kleiner ist als der rechte, ansonsten 0\\
-\hline
->&größer & gibt 1 zurück wenn der linke Wert strikt größer ist als der rechte, ansonsten 0\\
+$>$&größer & gibt 1 zurück wenn der linke Wert strikt größer ist als der rechte, ansonsten 0\\
 \hline
 ()&Klammern&Klammern legen wie üblich fest, welche Operationen vor anderen Operationen ausgeführt werden sollen. Sie entfallen in polnischer Schreibweise\\
 \hline
