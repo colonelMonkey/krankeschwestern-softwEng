@@ -530,7 +530,7 @@ Symbol&Name&Beschreibung\\
 \hline
 - & Subtraktion & addiert den linken Wert mit dem negativen des rechten Wertes\\
 \hline
-* & multiplikation & multipliziert den linken Wert mit dem rechnten Wert\\
+* & multiplikation & multipliziert den linken Wert mit dem rechten Wert\\
 \hline
 / & division & dividiert den linken durch den rechten Wert. Achtung: Zellzustände sind integer, daher wird die Division wie Division von Integern in Java stets abgerundete Ergebnisse produzieren.\\
 \hline
@@ -539,7 +539,7 @@ Symbol&Name&Beschreibung\\
 
 \&  & AND & gibt den Integer zurück, den die bitweise Und-Operation auf linker und rechter Seite produziert. Die Verantwortung, gültige Ausdrücke zu finden wird dem Benutzer auferlegt.\\
 \hline
-| & OR & gibt den Integer zurück, welchen die bitwesie Oder-Operation auf linker und rechter Seite produziert. Die Verantwortung, Regeln gültig aufzuschreiben wird dem Benutzer auferlegt.\\
+$|$ & OR & gibt den Integer zurück, welchen die bitwesie Oder-Operation auf linker und rechter Seite produziert. Die Verantwortung, Regeln gültig aufzuschreiben wird dem Benutzer auferlegt.\\
 
 \hline
 \#&XOR&gibt den Integer zurück, welcher bei der bitweisen XOR-Verknüpfung zwiischen linker und rechter Seite entsteht. Benutzung auf eigene Gefahr.\\
@@ -573,37 +573,223 @@ Wird dieser Ausdruck von Rechts nach links durchlaufen, so ist die Berechnung di
 \subsection{Nichtfunktionale Anforderungen}
 \subsubsection{Performance}
 \begin{itemize}
-    \item Lineare Laufzeit der Generationsberechnung pro Spielfeldgröße
+    \item Lineare Laufzeit der Generationsberechnung pro Spielfeldgröße durch nutzung der Polnischen notation.
+    \item Vervielfachen der Geschwindigkeit von Bild und Regelberechnung durch Multithreading.
 \end{itemize}
 
 \pagebreak
 
 \section{Testszenarien}
-\subsection{UI}
+Alle Testscenarien beziehen sich auf den Fall, dass das Programm Gestartet ist. Alles andere steht im Handbuch des jeweiligen Betriebssystems.
 
-%Hier müssen noch Testszenarien aufgearbeitet werden nach Herr Düntgen.
-Das UserInterface bietet einige Möglichkeiten für Probleme. Für alle Texteingabefelder muss zur Laufzeit geprüft werden, ob der User-Input in Ordnung ist und bei Bedarf Fehlermeldungen ausspucken. Beispiel: Die Spielfeldgröße muss unbedingt vom Typ int sein. "abeuiae" ist keine valide Spielfeldgröße.
-Ferner muss geprüft werden, ob alle Knöpfe ausschließlich das tun, was sie sollen und nicht spaßige Nebeneffekte erzeugen.
-Knöpfe, die was am Spielfeld ändern, dürfen während der Simulation nicht betätigbar sein. Man muss fähig sein Zustände wieder zu verlassen, ohne das Programm zu beenden. Überschreiten des Wertebereiches von int darf nicht zum Absturz oder unvorhersehbarem Verhalten führen. 
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Klick außerhalb eines Dialogfensters während dieses Geöffnet ist.\\
+\hline
+Erwartetes Ergebnis&Dialogfenster behält Fokus. Aktion nicht ausführen.\\
+\hline
+\end{longtable}
+
+\subsection{Hauptfenster}
+\textbf{Vorbedingung: Automatische Simulation gestoppt(Ausgangszustand)}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Rechtsklick auf Lupe ohne Vorherige Wertzuweisung durch Linksklick ins Feld.\\
+\hline
+Erwartetes Ergebnis&Einfügen Modus wird Gestartet und ermoglicht einfügen von 0.\\
+\hline
+\end{longtable}
+
+
+\textbf{Vorbedingung: Simulation Gestartet}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Benutzung von Step, Lupe oder Klick ins Spielfeld.\\
+\hline
+Erwartetes Ergebnis&Keine Aktion.\\
+\hline
+\end{longtable}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Klick auf Spielfeldeditor oder Regeleditor.\\
+\hline
+Erwartetes Ergebnis&Simulation wird Angehalten. Start/Stop wird Grau.\\
+\hline
+\end{longtable}
+
+
+\subsection{Spielfeldeditor}
+\textbf{Vorbedingung: Simulation ist immer gestoppt bei geöffnetem Spielfeldeditor.}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Klick auf Bedienelemente außerhalb des Spielfeleditors.\\
+\hline
+Erwartetes Ergebnis&Spielfeldeditor wird Geschlossen.\\
+\hline
+\end{longtable}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Klick auf Laden oder Einfügen. Auswahl von Datei ohne Lesezugriff oder falschem Dateiformat.\\
+\hline
+Erwartetes Ergebnis&Programminterne Fehlermeldung ausgeben und Aktion nicht ausführen.\\
+\hline
+\end{longtable}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Klick auf Speichern. Auswahl von Ordner ohne Schreibzugriff, falschem Dateiformat, oder Partition ohne Ausreichenden Speicherplatz.\\
+\hline
+Erwartetes Ergebnis&Programminterne Fehlermeldung ausgeben und Aktion nicht ausführen.\\
+\hline
+\end{longtable}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Klick auf Speichern. Auswahl von mitgelieferter standard Datei.\\
+\hline
+Erwartetes Ergebnis&Fehlermeldung: Andere Datei wählen und Aktion nicht ausführen.\\
+\hline
+\end{longtable}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Klick auf Eingabefeld Größe. Eingabe von Nicht Positivem Integer Wert oder unzulässigen Datentyp. Klick auf anwenden.\\
+\hline
+Erwartetes Ergebnis&Fehlermeldung: nur Positive Integer zulässig. Aktion nicht ausführen.\\
+\hline
+\end{longtable}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Klick auf Anwenden ohne, dass die Textfelder mit 2 Positiven Integern gefüllt sind.\\
+\hline
+Erwartetes Ergebnis&Fehlermeldung: 2 Dimensionen benötigt. Aktion nicht ausführen.\\
+\hline
+\end{longtable}
+
+\subsubsection{Zufallsgenerator}
+
+\textbf{Vorbedingung: Hauptfenster des Zufallsgenerators mit Tabelle ist geöffnet.}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Klick auf Entfernen oder Bearbeiten, ohne dass Zeile ausgewählt ist.\\
+\hline
+Erwartetes Ergebnis&Fehlermeldung: Bitte Zeile auswählen. Keine Aktion.\\
+\hline
+\end{longtable}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Klick auf ok bei leerer Tabelle.\\
+\hline
+Erwartetes Ergebnis&Dialogfenster wird Geschlossen. Änderungen werden verworfen.\\
+\hline
+\end{longtable}
+
+\textbf{Vorbedingung: Unterfenster zum Ändern oder Hinzufügen geöffnet.}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Klick auf ok bei leeren Textfeldern, nicht Positiven Integern in Anzahl, oder nicht Integern in mindestens einem der 3 Felder.\\
+\hline
+Erwartetes Ergebnis&Dialogfenster wird Geschlossen. Änderungen werden verworfen.\\
+\hline
+\end{longtable}
+
+\subsection{Regeleditor}
+
+\textbf{Vorbedingung: Simulation ist immer gestoppt bei geöffnetem Regeleditor.}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Klick auf Bedienelemente außerhalb des Regeleditors.\\
+\hline
+Erwartetes Ergebnis&Regeleditor wird Geschlossen.\\
+\hline
+\end{longtable}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Klick auf Speichern. Auswahl von mitgelieferter standard Datei.\\
+\hline
+Erwartetes Ergebnis&Fehlermeldung: Andere Datei wählen und Aktion nicht ausführen.\\
+\hline
+\end{longtable}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Klick auf Laden. Auswahl von Datei ohne Lesezugriff oder falschem Dateiformat.\\
+\hline
+Erwartetes Ergebnis&Programminterne Fehlermeldung ausgeben und Aktion nicht ausführen.\\
+\hline
+\end{longtable}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Klick auf Speichern. Auswahl von Ordner ohne Schreibzugriff, falschem Dateiformat, oder Partition ohne Ausreichenden Speicherplatz.\\
+\hline
+Erwartetes Ergebnis&Programminterne Fehlermeldung ausgeben und Aktion nicht ausführen.\\
+\hline
+\end{longtable}
+
+ 
 \subsection{Verarbeitung}
-Der Regelinterpreter bekommt den Regelsatz für Game of Life und es werden bekannte Formationen eigegeben und geschaut, ob diese sich auf Langzeit stabil verhalten. 
-Es wird eine Regelsatz entworfen, welcher zu Überschreitung des Zahlenbereichs int führt. Das Programm muss weiter Funkitionieren.
-Es wird empirisch getestet, ob bei dem Zufallsgenerator ausschließlich erwünschte Zustände mit jeweiligen Verteilungen generiert werden.
-Die Funktion der Topologien wird überprüft.
 
 
 
-\subsection{Speichern}
-Der Java Filechooser wird wohl funktionieren, nicht wahr?
-Zugriffsfehler(Rechte oder Speicherplatz bedingt) müssen abgefangen werden.
 
+\subsection{Speichern und Laden}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Öffnen eines Filechoosers wenn automatisch erzeugte Ordner oder Dateien gelöscht oder geandert wurden.\\
+\hline
+Erwartetes Ergebnis&Wiederherstellen der nicht vorhandenen Ordner und Dateien. Öffnen des Filechoosers.\\
+\hline
+\end{longtable}
 
 \subsection{Performance}
-Eine flüssige Interaktion mit der UI ist gewährleistet, wenn die Hardwareanforderungen (s. 2.3.3) eigehalten werden.
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Einstellen der Spielfeld Größe auf 3000 * 3000. Ui Elemente Bedienen\\
+\hline
+Erwartetes Ergebnis&Angeforderte Operationen werden ohne störende Verzögerung (Max 1 Sekunde) ausgeführt.\\
+\hline
+\end{longtable}
 
-\subsection {Stabilität}
-Langzeittest mit Testperson.
-Ist eher ein Test der Ausdauer von besagter Person.
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Bei Standard Spielfeld Größe, Game of Life Regelsatz, 40 Prozent gefülltem Spielfeld und ohne Verzögerung Simulation starten.\\
+\hline
+Erwartetes Ergebnis&Simulation wird Flüssig (Mindestens 30 FPS) ausgeführt.\\
+\hline
+\end{longtable}
+
+\subsection{Stabilität}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Bei Standard Spielfeld Größe, Game of Life Regelsatz, Einer Glidergun auf dem Spielfeld und ohne Verzögerung Simulation starten und eine Stunde Laufen lassen.\\
+\hline
+Erwartetes Ergebnis&Nach einer Stunde läuft das Programm unverändert weiter und produziert immernoch Glider.\\
+\hline
+\end{longtable}
+
+\begin{longtable}[m]{|m{3cm}|m{10cm}|}
+\hline
+Ablauf&Erfahrene Testperson benutzt 1 Stunde Lang alle funktionen des Programms.\\
+\hline
+Erwartetes Ergebnis&Nach einer Stunde läuft das Programm noch stabil und ist nicht zwischendurch abgestürtzt.\\
+\hline
+\end{longtable}
+
+
 \section{Entwicklungsumgebung}
 \subsection{Verwendete Software}
 \begin{tabular}{|c|c|}
@@ -626,7 +812,7 @@ Intelligente Frühstücksbrettchen mit abwaschbarer Benutzeroberfläche verschie
 \subsection{verwendete Organisation}
 Haben Sie wirklich den Eindruck, dass hier irgendwas organisiert abläuft? 
 Aber gut, ein Versuch: 
-Wenn etwas schief geht, ist Alex schuld.
+Wenn etwas schief geht, hat Alex schuld.
 Wenn jemand Ahnung hat, dann Nico.
 Wenn jemand Protokoll schreibt, dann Felix.
 Wenn jemand gute Laune hat, dann Jörg.
