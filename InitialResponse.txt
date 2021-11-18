@@ -78,7 +78,7 @@ Produktfunktionen:
     
 4 Testszenarien
 
-    Unter Testszenarien verstehen wir hier typische Anwendungsfälle. Also etwa:								aus Budgetgründen nicht mehr bearbeitet.
+    Unter Testszenarien verstehen wir hier typische Anwendungsfälle. Also etwa:								
      - Programm starten, Standardkonfiguration wählen, Simulation starten, Simulation und Programm beenden.
      - Programm starten und alternative Regeln und eigenes Spielfeld erstellen, beides Speichern, Simulation starten
      - laufende Simulation unterbrechen und Spielfeld editieren. Danach Simulation fortsetzen.
@@ -88,7 +88,7 @@ Produktfunktionen:
     Diese Szenarien können dann im Benutzerleitfaden und in der Testspezifikationsphase wiederverwendet werden.
 
     Die von ihnen beschriebenen Szenarien sind nicht konkret genug. Um diese nutzen zu können, muss genau
-    beschrieben werden, was man erwartet. Es hilft auch, alle von einem Test überdeckten Funktionen/Anforderungen			Kann noch. Bitte tob sich hier noch einer aus.
+    beschrieben werden, was man erwartet. Es hilft auch, alle von einem Test überdeckten Funktionen/Anforderungen			done :C
     klar zu benennen, etwa um die Vollständigkeit des Tests zu dokumentieren.
 
 4.4    Man schreibt nicht salopp, dass das Programm "laggt". Das ist bei dem von ihnen geforderten >2 Core-Prozessor			done
@@ -133,7 +133,7 @@ Denglish ist nie eine gute Wahl! Im Pflichtenheft mag dies noch gehen, denn der 
         - Das Bild ist irreführend: Die totale Wahrscheinlichkeit (Summe der W'keiten aller			 done
           unabhängigen Ereignisse) im Beispiel liegt bei 60%, sollte aber bei 100% liegen.
           Darüber hinaus passen die "Anzahlen" nicht zu den "Abs. W'keiten". Bei 0-0 müsste
-          sie 10/12 (nicht 50%), bei 1-5 und 6-10 1/12 (nicht 5%).						        beschreibbunng überarbeiten
+          sie 10/12 (nicht 50%), bei 1-5 und 6-10 1/12 (nicht 5%).						        beschreibung überarbeiten (Nico)
 
 3.2 Die Funktionen wurden im Pflichtenheft nicht genannt. Bitte nachtragen (Bedienkonzept).			Bei Kannkrieterien und gesondert die tabelle eintragen.
 
@@ -143,7 +143,7 @@ Denglish ist nie eine gute Wahl! Im Pflichtenheft mag dies noch gehen, denn der 
 
 Glossar: Siehe oben. An beiden Stellen dasselbe Glossar verwenden.						glossar anpassen muss noch, jetzt hauptsächlich vom pflichtenheft notwendigste ind handbuch
 
-Es fehlen die Anwendungsfälle (heißen im Pflichtenheft "Testszenarien"). Hier bitte recyclen!			die müssen im pflichtenheft besser und dann ins handbuch.
+Es fehlen die Anwendungsfälle (heißen im Pflichtenheft "Testszenarien"). Hier bitte recyclen!			Punkt 4 bitte ins Hanbuch unter Anwendungsfälle eintragen
 
 
 
