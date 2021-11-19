@@ -1,0 +1,4 @@
+Alex:Bei anklicken von spielfeldeditor wird die simulatio gestoppt.
+Alex:Undo entwerder mit undo trees und dann will ich meinen bachelor für das praktikum
+ oder garnicht.
+Nico: Absolute wahrscheilichkeit von 0-0 ist nicht 50 %. Sondern 5.

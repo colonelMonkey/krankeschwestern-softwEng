@@ -1,0 +1,52 @@
+Protokoll 
+14:05 Beginn:
+Diaa kann nicht, alle anderen trudeln nach und nach ein.
+
+
+Pflichtenheft, Handbuch
+
+	Diaa sollte das Handbuch machen, konnte aber nicht: Nico muss noch fertig werden.
+	Alex sollte das Pflichtenheft aktualisieren, ist aber noch nicht ganz fertig geworden. Wieviel noch fehlt ist fraglich.
+--sind aktualisiert worden, müssen abgeschickt werden. Muss heute fertig werden
+
+Am liebsten gestern.
+
+
+Fensterprogrammierung: 
+	Nico scheint der einzige zu sein, der noch weiß wie das geht.
+	Wir brauchen ein paar Fenster und einen Riesenhaufen von Methoden.
+
+	Damit wir die später implementieren können.
+
+
+Flugplan Aufgabenverteilung
+
+	2 arrays, eins für "ist" eins für "wird"
+	Algorithmus 
+	-iteriere über das "ist" array, schreibe in das "wird sein" array
+	-tausche die Arrays
+
+	-funktion Berechnungen
+	
+	
+
+
+
+
+
+Jobs:
+
+Nico
+	Handbuch fertig machen.
+
+Felix
+	Mit Nico Handbuch/Pflichtenheft angleichen.
+
+Alex
+	
+
+Jörg
+	Modelio klarmachen. 
+
+Diaa
+	Der Mann soll mal wieder dazu kommen.
