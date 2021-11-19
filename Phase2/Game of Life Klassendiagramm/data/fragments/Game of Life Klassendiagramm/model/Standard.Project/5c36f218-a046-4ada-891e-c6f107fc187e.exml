@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Game of Life Klassendiagramm" version="4">
+  <OBJECT>
+    <ID name="Game of Life Klassendiagramm" mc="Standard.Project" uid="5c36f218-a046-4ada-891e-c6f107fc187e"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[Game of Life Klassendiagramm]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Model">
+        <COMPID name="game of life klassendiagramm" mc="Standard.Package" uid="893d4dcf-21bf-4850-85d5-0ace87e4cfeb"/>
+      </COMP>
+      <COMP relation="DiagramRoot">
+        <COMPID name="Game of Life Klassendiagramm" mc="Infrastructure.DiagramSet" uid="59d26701-234c-462e-8b1f-5cc1f5d62afd"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

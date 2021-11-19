@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Game of Life Klassendiagramm" version="4">
+  <OBJECT>
+    <ID name="Game of Life Klassendiagramm" mc="Infrastructure.DiagramSet" uid="59d26701-234c-462e-8b1f-5cc1f5d62afd"/>
+    <PID name="Game of Life Klassendiagramm" mc="Standard.Project" uid="5c36f218-a046-4ada-891e-c6f107fc187e"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[Game of Life Klassendiagramm]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

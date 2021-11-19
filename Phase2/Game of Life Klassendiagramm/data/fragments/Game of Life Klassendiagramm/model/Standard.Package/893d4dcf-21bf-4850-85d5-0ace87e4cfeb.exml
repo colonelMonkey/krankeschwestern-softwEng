@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="game of life klassendiagramm" version="4">
+  <OBJECT>
+    <ID name="game of life klassendiagramm" mc="Standard.Package" uid="893d4dcf-21bf-4850-85d5-0ace87e4cfeb"/>
+    <PID name="Game of Life Klassendiagramm" mc="Standard.Project" uid="5c36f218-a046-4ada-891e-c6f107fc187e"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[game of life klassendiagramm]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="GUI" mc="Standard.Class" uid="84a7c23b-f4e5-4d3f-bc31-570087b1b0fe"/>
+        <COMPID name="JFrame" mc="Standard.Class" uid="6a3bc4aa-aaa4-48c1-a292-55271fe75255"/>
+        <COMPID name="Spielfeld" mc="Standard.Class" uid="a2026222-9f68-4248-9389-c30c5c876d6c"/>
+        <COMPID name="JButton" mc="Standard.Class" uid="cd894c45-fb9d-421e-a30c-f6bf2b3ff7b2"/>
+        <COMPID name="JMenuItem" mc="Standard.Class" uid="6d8a6fc5-6343-46d0-9fd9-4337cbc92322"/>
+        <COMPID name="Verarbeitung" mc="Standard.Class" uid="5f601813-38e2-417a-927e-18e0d1ad9039"/>
+        <COMPID name="JFileChooser" mc="Standard.Class" uid="afb0b3ca-a7f8-4e97-8bc9-4bb3aee4f364"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="game of life klassendiagramm Class diagram" mc="Standard.ClassDiagram" uid="3f6a0574-784a-4204-ac1b-740b79b17bdd"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
