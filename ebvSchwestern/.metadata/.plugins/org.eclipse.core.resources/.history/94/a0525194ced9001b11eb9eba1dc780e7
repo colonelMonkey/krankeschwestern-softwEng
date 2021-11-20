@@ -1,0 +1,45 @@
+package aufg0256;
+
+import java.awt.Point;
+
+public class Ellipse extends GeomFigur
+{
+  
+  private double flaeche;
+  private double umfang;
+  
+  public Ellipse(Point mittelpunkt, int hauptachse, int nebenachse)
+  {
+    super("Ellipse", mittelpunkt, hauptachse, nebenachse);
+    berechneEigenschaften();
+    }
+  
+  private void berechneEigenschaften()
+  {
+    flaeche = Math.round((this.getBreite()/2d)*(this.getHoehe()/2d))*Math.PI)*1d;
+    umfang = Math.PI*(0.75 * this.getBreite() + 0.75 * this.getHoehe() - Math.sqrt(this.getBreite()/2 * this.getHoehe()/2));
+    umfang = Math.round(umfang)*1d;
+  }
+
+  @Override
+  public double getFlaeche()
+  {
+    return flaeche;
+  }
+
+  @Override
+  public double getUmfang()
+  {
+    // TODO Auto-generated method stub
+    return umfang;
+  }
+  public double getHauptAchse()
+  {
+    return this.getBreite();
+  }
+  public double getNebenAchse()
+  {
+    return this.getHoehe();
+  }
+
+}

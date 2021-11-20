@@ -1,0 +1,7 @@
+1625070243871	Rename local variable 'breite'
+1625074035881	Rename method 'getMittelpunkt'
+1625074058675	Rename method 'setMittelpunkt'
+1625074105904	Rename method 'getHauptachse'
+1625074113778	Rename method 'getNebenachse'
+1625074169569	Rename method 'getSeitenlaenge'
+1625076307689	Encapsulate field 'flaeche'

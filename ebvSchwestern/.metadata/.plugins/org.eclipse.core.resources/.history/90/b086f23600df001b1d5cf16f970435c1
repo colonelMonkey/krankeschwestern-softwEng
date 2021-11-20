@@ -1,0 +1,124 @@
+package aufg0258.rmiclient;
+
+import java.rmi.Remote;
+import java.io.Console;
+import java.rmi.Naming;
+import java.rmi.RemoteException;
+import java.rmi.NotBoundException;
+import de.eikelberg.iotools.*;
+
+import aufg0258.rmiserver.RmiMethodenInterface;
+
+public class Client
+{ 
+
+  public static void main(String[] args)
+  {
+// Startmeldung
+    System.out.println(
+        "\nBeispiel zur Verwendung eines Interface - RMI Client"+
+        "\nCopyright 2006,2008 by M. Eikelberg (www.eikelberg.de)");
+
+    try
+    {
+// Security Manager konfigurieren und setzen
+      String policypath="aufg0258/rmiclient/rmipolicy_client.txt";
+      System.setProperty("java.security.policy",policypath);
+      if (System.getSecurityManager() == null)
+        System.setSecurityManager(new SecurityManager());
+
+// Remote Object suchen      
+      String rmiurl = "rmi://127.0.0.1:11099/rmidienst";
+      System.out.println("\nEs wird folgender RMI-Dienst gesucht: "+rmiurl);
+      Remote myRemoteObj = Naming.lookup(rmiurl);
+
+// Cast auf das Remote Object absetzen, damit es vom Typ des Interface wird      
+      RmiMethodenInterface myRmiMethInterf;
+      myRmiMethInterf= (RmiMethodenInterface) myRemoteObj;
+      System.out.println("\nRMI-Dienst "+rmiurl+" wurde gefunden.");
+
+// Methodenaufruf auf dem Server
+     
+      String zeit = myRmiMethInterf.getServerZeit();
+      System.out.println("\nZeit-Abfrage auf Server ergab folgende Zeit: "+zeit);      
+      
+      
+      //eigenes
+        // Schleife für Verarbeitung
+       char weiter = 'j';
+       Console eingabe = System.console();
+        do
+        {
+          double x1 = 0d, x2 = 0d;
+          ScreenOut.kPrintln("Geben sie die erste Zahl ein.");
+          try
+          {
+          x1 = Double.parseDouble(eingabe.readLine());
+          }
+          catch(NumberFormatException e){
+            ScreenOut.kPrintln("Die eingegebene Zahl lässt sich nicht als double parsen");
+          }
+          
+          ScreenOut.kPrintln("Geben sie die zweite Zahl ein.");
+          try
+          {
+          x2 = Double.parseDouble(eingabe.readLine());
+          }
+          catch(NumberFormatException e){
+            ScreenOut.kPrintln("Die eingegebene Zahl lässt sich nicht als double parsen");
+          }
+          ScreenOut.kPrintln("Geben sie die gewünschte Rechenoperation ein.(-,+.*,/)");
+          char ro;
+          
+          ro = eingabe.readLine().charAt(0);
+          double erg = 0d;
+          switch(ro)
+          {
+          case '+' : erg = myRmiMethInterf.rmiAdd(x1, x2);
+          break;
+          case '-' : erg = myRmiMethInterf.rmiSub(x1, x2);
+          break;
+          case '*' : erg = myRmiMethInterf.rmiMult(x1, x2);
+          break;
+          case '/' : erg = myRmiMethInterf.rmiDiv(x1, x2);
+          break;
+          default : ScreenOut.kPrintln("Fehler bei der Eingabe der Rechenoperation"); 
+          break;
+          }
+          ScreenOut.kPrintln("Das Ergebnis ist: " + erg);
+       
+          weiter = weiterPruefung();
+        } while (weiter=='j' || weiter=='J');
+      
+      //bis hier
+    }
+    
+    
+    catch (RemoteException e)
+    {
+      System.out.println("\nEine RemoteException ist aufgetreten.");
+      e.printStackTrace();
+    }
+    catch (NotBoundException e)
+    {
+      System.out.println(
+        "\nDer Dienst \"rmidienst\" ist noch nicht an die Registry gebunden.");
+      e.printStackTrace();
+    }
+    catch (Exception e)
+    {
+      System.out.println("\nFehler beim Verbindungsaufbau zum Server.");
+      e.printStackTrace();
+    }
+  }
+
+  private static char weiterPruefung() 
+  {
+    Console eingabe = System.console();
+    ScreenOut.kPrintln("Wollen sie die Verarbeitung wiederholen? (J/N): ");
+    char ans = eingabe.readLine().charAt(0);
+    return ans;
+  }
+ 
+}
+

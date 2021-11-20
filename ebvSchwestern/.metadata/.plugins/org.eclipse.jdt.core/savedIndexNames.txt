@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+/home/nicholas/$daten/$schuran/ebvSchwestern/.metadata/.plugins/org.eclipse.jdt.core
+4060206799.index
+2675545194.index
+2405556475.index
+1865797976.index
+2872762723.index
+646308851.index

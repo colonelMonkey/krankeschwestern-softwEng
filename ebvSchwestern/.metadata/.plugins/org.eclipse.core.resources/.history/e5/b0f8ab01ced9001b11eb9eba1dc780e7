@@ -1,0 +1,35 @@
+package aufg0256;
+
+import java.awt.Point;
+
+public class Kreis extends Ellipse
+{
+  private double flaeche;
+  private double umfang;
+
+  public Kreis(Point mittelpunkt, int durchmesser)
+  {
+    super(mittelpunkt, durchmesser, durchmesser);
+    this.setName("Kreis");
+    berechneEigenschaften();
+  }
+  private void berechneEigenschaften()
+  {
+    this.setFlaeche(Math.PI);
+    umfang = Math.PI*this.getHauptAchse();
+    umfang = Math.round(umfang)*1d;
+  }
+  public double getRadius()
+  {
+    return (this.getBreite()/2d);
+  }
+  public double getFlaeche()
+  {
+    return flaeche;
+  }
+  public void setFlaeche(double flaeche)
+  {
+    this.flaeche = flaeche;
+  }
+  
+}

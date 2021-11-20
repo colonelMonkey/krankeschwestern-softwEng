@@ -1,0 +1,136 @@
+package aufg0254;
+
+public class KraftFahrZeug
+{
+  //instanzvariablen
+  private String fahrgestellNr;
+  private String hersteller;
+  private String modell;
+  private double verbrauchsDurchschnitt;
+  private double kmStand;
+  private double tankFuellStand;
+  private double tagesVerbrauch;
+  private boolean an;
+  //kostruktor
+  public KraftFahrZeug(String fahrgestellNr, String hersteller, String modell, double kmStand,
+      double verbrauchsDurchschnitt)
+  {
+    this.fahrgestellNr = fahrgestellNr;
+    this.hersteller = hersteller;
+    this.modell = modell;
+    this.verbrauchsDurchschnitt = verbrauchsDurchschnitt;
+    this.kmStand = kmStand;
+  }
+  //getter Eigenschaften
+  public String getFahrgestellNr()
+  {
+    return fahrgestellNr;
+  }
+  public String getHersteller()
+  {
+    return hersteller;
+  }
+  public String getModell()
+  {
+    return modell;
+  }
+  public double getVerbrauchsDurchschnitt()
+  {
+    return verbrauchsDurchschnitt;
+  }
+  //getter Zustände
+  public double getKmStand()
+  {
+    return kmStand;
+  }
+  public double getTankFuellStand()
+  {
+    return tankFuellStand;
+  }
+  public double getTagesVerbrauch()
+  {
+    return tagesVerbrauch;
+  }
+  private boolean isAn()
+  {
+    return an;
+  }
+  //setter
+  private void setKmStand(double kmStand)
+  {
+    this.kmStand = kmStand;
+  }
+  private void setTankFuellStand(double tankFuellStand)
+  {
+    this.tankFuellStand = tankFuellStand;
+  }
+  private void setTagesVerbrauch(double tagesVerbrauch)
+  {
+    this.tagesVerbrauch = tagesVerbrauch;
+  }
+  
+  private void setAn(boolean an)
+  {
+    this.an = an;
+  }
+  //Funktionalität
+  public boolean starte()
+  {
+    setTagesVerbrauch(0);
+    if(getTankFuellStand() > 0)
+    {
+      setAn(true);
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+  public double stoppe()
+  {
+    setAn(false);
+    setTagesVerbrauch(0);
+    return getTagesVerbrauch();
+  }
+  public String liesArmaturen()
+  {
+    
+    String aus = ("Der Füllstand des Tanks ist: " + getTankFuellStand() + " Liter!\n");
+    if(getTankFuellStand() == 0) aus += ("Der Tank ist Leer!" + "\n");
+    else if(getTankFuellStand() < 10) aus += ("Der Tank ist fast leer!" + "\n");
+    aus += ("Der km Stand ist: " + getKmStand() + " km!\n");
+    aus += ("Seit dem letzten Start wurden " + getTagesVerbrauch() + " Liter Kraftstoff verbraucht\n");
+    return aus;
+  }
+  public double tanke(double getankt)
+  {
+    setTankFuellStand(getankt + getTankFuellStand());
+    return getTankFuellStand();
+  }
+  public double fahre(double km)
+  {
+    if(isAn())
+    {
+      double reichweite = getTankFuellStand() / getVerbrauchsDurchschnitt() * 100;
+      if(km > reichweite)// zu wenig Sprit
+      {
+        setKmStand(getKmStand() + reichweite);
+        setTagesVerbrauch(getTagesVerbrauch() + getTankFuellStand());
+        setTankFuellStand(0);
+        stoppe();//wenn der Tank leer ist, muss der Motor aus gehen
+        return reichweite;
+      }
+      else { // genug sprit
+        setKmStand(getKmStand() + km);
+        double verbraucht = getVerbrauchsDurchschnitt() * km / 100;
+        setTagesVerbrauch(getTagesVerbrauch() + verbraucht);
+        setTankFuellStand(getTankFuellStand() - verbraucht);
+        return km;
+      }
+    }
+    else {
+      return 0d;
+    }
+  }
+  
+}

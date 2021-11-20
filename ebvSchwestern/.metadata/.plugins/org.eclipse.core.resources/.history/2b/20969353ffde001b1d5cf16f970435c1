@@ -1,0 +1,11 @@
+grant
+{
+  // Permissions für den RMI-Server:
+  permission java.net.SocketPermission "127.0.0.1:15560", "accept,connect,listen,resolve";
+  
+  //test
+  permission java.util.PropertyPermission "*", "read,write";
+
+  // Permissions für die RMI Registry:
+  permission java.net.SocketPermission "127.0.0.1:11099", "accept,connect,listen,resolve";
+};

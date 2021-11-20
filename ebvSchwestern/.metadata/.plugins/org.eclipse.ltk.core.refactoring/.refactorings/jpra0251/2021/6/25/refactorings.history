@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;de_eikelberg_iotools.jar&apos; to &apos;jpra0254e&apos;&#x0D;&#x0A;- Original project: &apos;jpra0251&apos;&#x0D;&#x0A;- Destination element: &apos;jpra0254e&apos;&#x0D;&#x0A;- Original element: &apos;de_eikelberg_iotools.jar&apos;" description="Copy file" destination="=jpra0254e" element1="de_eikelberg_iotools.jar" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1624283007888" units="0" version="1.0"/>
+</session>

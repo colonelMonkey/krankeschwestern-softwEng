@@ -1,0 +1,65 @@
+package jpra0245;
+import de.eikelberg.iotools.*;
+
+public class Mittelwerte
+{
+  private static double[] sums;
+  public static void main(String[] args)
+  {
+   sums = createArr();
+   ScreenOut.kPrintln("Das Arithmetische Mittel ist: " + arithmetischesMittel(sums));
+   try
+  {
+    ScreenOut.kPrintln("Das Geometrische Mittel ist: " + geometrischesMittel(sums));
+  }
+  catch (Exception e)
+  {
+    ScreenOut.kPrintln(" !!! " + e.getMessage() + " !!! ");
+  }
+   ScreenOut.kPrintln("Das Quadratische Mittel ist: " + quadratischesMittel(sums));
+   
+  }
+  
+  private static double[] createArr() 
+  {
+    DatasetIn reader = new DatasetIn("daten\\Summanden.txt");
+    int anzahl = reader.dReadInt();
+    double[] summanden = new double[anzahl];
+    for (int i = 0; i < summanden.length; i++)
+    {
+      ScreenOut.kPrintln(summanden[i] = reader.dReadDouble());
+    }
+    reader.dClose();
+    return summanden;
+  }
+  private static double arithmetischesMittel(double[] in)
+  {
+    double sum = 0.0;
+    for (int i = 0; i < in.length; i++)
+    {
+      sum += in[i];
+    }
+    return sum / in.length;
+  }
+  private static double geometrischesMittel(double[] in) throws Exception
+  {
+    double prod = in[0];
+    for (int i = 1; i < in.length; i++)
+    {
+      prod *= in[i];
+    }
+    if(prod < 0 && (in.length % 2 == 0))throw new Exception("Kann keine Wurzel aus negativer Zahl ziehen: "+ prod);
+    return  Math.pow(prod, (1.0 / in.length));
+  }
+  
+  private static double quadratischesMittel(double[] in)
+  {
+    double sum = 0.0;
+    for (int i = 0; i < in.length; i++)
+    {
+      sum += Math.pow(in[i], 2);
+    }
+    return Math.sqrt(sum / in.length);
+  }
+
+}

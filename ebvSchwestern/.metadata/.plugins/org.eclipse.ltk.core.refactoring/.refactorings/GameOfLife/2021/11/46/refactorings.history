@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;bsp13100&apos; to &apos;hauptPaket&apos;&#x0A;- Original project: &apos;GameOfLife&apos;&#x0A;- Original element: &apos;GameOfLife/bsp13100&apos;&#x0A;- Renamed element: &apos;GameOfLife/hauptPaket&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;bsp13100&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/&lt;bsp13100" name="hauptPaket" qualified="false" references="true" stamp="1637440593858" textual="false" version="1.0"/>
+</session>

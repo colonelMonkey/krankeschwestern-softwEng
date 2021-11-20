@@ -1,0 +1,14 @@
+package aufg0256;
+
+import java.awt.Point;
+
+public class Kreis extends Ellipse
+{
+
+  public Kreis(Point mittelpunkt, int hauptachse, int nebenachse)
+  {
+    super(mittelpunkt, hauptachse, nebenachse);
+    // TODO Auto-generated constructor stub
+  }
+
+}

@@ -1,0 +1,27 @@
+package aufg0256;
+
+import java.awt.Point;
+
+public class Quadrat extends Rechteck
+{
+  private double flaeche;
+  private double umfang;
+  
+  public Quadrat(Point mittelpunkt, int seitenLaenge)
+  {
+    super(mittelpunkt, seitenLaenge, seitenLaenge);
+    this.setName("Quadrat");
+    this.berechneEigenschaften();
+    
+  }
+  private void berechneEigenschaften() 
+  {
+    flaeche = Math.round(this.getXLaenge() * this.getXLaenge())*1d;
+    umfang = Math.round(this.getXLaenge() * 4)*1d;
+  }
+  public double getSeitenlaenge()
+  {
+    return this.getXLaenge();
+  }
+
+}

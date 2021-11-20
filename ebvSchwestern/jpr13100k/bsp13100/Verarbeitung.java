@@ -1,0 +1,77 @@
+package bsp13100;
+
+import java.util.Enumeration;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JOptionPane;
+import javax.swing.JRadioButton;
+
+public class Verarbeitung
+{
+  static int zaehlerStand = 0;
+  
+  private Verarbeitung() { }
+  
+  protected static void zaehle(MainPanel mp)
+  {
+    boolean ok = true;
+    String ein = mp.getTfSchrittWeite().getText();
+    int schrittweite = 0;
+    try
+    {
+      schrittweite = Integer.parseInt(ein);
+    }
+    catch (NumberFormatException e)
+    {
+      JOptionPane.showMessageDialog(mp, "Fehler - nicht ganzzahlige Schrittweite", "Fehler", JOptionPane.ERROR_MESSAGE);
+      ok = false;
+    }
+    ein = getSelectedRadioButton(mp.getButtonGroup()).getActionCommand();
+    
+    switch(ein)
+    {
+    case "aufw" : ;
+    break;
+    case "abw" : {
+      schrittweite = -schrittweite;
+    }
+    break;
+    default: {
+      JOptionPane.showMessageDialog(mp, "Fehler - keine Richtung ausgewählt", "Fehler", JOptionPane.ERROR_MESSAGE);
+      ok = false;
+    }
+
+    }
+    if(ok)
+    {
+      zaehlerStand += schrittweite;
+      String aus = (zaehlerStand+"");
+      mp.getTfZaehlerStand().setText(aus);
+    }
+    
+  }
+  private static JRadioButton getSelectedRadioButton(ButtonGroup bg)
+  {
+  JRadioButton rbSelected = null;
+  // 1. Referenzen der RadioButton-Objekte von der ButtonGroup holen
+  Enumeration<?> e = bg.getElements();
+  while (e.hasMoreElements() & rbSelected == null)
+  {
+  // 2. Sukzessiv die einzelnen Referenzen aus der Enumeration holen
+  Object o = e.nextElement();
+  if (o instanceof JRadioButton)
+  {
+  // 3. Cast nach Datentyp JRadioButton
+  JRadioButton rb = (JRadioButton) o;
+  // 4. Referenzen der Daten-Modelle vergleichen. Ist die Referenz
+  // der Modelle gleich, so sind auch die Radiobuttons identisch
+  if (rb.getModel() == bg.getSelection())
+  {
+  // 5. Referenz des gewählten JRadioButton speichern
+  rbSelected = rb;
+  }
+  }
+  }
+  return rbSelected;
+  }
+}

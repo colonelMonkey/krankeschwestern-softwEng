@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;jpra0250&apos; to &apos;aufg0250&apos;&#x0D;&#x0A;- Original project: &apos;jpra0250&apos;&#x0D;&#x0A;- Original element: &apos;jpra0250/jpra0250&apos;&#x0D;&#x0A;- Renamed element: &apos;jpra0250/aufg0250&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;jpra0250&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/&lt;jpra0250" name="aufg0250" qualified="false" references="true" stamp="1624287858532" textual="false" version="1.0"/>
+</session>

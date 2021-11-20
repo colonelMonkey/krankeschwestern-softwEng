@@ -1,0 +1,55 @@
+package aufg0256;
+
+import java.awt.Point;
+
+public abstract class GeomFigur
+{
+
+  private int breite;
+  private int hoehe;
+  private Point mittelpunkt;
+  private String name;
+  
+  public GeomFigur(String name, Point mittelpunkt,int breite, int hoehe )
+  {
+    super();
+    this.breite = breite;
+    this.hoehe = hoehe;
+    this.mittelpunkt = mittelpunkt;
+    this.name = name;
+  }
+  public final int getBreite()
+  {
+    return breite;
+  }
+  public final int getHoehe()
+  {
+    return hoehe;
+  }
+  public final Point getMittelpunkt()
+  {
+    return mittelpunkt;
+  }
+  public final String getName()
+  {
+    return name;
+  }
+  public final void setMittelpunkt(Point mittelpunkt)
+  {
+    this.mittelpunkt = mittelpunkt;
+  }
+  public final void setName(String name)
+  {
+    this.name = name;
+  }
+  public final Point getZeichenPostion()
+  {
+    Point zp = new Point();
+    zp.setLocation(getMittelpunkt().getX() - getBreite()/2, getMittelpunkt().getY() - getHoehe()/2);
+    return zp;
+  }
+  public abstract double getFlaeche();
+  
+  public abstract double getUmfang();
+
+}

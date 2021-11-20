@@ -1,0 +1,46 @@
+package aufg0256;
+
+import java.awt.Point;
+
+public class Rechteck extends GeomFigur
+{
+  private double flaeche;
+  private double umfang;
+
+  public Rechteck(Point mittelpunkt, int xLaenge, int yLaenge)
+  {
+    super(xLaenge, yLaenge, mittelpunkt, "Rechteck");
+    berechneEigenschaften();
+  }
+  
+  private void berechneEigenschaften()
+  {
+    this.flaeche = Math.round(getBreite()*getHoehe())*1d;
+    this.umfang = Math.round(2*getBreite() + 2*getHoehe())*1d;
+  }
+
+  @Override
+  public double getFlaeche()
+  {
+    return flaeche;
+  }
+
+  @Override
+  public double getUmfang()
+  {
+    return umfang;
+  }
+  
+  public double getXLaenge()
+  {
+    return getBreite();
+  }
+  
+  public double getYLaenge()
+  {
+    return getHoehe();
+  }
+
+ 
+
+}

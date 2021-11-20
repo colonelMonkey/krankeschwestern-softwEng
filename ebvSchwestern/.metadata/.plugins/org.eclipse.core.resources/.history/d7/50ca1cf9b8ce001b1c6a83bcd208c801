@@ -1,0 +1,27 @@
+package jpra0251;
+
+public class TaschenrechnerGRVerarbeitung
+{
+  private double op1, op2;
+  private byte status = 0;
+  public TaschenrechnerGRVerarbeitung(String op1, String op2)
+  {
+    if(op1 != null && op2 != null) {
+      try {
+        this.op1 = Double.parseDouble(op1);
+        this.op2 = Double.parseDouble(op2);
+      }
+      catch(NumberFormatException nfe) {
+        status = 2;
+      }
+      finally {
+        status = 3;
+      } 
+    } else 
+    {
+      status = 1;
+    }
+  }
+  
+  
+}

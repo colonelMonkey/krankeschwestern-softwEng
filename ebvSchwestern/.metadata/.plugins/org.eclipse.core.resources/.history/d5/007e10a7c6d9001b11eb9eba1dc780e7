@@ -1,0 +1,28 @@
+package aufg0256;
+
+import java.awt.Point;
+
+public class Ellipse extends GeomFigur
+{
+
+  public Ellipse(int breite, int hoehe, Point mittelpunkt, String name)
+  {
+    super(breite, hoehe, mittelpunkt, name);
+    // TODO Auto-generated constructor stub
+  }
+
+  @Override
+  public double getFlaeche()
+  {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  @Override
+  public double getUmfang()
+  {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+}

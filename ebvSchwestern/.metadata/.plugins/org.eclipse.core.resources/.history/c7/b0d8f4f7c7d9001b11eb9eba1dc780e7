@@ -1,0 +1,14 @@
+package aufg0256;
+
+import java.awt.Point;
+
+public class Quadrat extends Rechteck
+{
+
+  public Quadrat(Point mittelpunkt, int xLaenge, int yLaenge)
+  {
+    super(mittelpunkt, xLaenge, yLaenge);
+    // TODO Auto-generated constructor stub
+  }
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;de_eikelberg_nsttools.jar&apos; to &apos;test&apos;&#x0D;&#x0A;- Original project: &apos;jpra0123&apos;&#x0D;&#x0A;- Destination element: &apos;test&apos;&#x0D;&#x0A;- Original element: &apos;de_eikelberg_nsttools.jar&apos;" description="Copy file" destination="=test" element1="de_eikelberg_nsttools.jar" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1622213155099" units="0" version="1.0"/>
+</session>
