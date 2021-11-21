@@ -1,0 +1,10 @@
+package hauptPaket;
+
+public class Snippet
+{
+  public static void main(String[] args)
+  {
+    labelTable.put(1000, new JLabel("1") );
+  }
+}
+

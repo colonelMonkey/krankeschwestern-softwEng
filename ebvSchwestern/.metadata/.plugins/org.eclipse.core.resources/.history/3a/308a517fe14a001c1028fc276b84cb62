@@ -1,0 +1,43 @@
+package hauptPaket;
+
+import java.awt.Canvas;
+import java.awt.Graphics;
+import java.awt.GraphicsConfiguration;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+import javafx.scene.paint.Color;
+
+public class MyCanvas extends Canvas
+{
+  BufferedImage img;
+  
+  public MyCanvas(int width, int height)
+  {
+    img = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+  }
+  
+  public void paint( Graphics g )
+  {
+    super.paint(g);
+    g.drawImage(img, 0, 0, this);
+  }
+  
+  public void setBright(int x , int y, byte br)
+  {
+    img.setRGB(x, y, grayscale(br));
+  }
+  
+  private int grayscale(byte brightness)
+  {
+    int r = brightness;
+    int g = brightness;
+    int b = brightness;
+    int col = (r << 16) | (g << 8) | b;
+    return col;
+  }
+
+}

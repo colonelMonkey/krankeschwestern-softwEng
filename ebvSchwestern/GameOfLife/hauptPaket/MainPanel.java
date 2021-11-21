@@ -16,9 +16,15 @@ import javax.swing.ButtonGroup;
 import javax.swing.JScrollPane;
 import java.awt.Button;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.util.Hashtable;
 import java.awt.event.ActionEvent;
 import java.awt.Canvas;
 import java.awt.FlowLayout;
+import javax.swing.JSlider;
+import javax.swing.JSpinner;
+import java.awt.Color;
+import javax.swing.border.LineBorder;
 
 public class MainPanel extends JPanel
 {
@@ -50,13 +56,17 @@ public class MainPanel extends JPanel
   private JLabel lbTopologie;
   private JRadioButtonMenuItem rdbtnmntmStandard;
   private JRadioButtonMenuItem rdbtnmntmTorus;
-  private final ButtonGroup buttonGroup = new ButtonGroup();
+  private final ButtonGroup bGTopo = new ButtonGroup();
   private JSeparator separator_5;
   private JMenuItem mntmRegelBearbeiten;
-  private JScrollPane spSpielfeld;
   private JPanel panelBottomBar;
   private Button buttonPlayPause;
-  private Canvas canvas;
+  private Button buttonSchritt;
+  private JPanel panelSlider;
+  private JSlider slDelay;
+  private JLabel lbVerzgerung;
+  private JSpinner spZellLupe;
+  private MyCanvas canvas;
 
   public MainPanel()
   {
@@ -69,8 +79,8 @@ public class MainPanel extends JPanel
     setThisSize(new Dimension(1300, 900));
     setLayout(null);
     add(getMenuBar());
-    add(getSpSpielfeld());
     add(getPanelBottomBar());
+    add(getCanvas());
   }
 
   private MainPanel getMainPanel()
@@ -265,14 +275,14 @@ public class MainPanel extends JPanel
     if (rdbtnmntmStandard == null) {
     	rdbtnmntmStandard = new JRadioButtonMenuItem("Standard");
     	rdbtnmntmStandard.setSelected(true);
-    	buttonGroup.add(rdbtnmntmStandard);
+    	bGTopo.add(rdbtnmntmStandard);
     }
     return rdbtnmntmStandard;
   }
   protected JRadioButtonMenuItem getRdbtnmntmTorus() {
     if (rdbtnmntmTorus == null) {
     	rdbtnmntmTorus = new JRadioButtonMenuItem("Torus");
-    	buttonGroup.add(rdbtnmntmTorus);
+    	bGTopo.add(rdbtnmntmTorus);
     }
     return rdbtnmntmTorus;
   }
@@ -288,28 +298,24 @@ public class MainPanel extends JPanel
     }
     return mntmRegelBearbeiten;
   }
-  protected JScrollPane getSpSpielfeld() {
-    if (spSpielfeld == null) {
-    	spSpielfeld = new JScrollPane();
-    	spSpielfeld.setBounds(0, 22, 1300, 788);
-    	spSpielfeld.setViewportView(getCanvas());
-    }
-    return spSpielfeld;
-  }
   protected JPanel getPanelBottomBar() {
     if (panelBottomBar == null) {
     	panelBottomBar = new JPanel();
+    	panelBottomBar.setBorder(new LineBorder(new Color(0, 0, 0)));
     	panelBottomBar.setBounds(0, 810, 1300, 90);
-    	panelBottomBar.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+    	panelBottomBar.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10));
     	panelBottomBar.add(getButtonPlayPause());
+    	panelBottomBar.add(getButtonSchritt());
+    	panelBottomBar.add(getPanelSlider());
+    	panelBottomBar.add(getSpZellLupe());
     }
     return panelBottomBar;
   }
   protected Button getButtonPlayPause() {
     if (buttonPlayPause == null) {
     	buttonPlayPause = new Button("Play/Pause");
-    	buttonPlayPause.setSize(new Dimension(60, 20));
-    	buttonPlayPause.setPreferredSize(new Dimension(100, 30));
+    	buttonPlayPause.setSize(new Dimension(120, 50));
+    	buttonPlayPause.setPreferredSize(new Dimension(120, 50));
     	buttonPlayPause.addActionListener(new ActionListener() {
     	  public void actionPerformed(ActionEvent arg0) {
     	  }
@@ -317,9 +323,64 @@ public class MainPanel extends JPanel
     }
     return buttonPlayPause;
   }
+  protected Button getButtonSchritt() {
+    if (buttonSchritt == null) {
+    	buttonSchritt = new Button("Schritt");
+    	buttonSchritt.setSize(new Dimension(120, 50));
+    	buttonSchritt.setPreferredSize(new Dimension(120, 50));
+    }
+    return buttonSchritt;
+  }
+  protected JPanel getPanelSlider() {
+    if (panelSlider == null) {
+    	panelSlider = new JPanel();
+    	panelSlider.setSize(new Dimension(250, 70));
+    	panelSlider.setPreferredSize(new Dimension(250, 70));
+    	panelSlider.add(getSlDelay());
+    	panelSlider.add(getLbVerzgerung());
+    }
+    return panelSlider;
+  }
+  protected JSlider getSlDelay() {
+    if (slDelay == null) {
+    	slDelay = new JSlider();
+    	slDelay.setPreferredSize(new Dimension(250, 42));
+    	slDelay.setMinorTickSpacing(250);
+    	slDelay.setPaintLabels(true);
+    	slDelay.setPaintTicks(true);
+    	slDelay.setSnapToTicks(true);
+    	slDelay.setInverted(true);
+    	Hashtable<Integer, JLabel> labelTable = new Hashtable<Integer, JLabel>();
+      labelTable.put(0, new JLabel("Warp 9") );
+      for (int i = 1; i <= 5; i++)
+      {
+        labelTable.put(1000*i, new JLabel(""+i) );
+      }
+      slDelay.setLabelTable(labelTable);
+    	slDelay.setMajorTickSpacing(1000);
+    	slDelay.setMaximum(5000);
+    	slDelay.setValue(1000);
+    }
+    return slDelay;
+  }
+  protected JLabel getLbVerzgerung() {
+    if (lbVerzgerung == null) {
+    	lbVerzgerung = new JLabel("Verzögerung[S]");
+    }
+    return lbVerzgerung;
+  }
+  protected JSpinner getSpZellLupe() {
+    if (spZellLupe == null) {
+    	spZellLupe = new JSpinner();
+    	spZellLupe.setFont(new Font("Dialog", Font.BOLD, 30));
+    	spZellLupe.setPreferredSize(new Dimension(80, 50));
+    }
+    return spZellLupe;
+  }
   protected Canvas getCanvas() {
     if (canvas == null) {
-    	canvas = new Canvas();
+    	canvas = new MyCanvas();
+    	canvas.setBoundsG(0, 20, 1300, 790);
     }
     return canvas;
   }
