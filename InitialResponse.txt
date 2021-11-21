@@ -133,24 +133,24 @@ Denglish ist nie eine gute Wahl! Im Pflichtenheft mag dies noch gehen, denn der 
         - Das Bild ist irreführend: Die totale Wahrscheinlichkeit (Summe der W'keiten aller			 done
           unabhängigen Ereignisse) im Beispiel liegt bei 60%, sollte aber bei 100% liegen.
           Darüber hinaus passen die "Anzahlen" nicht zu den "Abs. W'keiten". Bei 0-0 müsste
-          sie 10/12 (nicht 50%), bei 1-5 und 6-10 1/12 (nicht 5%).						        beschreibung überarbeiten (Nico)
+          sie 10/12 (nicht 50%), bei 1-5 und 6-10 1/12 (nicht 5%).						        beschreibung überarbeiten (Nico) done
 
-3.2 Die Funktionen wurden im Pflichtenheft nicht genannt. Bitte nachtragen (Bedienkonzept).			Bei Kannkrieterien und gesondert die tabelle eintragen.
+3.2 Die Funktionen wurden im Pflichtenheft nicht genannt. Bitte nachtragen (Bedienkonzept).			Bei Kannkrieterien und gesondert die tabelle eintragen. done
 
 3.3 Die Syntax der Transitionsregeln muss ebenfalls ins Pflichtenheft!						triple done
     - können Sie mit den so erstellbaren Regeln Conway's Game of Life darstellen? Zur Übung und als Beispiel	done
       angeben. Wenn's nicht geht: Operatorsatz anpassen.
 
-Glossar: Siehe oben. An beiden Stellen dasselbe Glossar verwenden.						glossar anpassen muss noch, jetzt hauptsächlich vom pflichtenheft notwendigste ind handbuch
+Glossar: Siehe oben. An beiden Stellen dasselbe Glossar verwenden.						glossar anpassen muss noch, jetzt hauptsächlich vom pflichtenheft notwendigste ind handbuch         done
 
-Es fehlen die Anwendungsfälle (heißen im Pflichtenheft "Testszenarien"). Hier bitte recyclen!			Punkt 4 bitte ins Hanbuch unter Anwendungsfälle eintragen
+Es fehlen die Anwendungsfälle (heißen im Pflichtenheft "Testszenarien"). Hier bitte recyclen!			Punkt 4 bitte ins Hanbuch unter Anwendungsfälle eintragen done
 
 
 
 Gesamtwertung: 2/5												frechheit
 
 Bitte verbessern Sie ihre Abgabe unter Berücksichtigung meiner Anmerkungen und reichen Sie es schnellstmöglich erneut über die Abgabe-Funktion auf Moodle ein.
-(Es gibt auch noch zahlreiche Gelegenheiten, Rechtschreibung und Grammatik zu vervollkommnen.)                                                                      ALEX MUSS NOCH
+(Es gibt auch noch zahlreiche Gelegenheiten, Rechtschreibung und Grammatik zu vervollkommnen.)                                                                      ALEX MUSS NOCH 
 
 Beste Grüße
 

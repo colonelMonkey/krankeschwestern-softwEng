@@ -36,9 +36,9 @@ M0002 & Scope & Es soll ein zellulärer Automat mit möglichst großer Freiheit 
 \hline
 M0003 & Darstellung Spielfeld & Die Darstellung des Zellulären Automaten Erfolgt über eine 2D Matrix aus Quadraten deren Farbe und Helligkeit den Zustand eines Feldes wiedergeben. \\
 \hline
-M0004 & Transitionsregeleditor & Die Transitionsregeln sollen über eine definierte und im Handbuch dokumentierte Syntax (invers Polnische Notation, ggf. auch mathematische Schreibweise) formuliert werden können. Der neue Zustand einer Zelle darf dabei von der Zelle selbst, sowie von den umliegenden acht benachbarten Zellen abhängen. Ihr Status wird in Variablen bereitgestellt.\\
+M0004 & Transitionsregeleditor & Die Transitionsregeln sollen über eine definierte und im Handbuch dokumentierte Syntax (invers Polnische Notation, ggf. auch mathematische Schreibweise) formuliert werden können. Der neue Zustand einer Zelle darf dabei von der Zelle selbst, sowie von den Umliegenden acht benachbarten Zellen abhängen. Ihr Status wird in Variablen bereitgestellt.\\
 \hline
-M0005 & Spielfeldaufbau & Das Spielfeld soll als 2D Array von Integerwerten ausgeführt sein, welche den Zellzustand repräsentieren.\\
+M0005 & Spielfeldaufbau & Das Spielfeld soll als 2D Array von Integer-werten ausgeführt sein, welche den Zellzustand repräsentieren.\\
 \hline
 0006 & Spielfeldgröße & Die Spielfeldgröße soll vor Simulationsstart vom Benutzer über (Text-)Eingabefelder festgelegt werden können.\\
 \hline
@@ -597,7 +597,7 @@ Erwartetes Ergebnis&Dialogfenster behält Fokus. Aktion nicht ausführen.\\
 \hline
 Ablauf&Rechtsklick auf Lupe ohne Vorherige Wertzuweisung durch Linksklick ins Feld.\\
 \hline
-Erwartetes Ergebnis&Einfügen Modus wird Gestartet und ermoglicht einfügen von 0.\\
+Erwartetes Ergebnis&Einfügen Modus wird Gestartet und ermöglicht einfügen von 0.\\
 \hline
 \end{longtable}
 
@@ -672,6 +672,8 @@ Erwartetes Ergebnis&Fehlermeldung: 2 Dimensionen benötigt. Aktion nicht ausfüh
 \hline
 \end{longtable}
 
+\newpage 
+
 \subsubsection{Zufallsgenerator}
 
 \textbf{Vorbedingung: Hauptfenster des Zufallsgenerators mit Tabelle ist geöffnet.}
@@ -744,7 +746,7 @@ Erwartetes Ergebnis&Programminterne Fehlermeldung ausgeben und Aktion nicht ausf
 
 
 
-\subsection{Speichern und Laden}
+\subsubsection{Speichern und Laden}
 
 \begin{longtable}[m]{|m{3cm}|m{10cm}|}
 \hline
@@ -754,7 +756,7 @@ Erwartetes Ergebnis&Wiederherstellen der nicht vorhandenen Ordner und Dateien. �
 \hline
 \end{longtable}
 
-\subsection{Performance}
+\subsubsection{Performance}
 \begin{longtable}[m]{|m{3cm}|m{10cm}|}
 \hline
 Ablauf&Einstellen der Spielfeld Größe auf 3000 * 3000. Ui Elemente Bedienen\\
@@ -771,11 +773,13 @@ Erwartetes Ergebnis&Simulation wird Flüssig (Mindestens 30 FPS) ausgeführt.\\
 \hline
 \end{longtable}
 
-\subsection{Stabilität}
+\newpage
+
+\subsubsection{Stabilität}
 
 \begin{longtable}[m]{|m{3cm}|m{10cm}|}
 \hline
-Ablauf&Bei Standard Spielfeld Größe, Game of Life Regelsatz, Einer Glidergun auf dem Spielfeld und ohne Verzögerung Simulation starten und eine Stunde Laufen lassen.\\
+Ablauf&Bei Standard Spielfeld Größe, Game of Life Regelsatz, eine Glidergun auf dem Spielfeld und ohne Verzögerung Simulation starten und eine Stunde Laufen lassen.\\
 \hline
 Erwartetes Ergebnis&Nach einer Stunde läuft das Programm unverändert weiter und produziert immernoch Glider.\\
 \hline
@@ -783,9 +787,9 @@ Erwartetes Ergebnis&Nach einer Stunde läuft das Programm unverändert weiter un
 
 \begin{longtable}[m]{|m{3cm}|m{10cm}|}
 \hline
-Ablauf&Erfahrene Testperson benutzt 1 Stunde Lang alle funktionen des Programms.\\
+Ablauf&Erfahrene Testperson benutzt 1 Stunde lang alle Funktionen des Programms.\\
 \hline
-Erwartetes Ergebnis&Nach einer Stunde läuft das Programm noch stabil und ist nicht zwischendurch abgestürtzt.\\
+Erwartetes Ergebnis&Nach einer Stunde läuft das Programm noch stabil und ist nicht zwischendurch abgestürzt.\\
 \hline
 \end{longtable}
 
@@ -843,13 +847,13 @@ JRE  & Java Runtime Environment. Ein Stück frei erhältliche Software, die es E
 Zellen die eine bestimmte Menge von zuständen einnehmen können befinden sich in einem Raum. Die Räumlich nächsten Zellen bilden die Nachbarschaft. Aus dem eigenen Zustand und dem der Nachbarn ergibt sich über eine Transitionsregel der Folgezustand.
 \\
     \hline
- Transiitonsregel & Vorschrift die unter Verwendung vorhandener Daten den Zustand einer Zelle in den Nächsten überfuhrt.\\  
+ Transitionsregel & Vorschrift die unter Verwendung vorhandener Daten den Zustand einer Zelle in den Nächsten überfuhrt.\\  
   \hline
  Simulation & Dynamische Abbildung, meist realer Sachverhalte, anhand eines Modells, durch Anwendung des Modells über Zeit.\\
   \hline
   Spielfeld & Zweidimensionales Feld aus Zellen\\
   \hline
-  Zelle & Ein zellular Automat (Zelle), der einen Zustand (lebendig oder tot) annehmen kann.\\
+  Zelle & Ein zellular Automat (Zelle), der 2 hoch 32 Zustände annehmen kann.\\
   \hline
   Invers Polnische Notation & Beste Erfindung der Welt. Klammerfreie Notation von Algorithmen, die auf einem Stack ausgeführt werden können.\\
   \hline
@@ -859,9 +863,13 @@ Zellen die eine bestimmte Menge von zuständen einnehmen können befinden sich i
  \hline
  Spielfeld & Ein abgegrenztes 2D Feld aus Zellen. \\
  \hline
+ Multithreading & Aufteilen einer von Aufgaben auf mehrere Threads. In diesem Kontext lässt sich das Spielfeld in mehrere Bereiche unterteilen die dann Parallel bearbeitet werden können. \\
+ \hline
+ Thread & Logischer Prozessor \\
+ \hline
  Zustand & Der Zustand einer Zelle (lebendig oder tot) in der Folgegeneration hängt nur vom aktuellen Zustand der Zelle selbst und den aktuellen Zuständen ihrer Nachbarzellen ab. \\
  \hline
- Nachbarn & Zellen mit dem Zustand "lebendig", die über Kanten oder Ecken mit der aktuellen Zelle verbunden sind.\\ 
+ Nachbarn & Eine Auswahl an Zellen die über Ecken und Kanten mit der derzeit Betrachteten Zelle verbunden sind. Wie sonst unüblich kann man sich hier die Nachbarschaft aussuchen, indem man die Gewollten in der Regel verbaut, oder eben auch nicht. Wer seine Ruhe haben will, wird schnell merken, dass ein ruhiges Leben auch langweilig sein kann.\\ 
  \hline
  Nachbarschaft & Leute die auf MEINEM Parkplatz parken und den Hund mitten in der Nacht bellen lassen.\\
  \hline
