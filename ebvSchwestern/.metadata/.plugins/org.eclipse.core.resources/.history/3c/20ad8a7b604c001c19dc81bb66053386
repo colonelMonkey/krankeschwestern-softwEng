@@ -1,0 +1,6 @@
+package zufallsgenerator;
+
+public interface ZufallsgeneratorSchnittstelle
+{
+
+}

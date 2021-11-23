@@ -1,0 +1,17 @@
+package zufallsgenerator;
+
+public class GeneratorTester
+{
+
+  public GeneratorTester()
+  {
+    // TODO Auto-generated constructor stub
+  }
+
+  public static void main(String[] args)
+  {
+    // TODO Auto-generated method stub
+
+  }
+
+}

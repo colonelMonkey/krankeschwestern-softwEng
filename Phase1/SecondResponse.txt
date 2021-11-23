@@ -17,10 +17,10 @@ Produktfunktionen:
            
                   
 Folgende Produktfunktionen vermisse ich nach wie vor:
-     - Auswahl, Laden, Positionieren und Einfügen eines Musters         
-     - Anwendung der Transitionsregeln
-     - zeitdiskrete, synchrone Aktualisierung aller Zellzustände
-     - Datenformate für Speicherung von Regeldatei und Spielfeld
+     - Auswahl, Laden, Positionieren und Einfügen eines Musters         	spielfeldeditor gemeint >bild und genauer ausführen
+     - Anwendung der Transitionsregeln										siehhe eine zeile weiter unten Rgeledittor geimeint?
+     - zeitdiskrete, synchrone Aktualisierung aller Zellzustände			war schon drin hat er überlesen habs verdeutlicht
+     - Datenformate für Speicherung von Regeldatei und Spielfeld			rgeleditor auch bild und genauer punkt 2 eibauen.
 
 
 3.2
@@ -53,7 +53,7 @@ Benutzerleitfaden
 3.2 Die Funktionen wurden im Pflichtenheft immer noch nicht genannt. Bitte nachtragen (Bedienkonzept).
 
 4. Anwendungsfälle
-    Siehe Pflichtenheft (4. Testszenarien).                                                                      eigentlich drin. Überlesen? Abklären!
+    Siehe Pflichtenheft (4. Testszenarien).                                                                      eigentlich drin.  Überlesen? Abklären!
 
 
 Das Glossar dient als Register und ist natürlich lexikografisch zu sortieren!                                      done!
