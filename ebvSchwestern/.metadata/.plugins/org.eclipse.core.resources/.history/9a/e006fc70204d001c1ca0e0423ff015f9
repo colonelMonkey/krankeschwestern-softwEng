@@ -20,13 +20,13 @@ public class GeneratorTester
       }
     }
     for( Entry<Integer, Integer> entry : vorkommnisse.entrySet()) {
-      System.out.println("Ereignis: " + entry.getKey() + "    Häufigkeit: " + Math.round((double)entry.getValue()/iterations*100)+"%");
+      System.out.println("Ereignis : " + entry.getKey() + "    Häufigkeit: " + entry.getValue());
     }
   }
 
   public static void main(String[] args)
   {
-    new GeneratorTester(new TesterTester(), 100000000);//läuft wie geplant und breitzum testen des zufallsgenerators
+
   }
 
 }

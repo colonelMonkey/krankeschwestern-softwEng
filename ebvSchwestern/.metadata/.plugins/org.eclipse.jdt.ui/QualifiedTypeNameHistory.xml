@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="bsp.BeispielProgramm"/>
-    <fullyQualifiedTypeName name="jpra0251.TaschenrechnerGRVerarbeitung"/>
     <fullyQualifiedTypeName name="javax.swing.JProgressBar"/>
     <fullyQualifiedTypeName name="sun.security.mscapi.KeyStore.MY"/>
     <fullyQualifiedTypeName name="jpra0250.MyMath"/>
@@ -47,7 +45,6 @@
     <fullyQualifiedTypeName name="bspMandelbrot.MainPanel"/>
     <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
     <fullyQualifiedTypeName name="javafx.scene.paint.Color"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
     <fullyQualifiedTypeName name="bspMandelbrot.Verarbeitung"/>
@@ -58,6 +55,9 @@
     <fullyQualifiedTypeName name="hauptPaket.MyCanvas"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="zufallsgenerator.ZufallsgeneratorSchnittstelle"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="zufallsgenerator.ZufallsgeneratorSchnittstelle"/>
+    <fullyQualifiedTypeName name="zufallsgenerator.GeneratorTester"/>
+    <fullyQualifiedTypeName name="zufallsgenerator.TesterTester"/>
 </qualifiedTypeNameHistroy>

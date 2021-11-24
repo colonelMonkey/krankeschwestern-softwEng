@@ -1,7 +1,6 @@
 package zufallsgenerator;
 
 import java.util.HashMap;
-import java.util.Map.Entry;
 
 public class GeneratorTester
 {
@@ -15,18 +14,13 @@ public class GeneratorTester
     for (int i = 0; i < iterations; i++)
     {
       int erg = testsubjekt.getRnd();
-      if((vorkommnisse.putIfAbsent(erg, 1))!=null) {
-        vorkommnisse.put(erg,vorkommnisse.get(erg) + 1);
-      }
-    }
-    for( Entry<Integer, Integer> entry : vorkommnisse.entrySet()) {
-      System.out.println("Ereignis: " + entry.getKey() + "    Häufigkeit: " + Math.round((double)entry.getValue()/iterations*100)+"%");
+      vorkommnisse.putIfAbsent(null, null)// mach mal später
     }
   }
 
   public static void main(String[] args)
   {
-    new GeneratorTester(new TesterTester(), 100000000);//läuft wie geplant und breitzum testen des zufallsgenerators
+
   }
 
 }

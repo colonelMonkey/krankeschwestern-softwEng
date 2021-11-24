@@ -26,7 +26,7 @@ public class GeneratorTester
 
   public static void main(String[] args)
   {
-    new GeneratorTester(new TesterTester(), 100000000);//läuft wie geplant und breitzum testen des zufallsgenerators
+    new GeneratorTester(new TesterTester(), 100000000);
   }
 
 }
