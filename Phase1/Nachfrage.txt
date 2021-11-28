@@ -1,0 +1,110 @@
+Sehr geehrter momentan nichtsverantwortlicher Herr Schuran,
+
+
+1.1-    AF-07  
+
+       OK. Sie haben natürlich Recht. Könnte sogar praktisch sein. Das sollte man jedoch erklären.
+
+
+1.2- zeitdiskrete, synchrone Aktualisierung aller Zellzustände
+
+       Ich vertrete die Auffassung, dass "Zeitdiskrete Aktualisierung aller Zellzustände anhand der Transitionsregeln" eine eigene Programmfunktion darstellt. Das sehen Sie schon daran, dass sie in AF04 UND AF-05 verwendet wird. Außerdem handelt es sich um einen komplexen, erklärungsbedürftigen Vorgang.
+
+
+
+1.3- M0017:  "Der genaue Wert einer Zelle muss irgendwie anzeigbar sein."
+      Das liest sich, als hätten Sie keine blasse Ahnung, wie das vernünftig geht. 
+      Ich glaube doch nicht, dass Sie bei einem Kunden den Anschein hinterlassen wollen, dass das so ist?
+      Wenn Sie es wirklich nicht wissen, können Sie es "diplomatischer" ausdrücken, etwa dass es hierzu 
+      einer Rücksprache bedarf oder verschiedene Formen getestet werden sollen.
+      Es ist ja Ihre Aufgabe, Unklarheiten der Produktspezifikation mit Hilfe des Pflichtenheftes weitestgehend auszuräumen.
+
+      Am einfachsten wäre es, das "irgendwie" wegzulassen...
+
+
+1.4- Reicht es hier die Abfolge an Nutzereingaben in einer 3. Zeile nachzutragen?
+
+      Nein. Es müssen KONKRETE Situationen und Nutzereingaben (Zahlen, Dateinamen etc.) und KONKRETE Reaktionen des Programms darauf beschrieben werden.
+
+      Wie sollte man sonst später überprüfen, ob der Test bestanden ist oder nicht? Interpretationsspielräume klein zu halten hilft ;)
+
+
+Benutzerleitfaden: 2.   
+      Eines meiner Hobbies sind SEHR komplexe Brett-, Rollen- und sonstigen Gesellschaftsspiele.
+
+      Ich habe japanische Gebrauchsanweisungen und wissenschaftliche Artikel chinesischer Kollegen gelesen. 
+
+      Ich habe mir diese Beschreibung jetzt zum 3. mal angesehen. 
+
+      Ich halte sie nach wie vor für völlig unverständlich. Ich habe bislang allenfalls eine vage Vorstellung davon, was Sie meinen KÖNNTEN. 
+
+      Wenn ich das ihren Kommilitton:innen vorsetzte - wie denken Sie würde die überwiegende Reaktion ausfallen?
+
+      BITTE beschreiben Sie in verständlichen Worten, was Sie meinen. Verwenden Sie gängige Begriffe: "Faces" mag man im englischen
+
+      Sprachraum verstehen, "Gesichter" im Deutschen sicherlich nicht.
+
+
+Ich hoffe, ich konnte mein Geschreibsel erhellend wirken
+
+
+Beste Grüße
+
+
+Christian Düntgen
+
+----
+Dipl.-Inform. Christian Düntgen
+Hochschule Bochum
+Fachbereich Elektrotechnik und Informatik
+Labor für Technische Informatik
+Raum D3-30
+
+Tel.: +49 234 32 10330
+
+1.4-
+
+Von: nicholas.schuran@stud.hs-bochum.de <nicholas.schuran@stud.hs-bochum.de> im Auftrag von Nicholas Schuran <nicholas.schuran@stud.hs-bochum.de>
+Gesendet: Mittwoch, 24. November 2021 14:26:44
+An: Düntgen, Christian
+Betreff: Rückfragen zur 2. Bewertung(5 Kranken Schwestern)
+ 
+Guten Tag Herr Düntgen,
+
+ich habe im Namen der "5 Kranken Schwestern" einige Rückfragen zur 2. Bewertung der Defintionsphase.
+
+Pflichtenheft:
+
+
+1.1-    AF-07    (1) Negative Integer immer noch im zulässigen Wertebereich! Meinen sie "unsigned integer"?
+Wollen sie, dass nur positive Werte möglich sind? Wir dachten uns, da  Java nur den signed Integer bereitstellt benutzen wir den auch. Spricht ja eigentlich nichts gegen Zustände < 0.
+
+1.2- zeitdiskrete, synchrone Aktualisierung aller Zellzustände
+- Anwendung der Transitionsregeln
+Ich hatte unter AF-04 und AF-05 die Defintion um "Zeitdiskret" und "Anwendung der Transitionsregeln" erweitert. War das nicht gemeint?
+
+1.3- M0017: "Der genaue Wert einer Zelle muss irgendwie anzeigbar sein." Nicht "irgendwie" sondern... ?
+Was gehört hier jetzt hin? Die Musskriterien beziehen sich ja eigentlich garnicht auf die genaue Umsetzung, sondern erstmal nur die Funktionalität.
+
+1.4-Sie haben zahlreiche Tests beschrieben. Allerdings sollte ein Testszenario eine typische Folge von sinnvoll aufeinanderfolgenden
+    Benutzeraktionen mit dem Programm umfassen, also gewissermaßen ein Protokoll einer Benutzung darstellen. Anhand des
+    "Protokolls" der Interaktion Benutzer-Programm kann man später das System modulübergreifend testen. Da die Reihenfolge typisch
+    und sinnvoll ist, kann man Sie im Benutzerhandbuch als typischen Anwendungsfall/Beispiel im Trainingsteil verwenden.
+
+Reicht es hier die Abfolge an Nutzereingaben in einer 3. Zeile nachzutragen?
+
+
+Benutzerleitfaden:
+
+2.     -Man kann die Zuordnung leicht Verteilung eines absoluten Gewichts an jeden Zustand erfolgen.
+        Gerne kann man auch mehreren Zuständen gleiche Gewichte zuordnen. Dann muss man festlegen, ob das absolute Gewicht für jeden
+        aufgeführten Zustand gelten soll oder sich die Zustände das Gewicht gleichsam teilen.
+        Die Berechnung der W'keit kann dann automatisch erfolgen als Gewicht/(Summe aller Gewichte).
+
+Eigentlich funktioniert mein Zufallsgenerator über zuordnen von Gewichten für Mehrere zustände. Diese mehreren Zustände heißen bei mir "Gesichter", das Gewicht für jeden aufgeführten Zustand "Anzahl" und die Berechnung der Wahrscheinlichkeiten erfolgt analog über Anzahl/(Menge aller Gesichter). Notfalls übernehme ich einfach ihren Vorschlag.
+
+
+Vielen Dank für ihre gewissenhaften Korrekturen und mit freundlichen Grüßen,
+
+Eigentlich momentan für nix verantworlticher:
+Nicholas Schuran
