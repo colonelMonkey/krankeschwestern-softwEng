@@ -1,7 +1,7 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{pdfpages}
-\usepackage[sfdefault]{GoSans}
+%\usepackage[sfdefault]{GoSans}
 \usepackage{longtable}
 \usepackage{array}
 \usepackage{verbatim}
@@ -50,7 +50,7 @@ M0009 & Navigation & es soll möglich sein, das Spielfeld mit Zoom und Pan versc
 \hline
 M0010 & Spielfeldmanipulation & Der Zustand einer Zelle soll durch Mausklick darauf auf einen wählbaren Wert einstellbar sein. Das Wählen des Werts soll durch ein Texteingabefeld auf der Benutzeroberfläche Erfolgten. Details in der Beschreibung der Benutzeroberfläche.\\
 \hline
-M0011 & Topologie & Das Randverhalten des Spielfelds soll zwischen begrenztem Rechteck und Torus (Zellen an den Kanten sind mit den ihnen gegenüberliegen zellen benachbart) wählbar sein.\\
+M0011 & Topologie & Das Randverhalten des Spielfelds soll zwischen begrenztem Rechteck und Torus (Zellen an den Kanten sind mit den ihnen gegenüberliegen zellen benachbart) mithilfe eines Auswahlschalters wählbar sein.\\
 \hline
 M0012 & Automatische Simulation & Die Simulationsgeschwindigkeit soll über einen Slider einstellbar sein. Die Simulation soll über einen Button gestartet und unterbrochen werden können.\\
 \hline
@@ -150,7 +150,9 @@ AF-03& Undo/Redo& Mausklick auf "undo" macht die letzte Eingabe des Spielers rü
 \hline
  AF-06 & Delay-Slider & Mit diesem Slider kann die Verzögerung zwischen zwei Generationen zwischen 1 und 0 sekunden stufenlos ausgewählt werden. \\
  \hline
- AF-07 & Zellmodifikation & In diesem Textfeld kann (nur int) der Wert festgelegt werden, auf den eine Zelle gesetzt werden soll, falls man mit der Maus darauf klickt.  \\
+ AF-07 & Zellmodifikation & In diesem Textfeld kann (nur int, muss positiv sein) der Wert festgelegt werden, auf den eine Zelle gesetzt werden soll, falls man mit der Maus darauf klickt.  \\
+ \hline
+ AF-08 & Zeitdiskrete Änderung & Beschreibung der Berechnung des nächsten Zustands (manuell oder automatisch).\\
 \hline
 \end{longtable}
 
@@ -303,7 +305,7 @@ AF-03& Undo/Redo& Mausklick auf "undo" macht die letzte Eingabe des Spielers rü
     \hline
     Nachbedingung Erfolgt& Textfeld: User kann neuen Edit-Zielzustand angeben und mit Enter bestätigen. Spielfeld: Zustand der angeklickten Zelle wird auf den Zustand im Textfeld gesetzt. \\
     \hline
-    Nachbedingung Fehlschlag&Textfeld: Bei Eingabe einer Zeichenfolge welche keinen signed Integer repräsentiert: Fehlermeldung und bisherigen Zustand beibehalten.\\
+    Nachbedingung Fehlschlag&Textfeld: Bei Eingabe einer Zeichenfolge welche keinen unsigned Integer repräsentiert: Fehlermeldung und bisherigen Zustand beibehalten.\\
     \hline
     Ablauf&Textfeld: Nutzer klickt auf Textfeld. Nutzer gibt ein, welcher Zielzustand gewünscht ist. Nutzer bestätigt mit Enter. 
     \linebreak
@@ -311,6 +313,31 @@ AF-03& Undo/Redo& Mausklick auf "undo" macht die letzte Eingabe des Spielers rü
     Bei Abbruch wird der vorherige Wert weiterverwendet.
     \linebreak 
     Hinweis: Die Alkoholprüfung wird beim Programmstart durch bestätigung eines Pop-Ups durchgeführt "Dieses Programm darf nur von Personen mit einem Alkoholpegel $<$ 5\% verwendet werden. Durch klick auf OK bestätigen Sie, dass sie diese Bedingung erfüllen"\\
+    \hline
+    
+\end{tabular}
+\par
+
+
+\begin{tabular}[m]{|m{7cm}|m{9cm}|}
+    \hline
+    Anwendungsfall ID     & AF-08 \\
+         \hline
+    AF Name     & Zeitdiskrete Aktualisierung \\
+         \hline
+    Akteur&das Programm \\
+    \hline
+    Vorbedingung&Simulation aktiv ODER Stepover-Button gedrückt.  \\  %todo : Es muss eine Regel geladen sein. Vorbedingung für Simulation
+    \hline
+    Auslösendes Ereignis&Delay-Timer abgelaufen (automatische Simulation) oder Stepover-Button gedrückt\\
+    \hline
+    Nachbedingung Erfolgt& Die Funktion AF-08 gibt bei Erfolg den neuen Spielfeldzustand zurück. Dieser wird berechnet auf Basis des alten Spielfeldzustands und der aktuell geltenden Transitionsregeln.\\
+    \hline
+    Nachbedingung Fehlschlag&Fehlermeldung an den Benutzer, Unterbrechung der Simulation.\\
+    \hline
+    Ablauf&Fall A: Stepover: Auf Druck des Buttons Stepover wird die Funktion "aktualisieren" aufgerufen und berechnet den neuen Spielfeldzustand.
+    \linebreak
+    Fall B: Automatische Simulation: Solange "Automatische Simulation" aktiv ist, wird die Funktion "aktualisieren" aufgerufen, nach erfolgreicher Beendigung wird eine  Delay-Zeit (AF-06) abgewartet, bevor "aktualisieren" erneut aufgerufen wird. \\
     \hline
     
 \end{tabular}
@@ -412,6 +439,7 @@ Dialogfenster lassen sich innerhalb des Pragrammes nicht den Fokus entnehmen, \p
 	\par
 	\includegraphics[width=15cm]{regedit}
 	\par
+
 	\begin{tabular}[m]{|m{5cm}|m{11cm}|}
 		\hline
 		Anwendungsfall ID     & RF-04 \\ %Hier immer den rechten Tabelleneintrag ergänzen.
@@ -567,7 +595,7 @@ In umgekehrt polnischer Notation für den Rechner:
 \[|,=,m,3,\&,=,z,1,=,m,2\]
 \par
 Dabei stehen Zahlen bzw. Variablen für die Operation "lege auf den Stack", ein Operator nimmt die beiden vorhergehenden Werte von links nach rechts vom Stack und legt das Ergebnis zurück auf den Stack.
-Wird dieser Ausdruck von Rechts nach links durchlaufen, so ist die Berechnung dieselbe wie in geklammerter Schreibweise, weniger Übersichtlich für einen Menschen, aber für einen Computer mittels eines nachgebauten Stacks und switch-Case-Anweisungen schneller ausführbar als der geklammerte Ausdruck. Hoffentlich ist diese Methode effizient genug, um eine zügige Simulation zu ermöglichen. Natürlich würde es in Hardware direkt schneller gehen, aber wir haben keine andere Möglichkeit ersinnen können, die es ermöglicht die Regeln als Formel-Ausdruck einzugeben.
+Wird dieser Ausdruck von Rechts nach links durchlaufen, so ist die Berechnung dieselbe wie in geklammerter Schreibweise, weniger Übersichtlich für einen Menschen, aber für einen Computer mittels eines nachgebauten Stacks und switch-Case-Anweisungen schneller ausführbar als der geklammerte Ausdruck. Hoffentlich ist diese Methode effizient genug, um eine zügige Simulation zu ermöglichen. Natürlich würde es in Hardware direkt schneller gehen, aber wir haben keine Möglichkeit, zur Laufzeit des Programms Javacode nachzukompilieren. 
 
  
 \subsection{Nichtfunktionale Anforderungen}
