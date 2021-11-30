@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.wb.internal.core.model.util.RenameConvertSupport$RenameDialog">
-		<item key="x" value="1920"/>
+		<item key="x" value="2606"/>
 		<item key="width" value="525"/>
-		<item key="y" value="559"/>
+		<item key="y" value="535"/>
 		<item key="height" value="281"/>
 	</section>
 	<section name="org.eclipse.wb.internal.core.model.property.order.ReorderDialog">

@@ -1,0 +1,70 @@
+Hallo Schwesternschaft, hallo Herr Uwimana,
+
+vielen Dank für ihre verbesserte Abgabe.
+
+Meine Anmerkungen:
+
+Pflichtenheft
+=============
+
+Musskiterien:
+ - M0011: Behandlung von Randzellen bei endlicher Fläche? (Hinweis: Steht in RF-03.)                
+ - M0017: "Der genaue Wert einer Zelle muss irgendwie anzeigbar sein." Nicht "irgendwie" sondern... ?
+ 
+Produktfunktionen:
+        
+    AF-07    (1) Negative Integer immer noch im zulässigen Wertebereich! Meinen sie "unsigned integer"?				schon so gemeint wie es da steht. Sind negative Werte ungewünscht? abklären.
+           
+                  
+Folgende Produktfunktionen vermisse ich nach wie vor:
+     - Auswahl, Laden, Positionieren und Einfügen eines Musters         	spielfeldeditor gemeint >bild und genauer ausführen
+     - Anwendung der Transitionsregeln										siehhe eine zeile weiter unten Rgeledittor geimeint?
+     - zeitdiskrete, synchrone Aktualisierung aller Zellzustände			war schon drin hat er überlesen habs verdeutlicht
+     - Datenformate für Speicherung von Regeldatei und Spielfeld			rgeleditor auch bild und genauer punkt 2 eibauen.
+
+
+3.2
+    Der Abschnitt endet mit einem unvollständigen Satz.                     satz wurde beendet, aber schau mal ob das so in deinem sinne ist.
+
+    
+4 Testszenarien
+
+    Sie haben zahlreiche Tests beschrieben. Allerdings sollte ein Testszenario eine typische Folge von sinnvoll aufeinanderfolgenden
+    Benutzeraktionen mit dem Programm umfassen, also gewissermaßen ein Protokoll einer Benutzung darstellen. Anhand des
+    "Protokolls" der Interaktion Benutzer-Programm kann man später das System modulübergreifend testen. Da die Reihenfolge typisch
+    und sinnvoll ist, kann man Sie im Benutzerhandbuch als typischen Anwendungsfall/Beispiel im Trainingsteil verwenden.			dritte zeile mit eingaben abfolgen einfügen, repetitiv aber schnell gemacht.
+    
+Das Glossar dient als Register und ist natürlich lexikografisch zu sortieren!                                  viel spaß :P
+ 
+Benutzerleitfaden
+=================
+
+
+3.1 Bildschirmaufbau: 3. Zufallsgenerator
+    - Die Funktionsweise des Dialogfensters ist nach wie vor völlig rätselhaft.									 abkären!
+        Die man benötigt hier eigentlich nur eine Zuordnung Zustand -> Wahrscheinlichkeit. Ich verstehe nicht, wie das bei ihnen funktioniert.
+        
+        Man kann die Zuordnung leicht Verteilung eines absoluten Gewichts an jeden Zustand erfolgen.
+        Gerne kann man auch mehreren Zuständen gleiche Gewichte zuordnen. Dann muss man festlegen, ob das absolute Gewicht für jeden
+        aufgeführten Zustand gelten soll oder sich die Zustände das Gewicht gleichsam teilen.
+        Die Berechnung der W'keit kann dann automatisch erfolgen als Gewicht/(Summe aller Gewichte).
+        
+
+3.2 Die Funktionen wurden im Pflichtenheft immer noch nicht genannt. Bitte nachtragen (Bedienkonzept).
+
+4. Anwendungsfälle
+    Siehe Pflichtenheft (4. Testszenarien).                                                                      eigentlich drin.  Überlesen? Abklären!
+
+
+Das Glossar dient als Register und ist natürlich lexikografisch zu sortieren!                                      done!
+
+Gesamtwertung: 4/5
+
+Sie haben eine umfangreiche Überarbeitung vorgenommen. Umso unverständlicher ist mir, dass Sie einige meiner Anmerkungen
+(insbesondere zu den Produktfunktionen) nicht berücksichtigt zu haben scheinen.
+Ich empfehle Ihnen, die angesprochenen Empfehlungen in den Dokumenten umzusetzen und diese dann als finale
+Versionen auf Moodle hochzuladen.
+
+Beste Grüße
+
+Christian Düntgen

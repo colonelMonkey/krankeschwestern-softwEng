@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.epp.internal.mpc.ui.wizards.MarketplaceWizardDialog_dialogBounds.absolute">
-		<item key="DIALOG_WIDTH" value="525"/>
-		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|10.0|0|GTK|1|"/>
-		<item key="DIALOG_HEIGHT" value="892"/>
-		<item key="DIALOG_X_ORIGIN" value="1168"/>
-		<item key="DIALOG_Y_ORIGIN" value="360"/>
+		<item key="DIALOG_WIDTH" value="613"/>
+		<item key="DIALOG_FONT_NAME" value="1|Sans|10.0|0|GTK|1|"/>
+		<item key="DIALOG_HEIGHT" value="900"/>
+		<item key="DIALOG_X_ORIGIN" value="1067"/>
+		<item key="DIALOG_Y_ORIGIN" value="115"/>
 	</section>
 </section>

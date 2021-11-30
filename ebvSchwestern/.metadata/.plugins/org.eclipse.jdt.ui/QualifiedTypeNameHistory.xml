@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="de.eikelberg.iotools.DatasetIn"/>
-    <fullyQualifiedTypeName name="de.eikelberg.iotools.DatasetOut"/>
-    <fullyQualifiedTypeName name="java.lang.Double"/>
-    <fullyQualifiedTypeName name="aufg0220.IODouble"/>
-    <fullyQualifiedTypeName name="bsp.BeispielProgramm"/>
-    <fullyQualifiedTypeName name="jpra0251.TaschenrechnerGRVerarbeitung"/>
     <fullyQualifiedTypeName name="javax.swing.JProgressBar"/>
     <fullyQualifiedTypeName name="sun.security.mscapi.KeyStore.MY"/>
     <fullyQualifiedTypeName name="jpra0250.MyMath"/>
@@ -29,7 +23,6 @@
     <fullyQualifiedTypeName name="java.awt.event.ComponentEvent"/>
     <fullyQualifiedTypeName name="java.awt.Component"/>
     <fullyQualifiedTypeName name="aufg13105.Verarbeitung"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="aufg0256.Ellipse"/>
     <fullyQualifiedTypeName name="aufg0256.GeomFigur"/>
     <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
@@ -52,9 +45,19 @@
     <fullyQualifiedTypeName name="bspMandelbrot.MainPanel"/>
     <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
     <fullyQualifiedTypeName name="javafx.scene.paint.Color"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
     <fullyQualifiedTypeName name="bspMandelbrot.Verarbeitung"/>
     <fullyQualifiedTypeName name="java.math.BigInteger"/>
+    <fullyQualifiedTypeName name="java.util.Hashtable"/>
+    <fullyQualifiedTypeName name="hauptPaket.ZoomAndPan1"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="hauptPaket.MyCanvas"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="zufallsgenerator.ZufallsgeneratorSchnittstelle"/>
+    <fullyQualifiedTypeName name="zufallsgenerator.GeneratorTester"/>
+    <fullyQualifiedTypeName name="zufallsgenerator.TesterTester"/>
 </qualifiedTypeNameHistroy>
