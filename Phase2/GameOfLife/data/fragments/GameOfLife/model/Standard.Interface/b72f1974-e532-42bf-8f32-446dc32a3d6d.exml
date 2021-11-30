@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SpielfeldeditorInterface" version="4">
+  <OBJECT>
+    <ID name="SpielfeldeditorInterface" mc="Standard.Interface" uid="b72f1974-e532-42bf-8f32-446dc32a3d6d"/>
+    <PID name="gameoflife" mc="Standard.Package" uid="b399edce-cc37-4afd-987d-319c7462aedd"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">true</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[SpielfeldeditorInterface]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>
