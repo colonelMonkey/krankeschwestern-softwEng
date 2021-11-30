@@ -8,9 +8,10 @@ public class GeneratorTester
   private ZufallsgeneratorSchnittstelle testsubjekt;
   private HashMap<Integer, Integer> vorkommnisse = new HashMap<Integer, Integer>(100);
 
-  public GeneratorTester(Object rndzor, int iterations)
+  public GeneratorTester(ZufallsgeneratorSchnittstelle rndzor, int iterations)
   {
-    testsubjekt = (ZufallsgeneratorSchnittstelle) rndzor; 
+    testsubjekt = rndzor; 
+    
     if(iterations < 1000)iterations = 1000;
     for (int i = 0; i < iterations; i++)
     {

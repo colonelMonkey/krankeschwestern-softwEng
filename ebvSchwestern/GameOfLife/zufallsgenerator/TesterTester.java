@@ -16,13 +16,6 @@ public class TesterTester implements ZufallsgeneratorSchnittstelle
   }
 
   @Override
-  public void setSeed()
-  {
-    // TODO Auto-generated method stub
-    
-  }
-
-  @Override
   public int getSeed()
   {
     // TODO Auto-generated method stub
@@ -45,6 +38,13 @@ public class TesterTester implements ZufallsgeneratorSchnittstelle
 
   @Override
   public void forceClose()
+  {
+    // TODO Auto-generated method stub
+    
+  }
+
+  @Override
+  public void setSeed()
   {
     // TODO Auto-generated method stub
     

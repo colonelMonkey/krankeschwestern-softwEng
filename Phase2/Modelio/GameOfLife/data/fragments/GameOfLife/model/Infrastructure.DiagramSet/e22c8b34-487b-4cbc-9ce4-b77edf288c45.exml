@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="GameOfLife" version="4">
+  <OBJECT>
+    <ID name="GameOfLife" mc="Infrastructure.DiagramSet" uid="e22c8b34-487b-4cbc-9ce4-b77edf288c45"/>
+    <PID name="GameOfLife" mc="Standard.Project" uid="c9fb88a9-3acc-4419-bcb4-ec08a44a3b4b"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[GameOfLife]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>
