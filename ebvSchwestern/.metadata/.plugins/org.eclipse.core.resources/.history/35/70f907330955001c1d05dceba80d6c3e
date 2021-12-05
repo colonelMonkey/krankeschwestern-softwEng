@@ -1,0 +1,13 @@
+package zufallsgenerator;
+
+import javax.swing.JDialog;
+
+public class TableDialog extends JDialog
+{
+
+  public TableDialog()
+  {
+    // TODO Auto-generated constructor stub
+  }
+
+}

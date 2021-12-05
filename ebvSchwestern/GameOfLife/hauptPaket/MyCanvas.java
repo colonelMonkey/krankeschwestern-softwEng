@@ -10,7 +10,7 @@ public class MyCanvas extends Canvas
    */
   private static final long serialVersionUID = 1L;
   BufferedImage img;
-  double fillrate = 0.1;
+  double fillrate = 0.01;
   
   public MyCanvas() {
     super();

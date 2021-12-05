@@ -1,0 +1,11 @@
+package zufallsgenerator;
+
+public class lineDialog
+{
+
+  public lineDialog()
+  {
+    // TODO Auto-generated constructor stub
+  }
+
+}

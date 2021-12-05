@@ -1,0 +1,8 @@
+package spielfeldeditor;
+
+import zufallsgenerator.ZufallsgeneratorSchnittstelle;
+
+public interface SpielfeldeditorSchnittstelle
+{
+  ZufallsgeneratorSchnittstelle getZufallsgenerator();
+}

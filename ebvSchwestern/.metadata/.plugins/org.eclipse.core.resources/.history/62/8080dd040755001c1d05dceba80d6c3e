@@ -1,0 +1,11 @@
+package zufallsgenerator;
+
+public class Zufallsgenrator
+{
+
+  public Zufallsgenrator()
+  {
+    // TODO Auto-generated constructor stub
+  }
+
+}

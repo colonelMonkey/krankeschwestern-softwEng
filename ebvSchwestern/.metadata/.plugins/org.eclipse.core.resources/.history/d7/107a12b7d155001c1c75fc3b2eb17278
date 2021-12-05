@@ -1,0 +1,6 @@
+package arbeiter;
+
+public interface MalerarbeiterSchnittstelle
+{
+
+}

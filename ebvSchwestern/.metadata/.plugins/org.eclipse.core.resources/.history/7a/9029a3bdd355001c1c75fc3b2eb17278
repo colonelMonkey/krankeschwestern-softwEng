@@ -1,0 +1,15 @@
+package hauptPaket;
+
+import arbeiter.MalerarbeiterSchnittstelle;
+import arbeiter.RegelarbeiterSchnittstelle;
+import regeleditor.RegeleditorSchnittstelle;
+import spielfeldeditor.SpielfeldeditorSchnittstelle;
+
+public class Verarbeitung
+{
+  static SpielfeldeditorSchnittstelle spEdit;
+  static RegeleditorSchnittstelle rgEdit;
+  static RegelarbeiterSchnittstelle rgWorker;//Später liste für multicore
+  static MalerarbeiterSchnittstelle ptWorker;//Später liste für multicore
+  private Verarbeitung() { }
+}

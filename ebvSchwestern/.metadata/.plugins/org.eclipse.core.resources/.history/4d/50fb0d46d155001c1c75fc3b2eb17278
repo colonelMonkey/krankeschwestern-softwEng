@@ -1,0 +1,6 @@
+package regeleditor;
+
+public interface RegeleditorSchnittstelle
+{
+
+}
