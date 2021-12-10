@@ -5,10 +5,10 @@ import java.util.Map.Entry;
 
 public class GeneratorTester
 {
-  private ZufallsgeneratorSchnittstelle testsubjekt;
+  private ZufallsgeneratorPrototyp testsubjekt;
   private HashMap<Integer, Integer> vorkommnisse = new HashMap<Integer, Integer>(100);
 
-  public GeneratorTester(ZufallsgeneratorSchnittstelle rndzor, int iterations)
+  public GeneratorTester(ZufallsgeneratorPrototyp rndzor, int iterations)
   {
     testsubjekt = rndzor; 
     

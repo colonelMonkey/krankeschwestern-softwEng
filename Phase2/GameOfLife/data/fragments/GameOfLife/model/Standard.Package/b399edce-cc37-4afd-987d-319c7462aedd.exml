@@ -14,32 +14,32 @@
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedElement">
-        <COMPID name="Class" mc="Standard.Class" uid="2f738a79-569c-453b-b79a-0ecdb4a41d4f"/>
         <COMPID name="MainPanel" mc="Standard.Class" uid="7d9a3963-9126-4d96-843c-32267d00340c"/>
-        <COMPID name="ScrollPanel" mc="Standard.Class" uid="f719eecc-3d4d-4267-8e19-019da6e6f19e"/>
         <COMPID name="Programmstart" mc="Standard.Class" uid="3a448d5a-f4ef-420a-ad66-dcba304409bf"/>
         <COMPID name="Verarbeitung" mc="Standard.Class" uid="d1a54744-f337-486e-971d-44aadb09f89c"/>
-        <COMPID name="Canvas" mc="Standard.Class" uid="f0bc4d9a-e0d6-4722-9cf2-902b67401a92"/>
-        <COMPID name="RegeleditorINterface" mc="Standard.Interface" uid="f44a8f79-dc1d-488e-bb04-67b41e9d5cba"/>
-        <COMPID name="SpielfeldeditorInterface" mc="Standard.Interface" uid="b72f1974-e532-42bf-8f32-446dc32a3d6d"/>
-        <COMPID name="ZufallsgeneratorInterface" mc="Standard.Interface" uid="501cdb37-d7ac-449d-afd9-fa9e1942ffdb"/>
+        <COMPID name="RegeleditorSchnittstelle" mc="Standard.Interface" uid="f44a8f79-dc1d-488e-bb04-67b41e9d5cba"/>
+        <COMPID name="SpielfeldeditorSchnittstelle" mc="Standard.Interface" uid="b72f1974-e532-42bf-8f32-446dc32a3d6d"/>
         <COMPID name="Zufallsgenerator" mc="Standard.Class" uid="cab8ef00-709f-4297-863e-865918e1c476"/>
         <COMPID name="Spielfeldeditor" mc="Standard.Class" uid="5093e53d-515f-47a7-9328-36f8f84a5d94"/>
         <COMPID name="Regeleditor" mc="Standard.Class" uid="b68d34a2-ecab-4c96-b3c3-010edb4abab2"/>
         <COMPID name="ScrollPanel" mc="Standard.Class" uid="5bc81b84-cd1f-4e11-8988-b30226274bda"/>
-        <OBJECT>
-          <ID name="Enumeration" mc="Standard.Enumeration" uid="3d229152-6d65-4202-98c6-f934d307750f"/>
-          <ATTRIBUTES>
-            <ATT name="IsElementary">true</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="IsLeaf">false</ATT>
-            <ATT name="IsRoot">false</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="Name"><![CDATA[Enumeration]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
+        <COMPID name="FeldLupenSchnittstelle" mc="Standard.Interface" uid="598e9342-3c89-4513-9886-1376bb468c2a"/>
+        <COMPID name="FeldLupe" mc="Standard.Class" uid="431a6bde-188d-4b49-9ffd-f7e3891198fb"/>
+        <COMPID name="JComponent" mc="Standard.Class" uid="6cea45a4-dcf3-47ac-99d0-9feda8db412f"/>
+        <COMPID name="FeldGrafik" mc="Standard.Class" uid="c58def50-15c2-4087-82ee-1bec151ba968"/>
+        <COMPID name="FeldGrafikSchnittstelle" mc="Standard.Interface" uid="a2dd6664-a6e1-4ec1-a594-6e837518f66d"/>
+        <COMPID name="FarbMapSchnittstelle" mc="Standard.Interface" uid="3797333c-358f-436b-b4ee-a0746dbf6f53"/>
+        <COMPID name="Farbmapper" mc="Standard.Class" uid="2d638047-c3dc-462c-a4bd-c8b9c08d6026"/>
+        <COMPID name="TableDialog" mc="Standard.Class" uid="10f7f687-ba40-4064-9e5e-ef82aab819e0"/>
+        <COMPID name="LineDialog" mc="Standard.Class" uid="cd5a8280-c0df-4745-ad3e-9e69370c7ebd"/>
+        <COMPID name="ZufallsgeneratorPrototyp" mc="Standard.Class" uid="ca41d05a-90cf-4d37-86bf-d9e4b77e1b03"/>
+        <COMPID name="List" mc="Standard.Class" uid="b313b0f5-2bad-4b70-911d-81fc60154df6"/>
+        <COMPID name="RegelarbeiterListe" mc="Standard.Class" uid="feb9c0cb-5b67-4f96-8114-09794584cac8"/>
+        <COMPID name="MalerArbeiterListe" mc="Standard.Class" uid="fa321e56-5e9f-49f6-9425-f260a1097762"/>
+        <COMPID name="RegelarbeiterSchnittstelle" mc="Standard.Interface" uid="545c64d7-e29e-4d24-aa72-cd12f7e7802f"/>
+        <COMPID name="MalerArbeiterSchnittstelle" mc="Standard.Interface" uid="52328fb2-d0f9-43a3-a065-181d1256f94b"/>
+        <COMPID name="MalerArbeiter" mc="Standard.Class" uid="630705c7-9495-47ef-8ecd-d9c8c246cf26"/>
+        <COMPID name="RegelArbeiter" mc="Standard.Class" uid="97fb837a-3894-4a8a-8fbb-335feb7a580f"/>
       </COMP>
       <COMP relation="Product">
         <COMPID name="gameoflife Class diagram" mc="Standard.ClassDiagram" uid="2ca29be0-10a6-48f5-b30b-24fb0a0c4e1b"/>

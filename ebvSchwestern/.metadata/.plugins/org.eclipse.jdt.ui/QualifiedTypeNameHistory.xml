@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.swing.JProgressBar"/>
-    <fullyQualifiedTypeName name="sun.security.mscapi.KeyStore.MY"/>
-    <fullyQualifiedTypeName name="jpra0250.MyMath"/>
-    <fullyQualifiedTypeName name="aufg0250.MyMath"/>
-    <fullyQualifiedTypeName name="java.util.Vector"/>
-    <fullyQualifiedTypeName name="aufg0255.GiroKonto"/>
-    <fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
-    <fullyQualifiedTypeName name="javax.swing.event.DocumentListener"/>
     <fullyQualifiedTypeName name="bsp13101.Verarbeitung"/>
     <fullyQualifiedTypeName name="bsp13101.MainPanel"/>
     <fullyQualifiedTypeName name="aufg13102.MainPanel"/>
@@ -45,7 +35,6 @@
     <fullyQualifiedTypeName name="bspMandelbrot.MainPanel"/>
     <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
     <fullyQualifiedTypeName name="javafx.scene.paint.Color"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
     <fullyQualifiedTypeName name="bspMandelbrot.Verarbeitung"/>
     <fullyQualifiedTypeName name="java.math.BigInteger"/>
@@ -57,7 +46,18 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="zufallsgenerator.ZufallsgeneratorSchnittstelle"/>
     <fullyQualifiedTypeName name="zufallsgenerator.GeneratorTester"/>
     <fullyQualifiedTypeName name="zufallsgenerator.TesterTester"/>
+    <fullyQualifiedTypeName name="javax.swing.JSpinner"/>
+    <fullyQualifiedTypeName name="lupe.FeldLupenSchnittstelle"/>
+    <fullyQualifiedTypeName name="farbmapper.FarbMapSchnittstelle"/>
+    <fullyQualifiedTypeName name="spielfeldeditor.SpielfeldeditorSchnittstelle"/>
+    <fullyQualifiedTypeName name="regeleditor.RegeleditorSchnittstelle"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="zufallsgenerator.ZufallsgeneratorSchnittstelle"/>
+    <fullyQualifiedTypeName name="zufallsgenerator.Zufallsgenerator"/>
+    <fullyQualifiedTypeName name="zufallsgenerator.TableDialog"/>
+    <fullyQualifiedTypeName name="zufallsgenerator.lineDialog"/>
+    <fullyQualifiedTypeName name="zufallsgenerator.ZufallsgeneratorPrototyp"/>
+    <fullyQualifiedTypeName name="zufallsgenerator.LineDialog"/>
 </qualifiedTypeNameHistroy>

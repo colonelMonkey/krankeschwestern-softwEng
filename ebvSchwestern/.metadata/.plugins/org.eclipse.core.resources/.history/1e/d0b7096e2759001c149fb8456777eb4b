@@ -1,0 +1,11 @@
+package lupe;
+
+public class FeldLupe
+{
+
+  public FeldLupe()
+  {
+    // TODO Auto-generated constructor stub
+  }
+
+}

@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="RegeleditorINterface" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="RegeleditorSchnittstelle" version="4">
   <OBJECT>
-    <ID name="RegeleditorINterface" mc="Standard.Interface" uid="f44a8f79-dc1d-488e-bb04-67b41e9d5cba"/>
+    <ID name="RegeleditorSchnittstelle" mc="Standard.Interface" uid="f44a8f79-dc1d-488e-bb04-67b41e9d5cba"/>
     <PID name="gameoflife" mc="Standard.Package" uid="b399edce-cc37-4afd-987d-319c7462aedd"/>
     <ATTRIBUTES>
       <ATT name="IsElementary">false</ATT>
@@ -9,7 +9,7 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[RegeleditorINterface]]></ATT>
+      <ATT name="Name"><![CDATA[RegeleditorSchnittstelle]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES></DEPENDENCIES>

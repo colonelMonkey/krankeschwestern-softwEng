@@ -1,6 +1,6 @@
 package zufallsgenerator;
 
-public class TesterTester implements ZufallsgeneratorSchnittstelle
+public class TesterTester extends ZufallsgeneratorPrototyp
 {
 
   public TesterTester()

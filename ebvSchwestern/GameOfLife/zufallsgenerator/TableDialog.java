@@ -10,6 +10,7 @@ import java.awt.Dimension;
 public class TableDialog extends JDialog
 {
   private JTable tabX;
+  private LineDialog lDia;
   private JButton butX;
   private JButton butEntfernen;
   private JButton butBearbeiten;

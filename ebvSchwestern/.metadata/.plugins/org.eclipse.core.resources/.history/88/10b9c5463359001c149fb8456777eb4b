@@ -1,0 +1,11 @@
+package spielfeldeditor;
+
+public class Spielfeldeditor
+{
+
+  public Spielfeldeditor()
+  {
+    // TODO Auto-generated constructor stub
+  }
+
+}
