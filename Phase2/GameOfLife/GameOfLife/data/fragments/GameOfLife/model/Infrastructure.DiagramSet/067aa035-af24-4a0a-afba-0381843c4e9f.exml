@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="GameOfLife" version="4">
+  <OBJECT>
+    <ID name="GameOfLife" mc="Infrastructure.DiagramSet" uid="067aa035-af24-4a0a-afba-0381843c4e9f"/>
+    <PID name="GameOfLife" mc="Standard.Project" uid="e2693989-eef7-4768-877b-036975d85ec3"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[GameOfLife]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Sub">
+        <COMPID name="Auto Diagrams" mc="Infrastructure.DiagramSet" uid="2a4b8bb8-6d04-4805-b041-2532829b673d"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

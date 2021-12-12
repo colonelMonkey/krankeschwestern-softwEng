@@ -29,6 +29,9 @@
           <DEPENDENCIES></DEPENDENCIES>
         </OBJECT>
       </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaInterface" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0267-0000-000000000000"/>
+      </LINK>
     </DEPENDENCIES>
   </OBJECT>
 </EXT>

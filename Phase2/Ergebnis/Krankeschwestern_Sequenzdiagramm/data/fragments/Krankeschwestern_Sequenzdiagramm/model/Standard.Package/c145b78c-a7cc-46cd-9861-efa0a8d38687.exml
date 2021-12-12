@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="krankeschwestern_sequenzdiagramm" version="4">
+  <OBJECT>
+    <ID name="krankeschwestern_sequenzdiagramm" mc="Standard.Package" uid="c145b78c-a7cc-46cd-9861-efa0a8d38687"/>
+    <PID name="Krankeschwestern_Sequenzdiagramm" mc="Standard.Project" uid="b0f2ccaa-0c84-405d-8c71-86cc8b30667c"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[krankeschwestern_sequenzdiagramm]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedBehavior">
+        <COMPID name="Interaction" mc="Standard.Interaction" uid="e7ef7dc8-bd54-4d92-af30-90509129704c"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

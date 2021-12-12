@@ -13,6 +13,22 @@
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="Faerbe" mc="Standard.Operation" uid="05dda44d-7f2f-40e5-b36b-c9899eee8fae"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[Faerbe]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
       <COMP relation="OwnedEnd">
         <OBJECT>
           <ID name="malerArbeiter" mc="Standard.AssociationEnd" uid="1ede9942-e74d-4e9e-8527-c456e8f5df1c"/>

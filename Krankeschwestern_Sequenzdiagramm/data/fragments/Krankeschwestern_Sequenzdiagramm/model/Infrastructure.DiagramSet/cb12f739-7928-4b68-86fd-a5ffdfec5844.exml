@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Krankeschwestern_Sequenzdiagramm" version="4">
+  <OBJECT>
+    <ID name="Krankeschwestern_Sequenzdiagramm" mc="Infrastructure.DiagramSet" uid="cb12f739-7928-4b68-86fd-a5ffdfec5844"/>
+    <PID name="Krankeschwestern_Sequenzdiagramm" mc="Standard.Project" uid="b0f2ccaa-0c84-405d-8c71-86cc8b30667c"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[Krankeschwestern_Sequenzdiagramm]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

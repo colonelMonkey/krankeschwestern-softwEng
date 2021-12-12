@@ -1,0 +1,6 @@
+#Wed Dec 08 15:08:24 CET 2021
+org.modelio.module.propertytab.JavaDesigner\ v3.8.01\ GModule\ @file\:///C\:/Users/AffemitWaffe/.modelio/3.8/modules/JavaDesigner_3.8.01/JavaDesigner_3.8.01.jmdac\ runtime\ module_.org.modelio.full.perspective.parentId=app.ui.ext_com.partstack.bottom
+org.modelio.module.propertytab.JavaDesigner\ v3.8.01\ GModule\ @file\:///C\:/Users/AffemitWaffe/.modelio/3.8/modules/JavaDesigner_3.8.01/JavaDesigner_3.8.01.jmdac\ runtime\ module_.org.modelio.app.ui.model.perspective.parentId=org.modelio.app.bottom.parts
+org.modelio.module.propertytab.JavaDesigner\ v3.8.01\ GModule\ @file\:///C\:/Users/AffemitWaffe/.modelio/3.8/modules/JavaDesigner_3.8.01/JavaDesigner_3.8.01.jmdac\ runtime\ module_.org.modelio.development.perspective.parentId=app.ui.ext_com.partstack.bottom
+org.modelio.module.propertytab.JavaDesigner\ v3.8.01\ GModule\ @file\:///C\:/Users/AffemitWaffe/.modelio/3.8/modules/JavaDesigner_3.8.01/JavaDesigner_3.8.01.jmdac\ runtime\ module_.org.modelio.diagram.perspective.parentId=app.ui.ext_com.partstack.right
+org.modelio.diagram.editor.OpenedDiagrams0='gameoflifemodeliorev2 Class diagram' {de0baf8c-c317-41ef-bfa5-ae712966ec7f} Standard.ClassDiagram

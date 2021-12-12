@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Package Structure" version="4">
+  <OBJECT>
+    <ID name="Package Structure" mc="Infrastructure.DiagramSet" uid="d9a7f576-895c-4d63-8a72-c48798c70d5a"/>
+    <PID name="Auto Diagrams" mc="Infrastructure.DiagramSet" uid="57d144ba-370b-4559-a4cf-0008ffcf71ef"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[Package Structure]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>
