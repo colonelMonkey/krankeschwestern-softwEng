@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="regeleditor" version="4">
+  <OBJECT>
+    <ID name="regeleditor" mc="Standard.Package" uid="cb505524-d68a-4840-84ef-bbfb0a394cb7"/>
+    <PID name="gameoflife" mc="Standard.Package" uid="2abd630e-7760-447e-adff-927cebd86ad5"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[regeleditor]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Regeleditor" mc="Standard.Class" uid="f92e6ef1-569c-46e1-929d-64fc4bfb5ab1"/>
+        <COMPID name="RegeleditorSchnittstelle" mc="Standard.Interface" uid="d75d06ed-134a-4dd4-9cfb-0931b194e0a5"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

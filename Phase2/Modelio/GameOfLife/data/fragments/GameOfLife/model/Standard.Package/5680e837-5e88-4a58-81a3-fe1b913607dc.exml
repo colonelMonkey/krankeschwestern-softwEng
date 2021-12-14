@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="zufallsgenerator" version="4">
+  <OBJECT>
+    <ID name="zufallsgenerator" mc="Standard.Package" uid="5680e837-5e88-4a58-81a3-fe1b913607dc"/>
+    <PID name="gameoflife" mc="Standard.Package" uid="2abd630e-7760-447e-adff-927cebd86ad5"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[zufallsgenerator]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="ZufallsgeneratorPrototyp" mc="Standard.Class" uid="a044c54a-8c0e-47af-a700-c79ed707976c"/>
+        <COMPID name="TableDialog" mc="Standard.Class" uid="73b85f4b-27f3-48f3-88d7-1538ae63f961"/>
+        <COMPID name="Zufallsgenerator" mc="Standard.Class" uid="bff8796e-b829-4b05-8027-4ac8e529e4c2"/>
+        <COMPID name="TesterTester" mc="Standard.Class" uid="4fd280e8-de22-4351-b3c3-127ffa82f1a9"/>
+        <COMPID name="GeneratorTester" mc="Standard.Class" uid="feb6c803-5a37-4b4d-8803-91078a3e717b"/>
+        <COMPID name="LineDialog" mc="Standard.Class" uid="820d5209-886a-41e9-bc08-9318b4f660cf"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

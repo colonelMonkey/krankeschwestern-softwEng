@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="hauptPaket" version="4">
+  <OBJECT>
+    <ID name="hauptPaket" mc="Standard.Package" uid="7376c14a-14a6-41d2-9de9-740cafb96712"/>
+    <PID name="gameoflife" mc="Standard.Package" uid="2abd630e-7760-447e-adff-927cebd86ad5"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[hauptPaket]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Programmstart" mc="Standard.Class" uid="cb4a24ab-ad35-499e-98f4-db23cc4a8ada"/>
+        <COMPID name="FeldGrafikSchittstelle" mc="Standard.Interface" uid="cae9c6fb-2dda-4a57-a24a-eb44b09f5063"/>
+        <COMPID name="Verarbeitung" mc="Standard.Class" uid="421cbaa3-13d5-4753-a7fd-d92eb8fed8a1"/>
+        <COMPID name="MainPanel" mc="Standard.Class" uid="b7bc074e-80be-487c-a869-051664d5f47b"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

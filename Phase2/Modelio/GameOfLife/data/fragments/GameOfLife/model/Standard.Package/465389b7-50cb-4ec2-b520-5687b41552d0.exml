@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="spielfeldeditor" version="4">
+  <OBJECT>
+    <ID name="spielfeldeditor" mc="Standard.Package" uid="465389b7-50cb-4ec2-b520-5687b41552d0"/>
+    <PID name="gameoflife" mc="Standard.Package" uid="2abd630e-7760-447e-adff-927cebd86ad5"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[spielfeldeditor]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="SpielfeldeditorSchnittstelle" mc="Standard.Interface" uid="3abd21dd-6086-4353-9cfa-7ae2975b158b"/>
+        <COMPID name="Spielfeldeditor" mc="Standard.Class" uid="f78a3a97-f7c7-4a09-8afe-4d0e0e9693b5"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

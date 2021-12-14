@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="lupe" version="4">
+  <OBJECT>
+    <ID name="lupe" mc="Standard.Package" uid="c2c862ae-05eb-4f24-b1e8-5be521380df2"/>
+    <PID name="gameoflife" mc="Standard.Package" uid="2abd630e-7760-447e-adff-927cebd86ad5"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[lupe]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="FeldLupenSchnittstelle" mc="Standard.Interface" uid="9f379c39-cfe3-4311-83a3-7c11ec72c7bf"/>
+        <COMPID name="FeldLupe" mc="Standard.Class" uid="274ff26e-3756-4da1-838d-c9180083fe21"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

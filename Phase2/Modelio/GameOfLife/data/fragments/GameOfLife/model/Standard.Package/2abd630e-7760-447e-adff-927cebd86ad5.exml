@@ -12,6 +12,20 @@
       <ATT name="Name"><![CDATA[gameoflife]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
-    <DEPENDENCIES></DEPENDENCIES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="regeleditor" mc="Standard.Package" uid="cb505524-d68a-4840-84ef-bbfb0a394cb7"/>
+        <COMPID name="lupe" mc="Standard.Package" uid="c2c862ae-05eb-4f24-b1e8-5be521380df2"/>
+        <COMPID name="farbmapper" mc="Standard.Package" uid="44685881-e884-48ad-8cf9-c477931146fc"/>
+        <COMPID name="spielfeldeditor" mc="Standard.Package" uid="465389b7-50cb-4ec2-b520-5687b41552d0"/>
+        <COMPID name="zufallsgenerator" mc="Standard.Package" uid="5680e837-5e88-4a58-81a3-fe1b913607dc"/>
+        <COMPID name="hauptPaket" mc="Standard.Package" uid="7376c14a-14a6-41d2-9de9-740cafb96712"/>
+        <COMPID name="arbeiter" mc="Standard.Package" uid="f76cdad4-f451-4aec-970e-2a6d075ab061"/>
+        <COMPID name="ZoomPanPanel" mc="Standard.Class" uid="edb808cd-bd9e-4b1f-9b35-37ff5ef068f4"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="gameoflife Class diagram" mc="Standard.ClassDiagram" uid="a4194cd7-0141-427e-be5d-da96c9478779"/>
+      </COMP>
+    </DEPENDENCIES>
   </OBJECT>
 </EXT>
