@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="bsp13101.Verarbeitung"/>
-    <fullyQualifiedTypeName name="bsp13101.MainPanel"/>
-    <fullyQualifiedTypeName name="aufg13102.MainPanel"/>
-    <fullyQualifiedTypeName name="javax.swing.SwingConstants"/>
     <fullyQualifiedTypeName name="javafx.scene.control.TextField"/>
     <fullyQualifiedTypeName name="aufg13103.Verarbeitung"/>
     <fullyQualifiedTypeName name="aufg13104.MainPanel"/>
@@ -24,7 +20,6 @@
     <fullyQualifiedTypeName name="java.rmi.RemoteException"/>
     <fullyQualifiedTypeName name="de.eikelberg.iotools.KeyboardIn"/>
     <fullyQualifiedTypeName name="de.eikelberg.iotools.ScreenOut"/>
-    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="iptools.IPConfig"/>
     <fullyQualifiedTypeName name="benutzerverwaltung.Benutzer"/>
     <fullyQualifiedTypeName name="pi2D.nGonPanel"/>
@@ -46,8 +41,6 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="zufallsgenerator.GeneratorTester"/>
-    <fullyQualifiedTypeName name="zufallsgenerator.TesterTester"/>
     <fullyQualifiedTypeName name="javax.swing.JSpinner"/>
     <fullyQualifiedTypeName name="lupe.FeldLupenSchnittstelle"/>
     <fullyQualifiedTypeName name="farbmapper.FarbMapSchnittstelle"/>
@@ -55,9 +48,16 @@
     <fullyQualifiedTypeName name="regeleditor.RegeleditorSchnittstelle"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="zufallsgenerator.ZufallsgeneratorSchnittstelle"/>
-    <fullyQualifiedTypeName name="zufallsgenerator.Zufallsgenerator"/>
     <fullyQualifiedTypeName name="zufallsgenerator.TableDialog"/>
     <fullyQualifiedTypeName name="zufallsgenerator.lineDialog"/>
     <fullyQualifiedTypeName name="zufallsgenerator.ZufallsgeneratorPrototyp"/>
     <fullyQualifiedTypeName name="zufallsgenerator.LineDialog"/>
+    <fullyQualifiedTypeName name="arbeiter.RegelarbeiterSchnittstelle"/>
+    <fullyQualifiedTypeName name="org.junit.BeforeClass"/>
+    <fullyQualifiedTypeName name="zufallsgenerator.GeneratorTester"/>
+    <fullyQualifiedTypeName name="zufallsgenerator.Zufallsgenerator"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="javax.swing.text.StyledEditorKit.ForegroundAction"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="zufallsgenerator.TesterTester"/>
 </qualifiedTypeNameHistroy>

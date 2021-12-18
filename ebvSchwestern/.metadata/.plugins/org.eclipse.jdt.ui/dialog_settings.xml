@@ -52,9 +52,9 @@
 		<item key="FinalModifier" value="false"/>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
-		<item key="DIALOG_WIDTH" value="526"/>
-		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
-		<item key="DIALOG_HEIGHT" value="696"/>
+		<item key="DIALOG_WIDTH" value="581"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|10.0|0|GTK|1|"/>
+		<item key="DIALOG_HEIGHT" value="701"/>
 		<item key="DIALOG_X_ORIGIN" value="1025"/>
 		<item key="DIALOG_Y_ORIGIN" value="244"/>
 	</section>
@@ -92,7 +92,7 @@
 	<section name="RenameInformationPopup">
 	</section>
 	<section name="ClasspathContainerSelectionPage">
-		<item key="index" value="0"/>
+		<item key="index" value="1"/>
 	</section>
 	<section name="NewPackageWizardPage">
 		<item key="create_package_info_java" value="false"/>

@@ -7,9 +7,27 @@ public class GeneratorTester
 {
   private ZufallsgeneratorPrototyp testsubjekt;
   private HashMap<Integer, Integer> vorkommnisse = new HashMap<Integer, Integer>(100);
+  public ZufallsgeneratorPrototyp getTestsubjekt()
+  {
+    return testsubjekt;
+  }
+  public HashMap<Integer, Integer> getVorkommnisse()
+  {
+    return vorkommnisse;
+  }
+  public void setTestsubjekt(ZufallsgeneratorPrototyp testsubjekt)
+  {
+    this.testsubjekt = testsubjekt;
+  }
+  public void setVorkommnisse(HashMap<Integer, Integer> vorkommnisse)
+  {
+    this.vorkommnisse = vorkommnisse;
+  }
+  int iterations;
 
   public GeneratorTester(ZufallsgeneratorPrototyp rndzor, int iterations)
   {
+    this.iterations = iterations;
     testsubjekt = rndzor; 
     
     if(iterations < 1000)iterations = 1000;
@@ -25,12 +43,12 @@ public class GeneratorTester
     }
   }
    double getProbability(int occurance) {
-     return vorkommnisse.get(occurance);
+     return (vorkommnisse.get(occurance)/iterations);
    }
 /*
   public static void main(String[] args)
   {
-    //new GeneratorTester(new TesterTester(), 100000000);//läuft wie geplant und breitzum testen des zufallsgenerators
+    new GeneratorTester(new TesterTester(), 100000000);//läuft wie geplant und breitzum testen des zufallsgenerators
   }
 */
 }

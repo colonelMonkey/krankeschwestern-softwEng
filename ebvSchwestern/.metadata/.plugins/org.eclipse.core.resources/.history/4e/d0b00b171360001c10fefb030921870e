@@ -1,0 +1,15 @@
+package arbeiter;
+import java.awt.Point;
+
+public abstract class RegelarbeiterSchnittstelle
+{
+  Point linksOben, rechtsUnten;
+  
+  RegelarbeiterSchnittstelle(Point lO, Point rU)
+  {
+    linksOben = lO;
+    rechtsUnten = rU;
+  }
+  
+  abstract void transit();
+}

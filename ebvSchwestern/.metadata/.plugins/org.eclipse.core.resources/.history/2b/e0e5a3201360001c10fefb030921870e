@@ -1,0 +1,16 @@
+package arbeiter;
+
+import java.awt.Point;
+
+public abstract class MalerarbeiterSchnittstelle
+{
+  
+  Point linksOben, rechtsUnten;
+  
+  MalerarbeiterSchnittstelle(Point lO, Point rU)
+  {
+    linksOben = lO;
+    rechtsUnten = rU;
+  }
+  abstract void Faerbe();
+}

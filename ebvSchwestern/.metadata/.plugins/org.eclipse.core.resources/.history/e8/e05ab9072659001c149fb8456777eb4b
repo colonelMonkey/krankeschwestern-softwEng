@@ -1,8 +1,0 @@
-package lupe;
-
-public interface FeldLupenSchnittstelle
-{
-  void zeigeFeld(int x, int y);
-  void einfuegen(int x, int y);
-  void feldUeberschreiben();
-}

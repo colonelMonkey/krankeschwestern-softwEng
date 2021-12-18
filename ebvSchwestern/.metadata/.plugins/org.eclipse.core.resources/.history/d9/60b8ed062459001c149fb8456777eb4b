@@ -1,6 +1,0 @@
-package farbmapper;
-
-public interface FarbMapSchnittstelle
-{
-
-}

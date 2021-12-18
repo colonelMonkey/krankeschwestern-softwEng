@@ -1,6 +1,0 @@
-package lupe;
-
-public interface FeldLupenSchnittstelle
-{
-
-}

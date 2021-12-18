@@ -1,0 +1,25 @@
+package zufallsgenerator;
+
+import static org.junit.Assert.*;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class UnitTestGenerator
+{
+  GeneratorTester generationTester;
+  
+  @BeforeClass
+  public void init() {
+    generationTester = new GeneratorTester(new Zufallsgenerator(), 10000);
+  }
+
+  @Test
+  public void test()
+  {
+    //fail("Not yet implemented");
+    System.out.println("In dem Dialogfenster bitte Hinzufügen drücken, von 1 bis 6 gewicht 1 eingeben und 2*übernehmen!");
+    
+  }
+
+}
