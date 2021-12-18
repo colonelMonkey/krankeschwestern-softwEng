@@ -16,6 +16,7 @@
       <COMP relation="OwnedElement">
         <COMPID name="Regeleditor" mc="Standard.Class" uid="f92e6ef1-569c-46e1-929d-64fc4bfb5ab1"/>
         <COMPID name="RegeleditorSchnittstelle" mc="Standard.Interface" uid="d75d06ed-134a-4dd4-9cfb-0931b194e0a5"/>
+        <COMPID name="regeleditor" mc="Standard.Artifact" uid="01c5cf5f-c5a7-489c-84fb-708f548bed8a"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>

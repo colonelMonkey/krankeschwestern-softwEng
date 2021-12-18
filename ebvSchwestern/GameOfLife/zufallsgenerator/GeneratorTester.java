@@ -24,10 +24,13 @@ public class GeneratorTester
       System.out.println("Ereignis: " + entry.getKey() + "    Häufigkeit: " + Math.round((double)entry.getValue()/iterations*100)+"%");
     }
   }
-
+   double getProbability(int occurance) {
+     return vorkommnisse.get(occurance);
+   }
+/*
   public static void main(String[] args)
   {
-    new GeneratorTester(new TesterTester(), 100000000);//läuft wie geplant und breitzum testen des zufallsgenerators
+    //new GeneratorTester(new TesterTester(), 100000000);//läuft wie geplant und breitzum testen des zufallsgenerators
   }
-
+*/
 }

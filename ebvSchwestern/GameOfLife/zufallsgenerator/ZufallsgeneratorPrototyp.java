@@ -5,7 +5,7 @@ public abstract class ZufallsgeneratorPrototyp
   public TableDialog tDia;
   public ZufallsgeneratorPrototyp() {}
   public abstract int getRnd();
-  public abstract void setSeed();
+  public abstract int setSeed(int seed);
   public abstract int getSeed();
   public abstract void resetSequence();
   public abstract void showDialog();

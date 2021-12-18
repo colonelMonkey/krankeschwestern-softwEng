@@ -4,6 +4,8 @@ import java.io.File;
 
 import zufallsgenerator.ZufallsgeneratorPrototyp;
 
+
+
 public class Spielfeldeditor implements SpielfeldeditorSchnittstelle
 {
   File geladen;

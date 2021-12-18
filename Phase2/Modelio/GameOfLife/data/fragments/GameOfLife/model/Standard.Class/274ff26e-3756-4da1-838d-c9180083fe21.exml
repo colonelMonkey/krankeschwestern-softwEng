@@ -51,7 +51,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="machWas" mc="Standard.Operation" uid="189f40b3-0f02-4c05-9677-2febc485386f"/>
+          <ID name="machModus" mc="Standard.Operation" uid="189f40b3-0f02-4c05-9677-2febc485386f"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -59,7 +59,7 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[machWas]]></ATT>
+            <ATT name="Name"><![CDATA[machModus]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -109,6 +109,11 @@
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
+            <LINK relation="Redefines">
+              <REFOBJ>
+                <ID name="machModus" mc="Standard.Operation" uid="50cc24f0-bc0b-4571-8ac6-83b9fe190130"/>
+              </REFOBJ>
+            </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
                 <ID name="" mc="Infrastructure.Note" uid="6bea2a7f-ac4f-40a1-96f3-158d09e8fa84"/>

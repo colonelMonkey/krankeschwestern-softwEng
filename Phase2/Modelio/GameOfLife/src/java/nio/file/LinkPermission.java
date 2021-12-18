@@ -1,0 +1,8 @@
+package java.nio.file;
+
+import java.security.BasicPermission;
+import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+@objid ("2580001c-0007-157d-0000-000000000000")
+public final class LinkPermission extends BasicPermission {
+}

@@ -450,13 +450,12 @@
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
-      <COMP relation="OwnedAttribute">
+      <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="geladen" mc="Standard.Attribute" uid="1d1cb355-c32e-4232-86d6-5e84a8e7cc57"/>
+          <ID name="geladen" mc="Standard.AssociationEnd" uid="b11b906e-b28d-467c-b42a-b7139a5d8724"/>
           <ATTRIBUTES>
-            <ATT name="TypeConstraint"></ATT>
-            <ATT name="Value"></ATT>
-            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Aggregation">KindIsComposition</ATT>
+            <ATT name="IsChangeable">true</ATT>
             <ATT name="Changeable">AccesNone</ATT>
             <ATT name="IsDerived">false</ATT>
             <ATT name="IsOrdered">false</ATT>
@@ -470,31 +469,50 @@
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
-            <COMP relation="Tag">
+            <LINK relation="Target">
+              <FOREIGNID name="File" mc="Standard.Class" uid="00d00398-0000-2e0f-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="ea0b825a-97c2-4ead-a1df-ad7eb0bbcc30"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="c1e986c5-bc00-4687-a746-299e0454d576"/>
                 <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
-                  <COMP relation="Actual">
+                  <COMP relation="Opposite">
+                    <COMPID name="geladen" mc="Standard.AssociationEnd" uid="b11b906e-b28d-467c-b42a-b7139a5d8724"/>
+                  </COMP>
+                  <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Infrastructure.TagParameter" uid="a7ea3c87-df69-43e9-b705-39d6efa7c5ad"/>
+                      <ID name="" mc="Standard.Association" uid="ff87b85c-f8d3-42f8-a69b-debe1e9df71d"/>
                       <ATTRIBUTES>
-                        <ATT name="Value"><![CDATA[File]]></ATT>
+                        <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
                       </ATTRIBUTES>
                       <DEPENDENCIES></DEPENDENCIES>
                     </OBJECT>
                   </COMP>
-                  <LINK relation="Definition">
-                    <FOREIGNID name="JavaTypeExpr" mc="Infrastructure.TagType" uid="003800a8-0000-0165-0000-000000000000"/>
-                  </LINK>
                 </DEPENDENCIES>
               </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Standard.Association" uid="ff87b85c-f8d3-42f8-a69b-debe1e9df71d"/>
+            </COMP>
+            <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="4ea92168-3b49-428e-855c-3bbf823b2859"/>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="c0c5d014-b924-4b0b-a1cc-76d90e077910"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -526,30 +544,6 @@
       <LINK relation="Extension">
         <FOREIGNID name="JavaClass" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
       </LINK>
-      <COMP relation="Tag">
-        <OBJECT>
-          <ID name="" mc="Infrastructure.TaggedValue" uid="cb55afef-1e33-4a30-9d92-94c77ced10e0"/>
-          <ATTRIBUTES>
-            <ATT name="Name"></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Actual">
-              <OBJECT>
-                <ID name="" mc="Infrastructure.TagParameter" uid="fe9517d1-478b-432c-b827-41c66bf14ac5"/>
-                <ATTRIBUTES>
-                  <ATT name="Value"><![CDATA[java.io.File]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <LINK relation="Definition">
-              <FOREIGNID name="JavaImport" mc="Infrastructure.TagType" uid="003800a8-0000-0155-0000-000000000000"/>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-      </COMP>
     </DEPENDENCIES>
   </OBJECT>
 </EXT>

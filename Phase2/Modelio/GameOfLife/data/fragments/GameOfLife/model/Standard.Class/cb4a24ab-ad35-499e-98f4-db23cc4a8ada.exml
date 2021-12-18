@@ -47,6 +47,9 @@
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
                   <COMP relation="Tag">
                     <OBJECT>
                       <ID name="" mc="Infrastructure.TaggedValue" uid="3f29473d-0cab-4f02-81a5-abe9b9e7a6da"/>
@@ -70,28 +73,6 @@
                         </LINK>
                       </DEPENDENCIES>
                     </OBJECT>
-                    <OBJECT>
-                      <ID name="" mc="Infrastructure.TaggedValue" uid="72d83019-3b4c-44f1-ace5-afa04dc01ed7"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <COMP relation="Actual">
-                          <OBJECT>
-                            <ID name="" mc="Infrastructure.TagParameter" uid="205d5008-4893-4391-96a3-f995dc9e2e6e"/>
-                            <ATTRIBUTES>
-                              <ATT name="Value"><![CDATA[String]]></ATT>
-                              <ATT name="status">1970354901745664</ATT>
-                            </ATTRIBUTES>
-                            <DEPENDENCIES></DEPENDENCIES>
-                          </OBJECT>
-                        </COMP>
-                        <LINK relation="Definition">
-                          <FOREIGNID name="JavaTypeExpr" mc="Infrastructure.TagType" uid="00380080-0000-01a4-0000-000000000000"/>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
                   </COMP>
                 </DEPENDENCIES>
               </OBJECT>
@@ -111,7 +92,8 @@
     
 // 4. Fenster instanziieren und dabei Referenz auf das Panel sowie
 // die Fensterbeschriftung an den Konstruktor �bergeben    
-    new ESinglePanelFrame(mp,titel).setResizable(false);]]></ATT>
+    new ESinglePanelFrame(mp,titel).setResizable(false);
+]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -132,7 +114,7 @@
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
-            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
             <ATT name="IsDerived">false</ATT>
             <ATT name="IsOrdered">false</ATT>
             <ATT name="IsUnique">false</ATT>
@@ -185,6 +167,20 @@
             </COMP>
             <COMP relation="Association">
               <COMPID name="" mc="Standard.Association" uid="79e096b2-a587-4fa7-8a86-25765010e301"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="5564a50c-079f-435d-b71b-ee1cab48b915"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="Infrastructure.TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>

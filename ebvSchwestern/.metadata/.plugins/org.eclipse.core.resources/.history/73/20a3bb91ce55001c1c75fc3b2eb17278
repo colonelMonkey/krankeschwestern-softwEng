@@ -1,6 +1,0 @@
-package spielfeldeditor;
-
-public interface SpielfeldeditorSchnittstelle
-{
-
-}

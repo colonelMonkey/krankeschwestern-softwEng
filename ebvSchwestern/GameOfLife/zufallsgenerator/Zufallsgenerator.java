@@ -14,13 +14,7 @@ public class Zufallsgenerator extends ZufallsgeneratorPrototyp
     return 0;
   }
 
-  @Override
-  public void setSeed()
-  {
-    // TODO Auto-generated method stub
-    
-  }
-
+  
   @Override
   public int getSeed()
   {
@@ -47,6 +41,13 @@ public class Zufallsgenerator extends ZufallsgeneratorPrototyp
   {
     // TODO Auto-generated method stub
     
+  }
+
+  @Override
+  public int setSeed(int seed)
+  {
+    // TODO Auto-generated method stub
+    return 0;
   }
 
   
