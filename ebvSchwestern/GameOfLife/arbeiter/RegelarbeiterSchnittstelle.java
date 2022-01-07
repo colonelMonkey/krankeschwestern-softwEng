@@ -1,14 +1,17 @@
 package arbeiter;
 import java.awt.Point;
 
-public abstract class RegelarbeiterSchnittstelle
+
+
+public class RegelarbeiterSchnittstelle
 {
+  
+  public RegelarbeiterSchnittstelle(){}
+	
   Point linksOben, rechtsUnten;
   int [][] current, nextGen;
-  int [][] testDiaa = {{0,0,0,0},
-                       {0,1,1,0},
-                       {1,0,1,0},
-                       {0,1,0,0}};
+  
+
   
   RegelarbeiterSchnittstelle(Point lO, Point rU,int [][] current, int [][] nextGen )
   {
@@ -18,5 +21,8 @@ public abstract class RegelarbeiterSchnittstelle
     this.nextGen = nextGen;
   }
   
-  abstract void transit();
+  public static int[][]  transit(int[][] currentGen) {
+	  return new int[5][5]; //muss noch programmiert werden
+  };
+  
 }
