@@ -1,0 +1,34 @@
+package engine;
+
+import java.util.Stack;
+
+public class OperatorItem implements FormulaItem {
+	  FormulaItem mLinks;
+	  FormulaItem mRechts;
+	  Operator mOp;
+
+	  public OperatorItem(Operator op, Stack<FormulaItem> stack) {
+	    mRechts = stack.pop();
+	    mLinks = stack.pop();
+	    mOp = op;
+	  }
+	  @Override
+	  public int calculate(int x, int y, Zellen feld) {
+	    int links = mLinks.calculate(x, y, feld);
+	    int rechts = mRechts.calculate(x, y, feld);
+	    switch (mOp) {
+	    case Add :       return links +  rechts; break;
+	    case Subtract :  return links -  rechts; break;
+	    case Multiply:  return links *  rechts; break;
+	    case Divide:    return links /  rechts; break;
+	    case LessThan:  return links <  rechts ? 1 : 0; break;
+	    case MoreThan:  return links >  rechts ? 1 : 0; break;
+	    case Equals:    return links == rechts ? 1 : 0; break;  
+	    case And:       return ((links !=0) && (rechts != 0)) ? 1: 0; break;
+	    case Or:        return ((links !=0)||(rechts !=0)) ? 1: 0; break;
+	    case Xor:       return ((links != rechts)) ? 1: 0; break;
+	    default: return (-1); break; //
+	    }
+	  }
+
+}

@@ -1,0 +1,11 @@
+package engine;
+
+public class OperandItem implements FormulaItem{
+
+
+
+	@Override
+	public int getValue() {
+		return this.value;
+	}
+}

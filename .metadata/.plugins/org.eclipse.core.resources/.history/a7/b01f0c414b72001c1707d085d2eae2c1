@@ -1,0 +1,23 @@
+package engine;
+
+public class Rand extends Zellen {
+
+	@Override
+	public Zellen clone() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int readZelle(int x, int y) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void setZelle(int x, int y, int zelle) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

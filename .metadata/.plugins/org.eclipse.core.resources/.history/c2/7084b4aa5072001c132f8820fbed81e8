@@ -1,0 +1,12 @@
+package engine;
+
+public class ConstItem implements FormulaItem {
+	  int mValue;
+	  public ConstItem(int value) {
+	    mValue = value;
+	  }
+	  @Override
+	  int calculate(int x, int y, Zellen feld) {
+	    return mValue;
+	  }
+}

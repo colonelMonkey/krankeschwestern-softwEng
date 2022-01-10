@@ -18,13 +18,13 @@ Produktfunktionen:
                   
 Folgende Produktfunktionen vermisse ich nach wie vor:
      - Auswahl, Laden, Positionieren und Einfügen eines Musters         	spielfeldeditor gemeint >bild und genauer ausführen
-     - Anwendung der Transitionsregeln										siehhe eine zeile weiter unten Rgeledittor geimeint?
-     - zeitdiskrete, synchrone Aktualisierung aller Zellzustände			war schon drin hat er überlesen habs verdeutlicht
+     - Anwendung der Transitionsregeln										siehhe eine zeile weiter unten Rgeledittor geimeint? Feddich
+     - zeitdiskrete, synchrone Aktualisierung aller Zellzustände			war schon drin hat er überlesen habs verdeutlicht feddich
      - Datenformate für Speicherung von Regeldatei und Spielfeld			rgeleditor auch bild und genauer punkt 2 eibauen.
 
 
 3.2
-    Der Abschnitt endet mit einem unvollständigen Satz.                     satz wurde beendet, aber schau mal ob das so in deinem sinne ist.
+    Der Abschnitt endet mit einem unvollständigen Satz.                     satz wurde beendet, aber schau mal ob das so in deinem sinne ist.   hab ich gemacht und angepasst. 
 
     
 4 Testszenarien

@@ -1,0 +1,14 @@
+package engine;
+
+public class OperatorItem implements FormulaItem {
+
+	FormulaItem links, rechts;
+	OperatorItem Operator;
+	
+	
+	@Override
+	public int getValue() {
+		
+	}
+
+}

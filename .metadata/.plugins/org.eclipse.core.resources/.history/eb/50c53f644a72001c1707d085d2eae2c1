@@ -1,0 +1,14 @@
+package updater;
+
+import engine.FormulaItem;
+
+public class OperandItem implements FormulaItem{
+	int value;
+
+
+
+	@Override
+	public int getValue() {
+		return this.value;
+	}
+}
