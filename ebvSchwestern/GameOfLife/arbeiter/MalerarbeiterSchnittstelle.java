@@ -8,6 +8,14 @@ public abstract class MalerarbeiterSchnittstelle
   Point linksOben, rechtsUnten;
   int [][] current, nextGen;
   
+
+  /**
+   * 
+   * @param lO
+   * @param rU
+   * @param current
+   * @param nextGen
+   */
   MalerarbeiterSchnittstelle(Point lO, Point rU,int [][] current, int [][] nextGen )
   {
     linksOben = lO;
@@ -15,5 +23,6 @@ public abstract class MalerarbeiterSchnittstelle
     this.current = current;
     this.nextGen = nextGen;
   }
+  
   abstract void Faerbe();
 }

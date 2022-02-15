@@ -10,32 +10,50 @@ public class Regeleditor implements RegeleditorSchnittstelle
   boolean topologie;
   ZufallsgeneratorPrototyp random;
 
+  /**
+   * 
+   */
   public Regeleditor()
   {
     // TODO Auto-generated constructor stub
   }
 
+  
+  /**
+   *  Regeleditor: RF-01 | Laden Ruft den Filechooser zum Laden eines anderen Regelausdrucks auf
+   */
   @Override
   public void re_laden()
   {
-    // TODO Auto-generated method stub
     
   }
+  
 
+  /**
+   * RF-02: Speichern | Ruft den Java-Swing-Filechooser zum Speichern des aktuellen Regelausdrucks auf.
+   */
   @Override
-  public void re_speichern()
+  public boolean re_speichern()
   {
-    // TODO Auto-generated method stub
-    
+	// Gibt immer false zurück, weil noch nicht implementiert
+	return false;
   }
 
+
+  /**
+   * RF-03: Topologiewechsler | Auswahlschalter für das Spielfeldrandverhalten.
+   */
   @Override
   public boolean getTopo()
   {
     // TODO Auto-generated method stub
     return false;
   }
+  
 
+  /**
+   * RF-04: Regel Bearbeiten | Ruft das Popup-Fenster zum Regelausdruck bearbeiten auf.
+   */
   @Override
   public void regelDialog()
   {
